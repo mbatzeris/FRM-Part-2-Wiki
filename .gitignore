@@ -1,0 +1,38 @@
+# Source PDFs (large files, should not be in version control)
+raw/*.pdf
+
+# Extracted/temporary files in raw/
+raw/extracted_*.txt
+raw/toc*.txt
+raw/*timestamp*.pdf
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary directories
+temp/
+cache/
+tmp/
+
+# Logs
+*.log
