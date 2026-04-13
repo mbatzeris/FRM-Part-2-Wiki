@@ -16,13 +16,13 @@
 
 | # | Domain | Weight | LOs Covered | Stars (★) | Domain Score |
 |---|--------|--------|-------------|-----------|-------------|
-| 1 | Market Risk | 20% | 14 / 14 | 0 / 14 | 100% |
-| 2 | Credit Risk | 20% | 7 / 11 | 0 / 11 | 64% |
+| 1 | Market Risk | 20% | 14 / 14 | 14 / 14 | 100% |
+| 2 | Credit Risk | 20% | 6 / 11 | 6 / 11 | 55% |
 | 3 | Operational Risk & Resilience | 20% | 0 / 10 | 0 / 10 | 0% |
 | 4 | Liquidity & Treasury Risk | 15% | 0 / 8 | 0 / 8 | 0% |
 | 5 | Risk Mgmt & Investment Mgmt | 15% | 0 / 9 | 0 / 9 | 0% |
 | 6 | Current Issues | 10% | 0 / 8 | 0 / 8 | 0% |
-| | **TOTAL** | **100%** | **21 / 60** | **0 / 60** | **35%** |
+| | **TOTAL** | **100%** | **20 / 60** | **20 / 60** | **36%** |
 
 > **Readiness Formula:** `Σ (domain_star_count / domain_total_LOs × domain_weight × 100)`  
 > **Pass Threshold Target:** ≥ 70% weighted readiness before sitting the exam.
@@ -33,20 +33,20 @@
 
 | # | Learning Objective | Status | Notes |
 |---|---|---|---|
-| 1.1 | VaR estimation methods: Parametric, Historical Simulation, Monte Carlo — assumptions, strengths, weaknesses | `[~]` | R1, R2, R3 |
-| 1.2 | Expected Shortfall (ES) — definition, coherence, regulatory preference over VaR | `[~]` | R1 |
-| 1.3 | Backtesting VaR models — exception counting, Basel traffic-light zones (Green ≤4, Yellow 5-9, Red ≥10 at 99%/250 days) | `[~]` | R4, R6, R7 |
-| 1.4 | Stress testing — scenario design, reverse stress testing, regulatory expectations | `[~]` | R1 |
-| 1.5 | Risk measures for non-linear portfolios — Delta-Gamma, full revaluation | `[~]` | R12, R13 |
-| 1.6 | Correlation risk — breakdown in crisis, copulas, tail dependence | `[~]` | R3, R8, R9, R10 |
-| 1.7 | Volatility modeling — EWMA, GARCH, term structure of volatility | `[~]` | R14, R15, R16, R17 |
-| 1.8 | FRTB framework — IMA vs Standardized Approach, desk-level approval, P&L attribution test, risk factor eligibility test | `[~]` | R18 |
-| 1.9 | Sensitivity-based measures (SbM) — Delta, Vega, Curvature risk charges | `[~]` | R18 |
-| 1.10 | Default Risk Charge (DRC) and Residual Risk Add-On (RRAO) | `[~]` | R18 |
-| 1.11 | Market risk for options — Greeks, exotic option risks | `[~]` | R12, R17 |
-| 1.12 | Model risk management — validation, governance, limitations | `[~]` | R6 |
-| 1.13 | Marginal VaR, Component VaR, Incremental VaR — portfolio decomposition | `[~]` | R1, R11 |
-| 1.14 | Parametric approaches — mapping positions, cash-flow mapping | `[~]` | R5, R11 |
+| 1.1 | VaR estimation methods: Parametric, Historical Simulation, Monte Carlo — assumptions, strengths, weaknesses | `[✓]` | R1, R2, R3 |
+| 1.2 | Expected Shortfall (ES) — definition, coherence, regulatory preference over VaR | `[✓]` | R1 |
+| 1.3 | Backtesting VaR models — exception counting, Basel traffic-light zones (Green ≤4, Yellow 5-9, Red ≥10 at 99%/250 days) | `[✓]` | R4, R6, R7 |
+| 1.4 | Stress testing — scenario design, reverse stress testing, regulatory expectations | `[✓]` | R1 |
+| 1.5 | Risk measures for non-linear portfolios — Delta-Gamma, full revaluation | `[✓]` | R12, R13 |
+| 1.6 | Correlation risk — breakdown in crisis, copulas, tail dependence | `[✓]` | R3, R8, R9, R10 |
+| 1.7 | Volatility modeling — EWMA, GARCH, term structure of volatility | `[✓]` | R14, R15, R16, R17 |
+| 1.8 | FRTB framework — IMA vs Standardized Approach, desk-level approval, P&L attribution test, risk factor eligibility test | `[✓]` | R18 |
+| 1.9 | Sensitivity-based measures (SbM) — Delta, Vega, Curvature risk charges | `[✓]` | R18 |
+| 1.10 | Default Risk Charge (DRC) and Residual Risk Add-On (RRAO) | `[✓]` | R18 |
+| 1.11 | Market risk for options — Greeks, exotic option risks | `[✓]` | R12, R17 |
+| 1.12 | Model risk management — validation, governance, limitations | `[✓]` | R6 |
+| 1.13 | Marginal VaR, Component VaR, Incremental VaR — portfolio decomposition | `[✓]` | R1, R11 |
+| 1.14 | Parametric approaches — mapping positions, cash-flow mapping | `[✓]` | R5, R11 |
 
 ---
 
@@ -54,17 +54,17 @@
 
 | # | Learning Objective | Status | Notes |
 |---|---|---|---|
-| 2.1 | Credit VaR — portfolio unexpected loss, single-factor Vasicek model, granularity adjustment | `[ ]` | R28 (in progress) |
-| 2.2 | Default probability estimation — structural models (Merton), reduced-form (hazard rates), transition matrices | `[~]` | R19, R23, R25, R26, R27 |
-| 2.3 | Credit exposure — EAD, PFE, EPE, loan equivalents | `[~]` | R21 |
-| 2.4 | Loss Given Default (LGD) — recovery rates, seniority, collateral | `[~]` | R19, R22 |
-| 2.5 | Counterparty credit risk (CCR) — netting, margining, wrong-way risk, right-way risk | `[~]` | R21 (basics only - netting/margining in R34-R36 pending) |
+| 2.1 | Credit VaR — portfolio unexpected loss, single-factor Vasicek model, granularity adjustment | `[✓]` | R28 |
+| 2.2 | Default probability estimation — structural models (Merton), reduced-form (hazard rates), transition matrices | `[✓]` | R19, R23, R25, R26, R27 |
+| 2.3 | Credit exposure — EAD, PFE, EPE, loan equivalents | `[✓]` | R21 |
+| 2.4 | Loss Given Default (LGD) — recovery rates, seniority, collateral | `[✓]` | R19, R22 |
+| 2.5 | Counterparty credit risk (CCR) — netting, margining, wrong-way risk, right-way risk | `[✓]` | R21 (basics only - netting/margining in R34-R36 pending) |
 | 2.6 | CVA & DVA — formulas, accounting vs risk management perspectives, CVA hedging | `[ ]` | R21 |
 | 2.7 | Credit derivatives — CDS pricing, basis risk, index products | `[ ]` | R21 |
 | 2.8 | Securitization — CDO tranching, correlation effects on equity/mezzanine/senior, waterfall structures | `[ ]` | R40, R41 |
 | 2.9 | SA-CCR — replacement cost, PFE add-on, aggregation across asset classes | `[ ]` | R21 |
 | 2.10 | Central Counterparties (CCPs) — default waterfall, skin-in-the-game, systemic risk implications | `[ ]` | R21 |
-| 2.11 | Credit scoring & rating models — PD estimation, discriminatory power (Gini, AR), calibration | `[~]` | R20, R23, R24, R25 |
+| 2.11 | Credit scoring & rating models — PD estimation, discriminatory power (Gini, AR), calibration | `[✓]` | R20, R23, R24, R25 |
 
 ---
 
