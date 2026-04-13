@@ -50,17 +50,5 @@
 - **"Largest source of credit exposure":** Globally = OTC Derivatives (by notional). For a typical US commercial bank = Loans. The scope qualifier in the stem flips the answer.
 - **Hedge Funds as Creditors:** Don't assume all creditors want to avoid default. Distressed debt hedge funds actively buy defaulted obligations at a discount, hoping for recovery > purchase price.
 
-
-## 4. Directional Intuition
-- **Leverage (Debt/Equity) ↑ → Insolvency Probability ↑ → Credit Risk ↑:** Higher leverage means a smaller equity cushion, making the balance sheet more fragile to asset value drops.
-- **Cash Flow Volatility ↑ → Default Probability ↑:** Even a solvent firm can default if its cash flows are too erratic to meet scheduled payments.
-- **Credit Risk Mitigation (Factoring/Insurance) ↑ → Residual Receivables Risk ↓:** Transferring receivables to a factor eliminates the idiosyncratic risk of individual customers.
-
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Insolvency ≠ Default:** A company with negative equity (Liabilities > Assets) can continue operating and paying coupons for years. Insolvency is a balance sheet state; default is a cash flow event. GARP loves this distinction.
-- **Bankruptcy ≠ Default:** Bankruptcy is a legal court process — a company may default without filing for bankruptcy, and may file for bankruptcy protection while still current on payments (Chapter 11).
-- **"Largest source of credit exposure":** Globally = OTC Derivatives (by notional). For a typical US commercial bank = Loans. The scope qualifier in the stem flips the answer.
-- **Hedge Funds as Creditors:** Don't assume all creditors want to avoid default. Distressed debt hedge funds actively buy defaulted obligations at a discount, hoping for recovery > purchase price.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

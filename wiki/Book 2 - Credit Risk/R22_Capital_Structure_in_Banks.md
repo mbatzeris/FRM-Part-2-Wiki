@@ -50,17 +50,5 @@
 - **"99.97% confidence":** This is the typical A-rated bank target. Don't confuse with 99.9% (Basel IRB) or 99.5% (Solvency II). The confidence level determines which quantile of the loss distribution you must capitalize.
 - **Beta Distribution:** The loss rate is modeled using a Beta distribution (bounded 0-1), NOT a Normal distribution (which can go negative).
 
-
-## 4. Directional Intuition
-- **Default Correlation (ρ) ↑ → Portfolio UL ↑ → Economic Capital ↑:** Clustering of defaults destroys diversification and pushes the tail of the loss distribution outward.
-- **Confidence Interval ↑ → Economic Capital ↑ (exponentially for fat tails):** Moving from 99.5% to 99.9% can more than double the required capital for credit portfolios.
-- **Number of Obligors ↑ → Idiosyncratic Risk ↓ → Portfolio UL ↓ (if correlation is low):** Diversification works only when defaults are not perfectly correlated.
-
-## 5. Ambiguity Traps (Anti-Decoder)
-- **EL in Capital:** Does Expected Loss belong in Economic Capital? **NO.** EL is priced into the loan spread and covered by reserves. EC covers only UL.
-- **Sum of ULs ≠ Portfolio UL:** Individual ULs are NOT additive. Portfolio UL < Sum(Individual ULs) due to diversification unless ρ = 1.
-- **"99.97% confidence":** This is the typical A-rated bank target. Don't confuse with 99.9% (Basel IRB) or 99.5% (Solvency II). The confidence level determines which quantile of the loss distribution you must capitalize.
-- **Beta Distribution:** The loss rate is modeled using a Beta distribution (bounded 0-1), NOT a Normal distribution (which can go negative).
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

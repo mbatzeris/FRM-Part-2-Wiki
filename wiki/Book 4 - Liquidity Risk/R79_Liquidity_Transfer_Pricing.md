@@ -44,11 +44,5 @@
 - **Profit Center Trap:** If a branch shows high profit in the FTP system, it may just mean FTP credits are set too generously -- not that the branch is genuinely profitable. FTP distortions create illusory performance.
 - **Liquidity Premium in FTP:** FTP should include a liquidity premium component for illiquid assets. If it doesn't, business units will originate long-dated illiquid loans because they appear cheap to fund internally.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **FTP != Market Rate:** FTP is an internally set transfer rate, not an external market rate. It should reflect the bank's marginal cost of funds for a specific tenor, not the SOFR/LIBOR rate directly.
-- **Behavioral vs. Contractual Maturity:** Demand deposits are contractually overnight but behaviorally multi-year. FTP should use the behavioral maturity, or the bank will undervalue deposit funding.
-- **Profit Center Trap:** If a branch shows high profit in the FTP system, it may just mean FTP credits are set too generously -- not that the branch is genuinely profitable. FTP distortions create illusory performance.
-- **Liquidity Premium in FTP:** FTP should include a liquidity premium component for illiquid assets. If it doesn't, business units will originate long-dated illiquid loans because they appear cheap to fund internally.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

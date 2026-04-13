@@ -51,11 +51,5 @@
 - **Rating Migration Matrices:** These are Markov chains — the probability of moving from BBB to BB next year is independent of whether the firm was AA two years ago. This "memoryless" property is an assumption, not a fact.
 - **The "Term Structure of PD":** Cumulative PD rises with time. Marginal (forward) PD can rise or fall depending on the credit curve shape. An inverted credit curve implies high near-term risk.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Hazard Rate vs. PD:** The hazard rate is the instantaneous conditional default rate. PD over a period T = 1 - e^(-λT) where λ is the hazard rate. They're related but not identical.
-- **Risk-Neutral vs. Real-World PD:** Market-implied PDs (from CDS/bonds) are risk-neutral and typically HIGHER than historical PDs because they include a risk premium. Use risk-neutral for pricing (CVA), historical for capital.
-- **Rating Migration Matrices:** These are Markov chains — the probability of moving from BBB to BB next year is independent of whether the firm was AA two years ago. This "memoryless" property is an assumption, not a fact.
-- **The "Term Structure of PD":** Cumulative PD rises with time. Marginal (forward) PD can rise or fall depending on the credit curve shape. An inverted credit curve implies high near-term risk.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

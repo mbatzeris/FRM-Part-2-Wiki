@@ -51,11 +51,5 @@
 - **CDS-Bond Basis:** Basis = CDS Spread - Bond Spread. A negative basis means the CDS is "cheap" relative to the bond — potential arbitrage. During the GFC, basis went massively negative due to liquidity.
 - **Index CDS vs. Single-Name CDS:** Index CDS (CDX, iTraxx) are standardized and more liquid. Single-name CDS are customized and less liquid but more precise for hedging specific exposures.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **CDS Buyer = Protection Buyer = Short Credit:** Buying a CDS is equivalent to shorting the reference entity's credit. The CDS buyer pays a premium and profits if spreads widen or default occurs.
-- **Cheapest-to-Deliver (CTD) Option:** In physically settled CDS, the protection buyer can deliver the cheapest eligible bond. This CTD option makes CDS slightly more valuable than implied by a single bond's spread.
-- **CDS-Bond Basis:** Basis = CDS Spread - Bond Spread. A negative basis means the CDS is "cheap" relative to the bond — potential arbitrage. During the GFC, basis went massively negative due to liquidity.
-- **Index CDS vs. Single-Name CDS:** Index CDS (CDX, iTraxx) are standardized and more liquid. Single-name CDS are customized and less liquid but more precise for hedging specific exposures.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

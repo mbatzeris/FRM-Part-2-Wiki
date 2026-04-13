@@ -50,10 +50,5 @@
 - **Vasicek Formula Inputs:** WCDR requires PD, ρ (asset correlation), and the confidence level. It does NOT require LGD — LGD is multiplied AFTER computing WCDR to get Credit VaR.
 - **Single-Factor Limitation:** The Vasicek model assumes a single systematic factor drives all correlations. In reality, sector-specific factors exist, which is why portfolio-specific adjustments are needed.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Granularity Adjustment:** Corrects the Vasicek single-factor model for finite portfolio size. The adjustment INCREASES capital requirements because smaller portfolios retain more idiosyncratic risk.
-- **Vasicek Formula Inputs:** WCDR requires PD, ρ (asset correlation), and the confidence level. It does NOT require LGD — LGD is multiplied AFTER computing WCDR to get Credit VaR.
-- **Single-Factor Limitation:** The Vasicek model assumes a single systematic factor drives all correlations. In reality, sector-specific factors exist, which is why portfolio-specific adjustments are needed.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

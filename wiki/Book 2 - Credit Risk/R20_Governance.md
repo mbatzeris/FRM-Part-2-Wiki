@@ -50,17 +50,5 @@
 - **"Dotted-Line" Trap:** If the stem mentions risk managers reporting to a desk head (even partly), independence is compromised. The CRO must report to the CEO/Board, period.
 - **Carve-Out Confusion:** A carve-out does NOT mean the breach is forgiven. It means the breach is explained by an external factor (e.g., FX move) and triggers investigation, not immediate termination.
 
-
-## 4. Directional Intuition
-- **Reporting Line Independence ↑ → Governance Quality ↑ → Regulatory Approval ↑:** The more direct the CRO-to-Board reporting path, the stronger the 2nd Line's integrity.
-- **Compensation Tied to Desk P&L ↑ → Risk Manager Independence ↓:** If risk managers are paid bonuses from the trading desk's profits, their "monitoring" becomes compromised.
-- **Carve-Out Specificity ↑ → Limit Breach Ambiguity ↓:** Well-defined carve-outs prevent endless debates about whether a breach was "external" or "intentional."
-
-## 5. Ambiguity Traps (Anti-Decoder)
-- **"Advisory" vs. "Veto":** Risk managers advise and escalate; they do NOT have veto power over transactions. If a question says a risk manager "blocks" a trade, that is a governance violation — the risk manager should escalate to the credit committee.
-- **2nd Line Executing Trades:** The 2nd Line (Risk) NEVER executes trades. Even if they spot a VaR breach, the 1st Line (Business) must execute the offsetting trade. This is the most tested governance boundary.
-- **"Dotted-Line" Trap:** If the stem mentions risk managers reporting to a desk head (even partly), independence is compromised. The CRO must report to the CEO/Board, period.
-- **Carve-Out Confusion:** A carve-out does NOT mean the breach is forgiven. It means the breach is explained by an external factor (e.g., FX move) and triggers investigation, not immediate termination.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

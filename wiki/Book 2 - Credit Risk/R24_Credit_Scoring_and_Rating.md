@@ -50,10 +50,5 @@
 - **Through-the-Cycle (TTC) vs. Point-in-Time (PIT):** Rating agencies use TTC (stable but slow). Internal bank models often use PIT (volatile but accurate). GARP tests which is appropriate for pricing (PIT) vs. capital (TTC).
 - **Type I vs. Type II Errors:** Type I = Rejecting a good borrower (lost revenue). Type II = Accepting a bad borrower (credit loss). Banks generally care more about Type II.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Accuracy Ratio (AR) = 2 × AUC - 1:** A perfect model has AR = 1; a random model has AR = 0. Don't confuse AR with the ROC curve itself.
-- **Through-the-Cycle (TTC) vs. Point-in-Time (PIT):** Rating agencies use TTC (stable but slow). Internal bank models often use PIT (volatile but accurate). GARP tests which is appropriate for pricing (PIT) vs. capital (TTC).
-- **Type I vs. Type II Errors:** Type I = Rejecting a good borrower (lost revenue). Type II = Accepting a bad borrower (credit loss). Banks generally care more about Type II.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

@@ -50,10 +50,5 @@
 - **Transfer Risk:** Even if a borrower is willing and able to pay in local currency, capital controls may prevent conversion to the lender's currency. This is transfer risk, not credit risk.
 - **Composite Risk Ratings:** Country risk scores blend quantitative (GDP, debt/GDP) and qualitative (political stability) measures. Don't assume the quantitative score alone determines the rating.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Sovereign Default ≠ Country Risk:** Sovereign default is the government failing to pay. Country risk includes transfer risk (capital controls), political risk, and macroeconomic risk — it's broader than just sovereign default.
-- **Transfer Risk:** Even if a borrower is willing and able to pay in local currency, capital controls may prevent conversion to the lender's currency. This is transfer risk, not credit risk.
-- **Composite Risk Ratings:** Country risk scores blend quantitative (GDP, debt/GDP) and qualitative (political stability) measures. Don't assume the quantitative score alone determines the rating.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

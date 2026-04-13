@@ -48,12 +48,5 @@
 - **CreditRisk+ Skew:** Be careful—CreditRisk+ produces a **positively skewed** distribution (fat tail on the right/loss side) when default correlation increases.
 - **Vasicek Proxy:** Remember that Basel's $\rho$ is a proxy for the correlation between **asset returns** (ROA/ROE), not just a binary default correlation.
 
-
-## 4. Directional Intuition
-- **Default Correlation (ρ) ↑ → Credit VaR ↑:** Higher systematic risk pushes the WCDR upward, fattening the tail of the portfolio loss distribution.
-- **PD ↑ → EL ↑, but Credit VaR (UL) effect depends on ρ:** Higher individual PD increases EL linearly, but the marginal impact on UL depends on the correlation structure.
-- **Portfolio Granularity ↑ → Idiosyncratic Risk ↓ → Closer to Vasicek Asymptote:** The larger and more diversified the portfolio, the closer it converges to the single-factor model prediction.
-- **Confidence Level ↑ → WCDR ↑ → Credit VaR ↑ (exponentially):** Moving from 99% to 99.9% dramatically increases the capital charge because the tail is fat.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

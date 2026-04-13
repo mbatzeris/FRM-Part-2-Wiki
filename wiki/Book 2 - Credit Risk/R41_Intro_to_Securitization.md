@@ -51,11 +51,5 @@
 - **Overcollateralization vs. Subordination:** Both provide credit enhancement. OC = more assets than liabilities in the SPV. Subordination = junior tranches absorb losses first. They can coexist.
 - **FRTB Treatment:** Under FRTB, securitized products MUST use the Standardized Approach — internal models are prohibited. This is a bright-line regulatory rule.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **SPV Bankruptcy Remoteness:** The SPV is legally isolated from the originator. If the originator goes bankrupt, the SPV's assets are NOT part of the bankruptcy estate. This is the entire point of securitization.
-- **True Sale vs. Synthetic:** In a true sale, the originator transfers ownership of the assets. In a synthetic, the originator retains the assets but transfers credit risk via CDS. The balance sheet treatment differs dramatically.
-- **Overcollateralization vs. Subordination:** Both provide credit enhancement. OC = more assets than liabilities in the SPV. Subordination = junior tranches absorb losses first. They can coexist.
-- **FRTB Treatment:** Under FRTB, securitized products MUST use the Standardized Approach — internal models are prohibited. This is a bright-line regulatory rule.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

@@ -50,10 +50,5 @@
 - **Behavioral Scoring vs. Application Scoring:** Application scoring is at origination (static). Behavioral scoring uses post-origination data (dynamic) and is more predictive of actual default.
 - **Loss Forecasting Horizon:** Retail models typically use a 12-month horizon for EL estimation, aligning with IFRS 9 Stage 1.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Pool-Level vs. Individual Modeling:** Retail credit risk is modeled at the pool level (segments of similar borrowers), not individual obligor level like corporate credit. This is because individual retail exposures are too small.
-- **Behavioral Scoring vs. Application Scoring:** Application scoring is at origination (static). Behavioral scoring uses post-origination data (dynamic) and is more predictive of actual default.
-- **Loss Forecasting Horizon:** Retail models typically use a 12-month horizon for EL estimation, aligning with IFRS 9 Stage 1.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

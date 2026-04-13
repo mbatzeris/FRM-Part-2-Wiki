@@ -51,10 +51,5 @@
 - **Credit Migration Risk:** A downgrade from A to BBB is a credit event that causes MTM losses, even though no default occurred. CreditMetrics captures this; CreditRisk+ does not.
 - **Recovery Rate Uncertainty:** LGD is not fixed — recovery rates vary by seniority, collateral, and economic conditions. Stressed LGD in a downturn can be 20-30% lower than historical average.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Spread Risk vs. Default Risk:** Credit spread movements cause MTM losses even without default. Under FRTB, spread risk is captured in the ES model while jump-to-default is captured by the DRC.
-- **Credit Migration Risk:** A downgrade from A to BBB is a credit event that causes MTM losses, even though no default occurred. CreditMetrics captures this; CreditRisk+ does not.
-- **Recovery Rate Uncertainty:** LGD is not fixed — recovery rates vary by seniority, collateral, and economic conditions. Stressed LGD in a downturn can be 20-30% lower than historical average.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

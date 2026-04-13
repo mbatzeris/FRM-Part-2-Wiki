@@ -50,17 +50,5 @@
 - **90-Day Rule:** Loans delinquent > 90 days are classified as non-performing (Stage 3). But a loan can be Stage 2 at 30 days if the bank judges the risk has "significantly increased."
 - **"Loss" Classification:** A loan classified as "Loss" is fully written off. Don't confuse with "Doubtful" — which means the bank expects a loss but hasn't confirmed the amount.
 
-
-## 4. Directional Intuition
-- **Credit Quality ↓ (Stage 1 → Stage 2) → Provisioning ↑↑:** The jump from 12-month EL to Lifetime EL under IFRS 9 creates a P&L cliff — even a small downgrade triggers massive provisioning increases.
-- **Portfolio Diversification ↑ → Unexpected Loss (UL) ↓:** Spreading exposure across industries reduces concentration, lowering the variance of the loss distribution.
-- **Delinquency Days ↑ → Asset Classification ↓:** Each threshold (30, 60, 90 days) moves the loan down the classification spectrum, triggering progressively heavier provisioning.
-
-## 5. Ambiguity Traps (Anti-Decoder)
-- **EL vs. UL Placement:** Expected Loss goes in *provisions* (numerator of RAROC). Unexpected Loss goes in *Economic Capital* (denominator). Mixing them up is the #1 credit risk exam error.
-- **IFRS 9 Stage 2 Trigger:** The move from Stage 1 to Stage 2 does NOT require a default or a specific number of delinquency days — it requires a "significant increase in credit risk" (SICR), which is a judgment call.
-- **90-Day Rule:** Loans delinquent > 90 days are classified as non-performing (Stage 3). But a loan can be Stage 2 at 30 days if the bank judges the risk has "significantly increased."
-- **"Loss" Classification:** A loan classified as "Loss" is fully written off. Don't confuse with "Doubtful" — which means the bank expects a loss but hasn't confirmed the amount.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

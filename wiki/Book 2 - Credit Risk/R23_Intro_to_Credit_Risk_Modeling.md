@@ -52,18 +52,5 @@
 - **Private Firms & Merton:** Structural models REQUIRE observable equity prices. For private firms with no public equity, Merton cannot be used directly — KMV or reduced-form models must substitute.
 - **CAMEL vs. CAMELS:** The S stands for "Sensitivity to Market Risk" — added later. If the question says "CAMEL" (5 letters), it's the original. "CAMELS" (6) is the expanded version.
 
-
-## 4. Directional Intuition
-- **PD ↑ → Basel IRB ρ ↓:** Counter-intuitive but critical. High-PD obligors fail for idiosyncratic reasons (micro), so the systemic correlation factor is reduced. Low-PD (AAA) obligors only fail in macro crises → high ρ.
-- **Asset Volatility (σ_V) ↑ → Distance to Default ↓ → PD ↑:** Higher volatility makes it easier for the asset value to breach the debt barrier in the Merton model.
-- **Debt/Asset Ratio ↑ → Default Barrier ↑ → Distance to Default ↓:** Higher leverage raises the "trip wire" closer to the current asset value.
-
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Basel IRB ρ vs. PD:** GARP's most tested tension. High-PD bonds get LOWER correlation under Basel, not higher. The reasoning: junk bonds default due to company-specific problems, not macro events.
-- **Merton vs. KMV:** Merton uses N(d2) for PD (standard normal). KMV maps Distance to Default to an empirical default frequency (EDF), which is more accurate for real-world tails.
-- **CreditRisk+ vs. CreditMetrics:** CreditRisk+ = Default-mode only (Poisson). CreditMetrics = Mark-to-Market (rating transitions, copulas). If the question mentions "downgrade losses" → CreditMetrics. If "actuarial" → CreditRisk+.
-- **Private Firms & Merton:** Structural models REQUIRE observable equity prices. For private firms with no public equity, Merton cannot be used directly — KMV or reduced-form models must substitute.
-- **CAMEL vs. CAMELS:** The S stands for "Sensitivity to Market Risk" — added later. If the question says "CAMEL" (5 letters), it's the original. "CAMELS" (6) is the expanded version.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)

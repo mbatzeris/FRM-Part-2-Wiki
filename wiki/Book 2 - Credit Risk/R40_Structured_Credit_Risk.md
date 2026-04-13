@@ -51,11 +51,5 @@
 - **Gaussian Copula Limitation:** The Gaussian copula underestimates tail dependence — it assumes extreme co-defaults are rarer than they actually are. This was the core model failure of the 2008 crisis.
 - **Attachment/Detachment Points:** Know how to read them. A 3-7% mezzanine tranche means it starts absorbing losses after the first 3% of the pool defaults and is wiped out at 7%.
 
-## 5. Ambiguity Traps (Anti-Decoder)
-- **Equity vs. Senior Correlation Sensitivity:** Equity tranche is LONG correlation (benefits from ρ↑). Senior tranche is SHORT correlation (hurt by ρ↑). Mezzanine sensitivity is non-monotonic.
-- **Subordination ≠ Safety:** Just because a tranche has 30% subordination doesn't mean it's safe. If default correlation is high, losses can bypass the equity tranche and directly hit mezzanine/senior.
-- **Gaussian Copula Limitation:** The Gaussian copula underestimates tail dependence — it assumes extreme co-defaults are rarer than they actually are. This was the core model failure of the 2008 crisis.
-- **Attachment/Detachment Points:** Know how to read them. A 3-7% mezzanine tranche means it starts absorbing losses after the first 3% of the pool defaults and is wiped out at 7%.
-
 ---
 **Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)
