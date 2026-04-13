@@ -11,7 +11,7 @@
 | **Exam Date** | `November 17, 2026` |
 | **Study Start Date** | `April 13, 2026` |
 | **Total Days Available** | `217 days` |
-| **Daily Study Hours** | `________` (fill in) |
+| **Daily Study Hours** | `2 hours` |
 
 ---
 

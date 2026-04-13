@@ -220,7 +220,7 @@ CCP default waterfall: (1) Defaulting member's initial margin → (2) Defaulting
 
 ---
 
-## Domain 3: Operational Risk (Questions 21–25)
+## Domain 3: Operational Risk (Questions 21–30)
 
 ### Q21 [OpRisk] [REG-ECO FLIP] [OPS]
 **Vignette:** The Risk Management team (2nd Line) identifies that a trading desk has breached its VaR limit. The head of risk immediately instructs the desk to unwind the position.
@@ -264,7 +264,7 @@ A bank's risk appetite statement sets a maximum acceptable operational loss of �
 
 ---
 
-## Domain 4: Liquidity Risk (Questions 26–30)
+## Domain 4: Liquidity Risk (Questions 26–35)
 
 ### Q26 [Liquidity] [TRUE-IRRELEVANT] [REG]
 A corporate bond rated A+ with "proven liquidity during the 2008 crisis" is classified as HQLA Level **2B** (not 2A). Level 2A requires **AA- or higher**. The narrative about crisis performance is noise — the rating rule is the signal.
@@ -298,7 +298,7 @@ Under LCR, a bank calculates net cash outflows for its deposit base. The regulat
 
 ---
 
-## Domain 5: Investment Management (Questions 31–35)
+## Domain 5: Investment Management (Questions 31–40)
 
 ### Q31 [InvMgmt] [TRUE-IRRELEVANT] [ECO]
 A hedge fund reports high returns with high correlation to the Momentum factor. The returns represent **factor beta** (momentum premium), **not alpha** (skill). If a factor model explains it, it's compensation for bearing systematic risk. **Trap:** equating "high returns" with "skill."
