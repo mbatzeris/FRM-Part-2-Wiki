@@ -295,6 +295,111 @@ D_M = √[(x - μ)ᵀ × Σ⁻¹ × (x - μ)]
 
 > **Exam Trap:** Mahalanobis distance measures how many standard deviations a scenario is from the historical mean, accounting for correlation. D_M² > χ² threshold indicates implausible scenario. Used in Market-Driven Scenarios (MDS) to filter out impossible stress tests.
 
+### 5.4 Pension Fund Surplus-at-Risk
+```
+Surplus = Assets - Liabilities
+Surplus_at_Risk = Surplus - Confidence_Level(Surplus)
+```
+| Variable | Direction |
+|----------|-----------|
+| Discount rate ↓ | Liabilities PV ↑ (more than Assets PV ↑) → Surplus ↓ |
+| Asset volatility ↑ | Surplus_at_Risk ↑ |
+| Duration mismatch ↑ | Surplus volatility ↑ |
+
+> **Exam Trap:** Pension liabilities typically have longer duration than assets. When rates fall, liability PV rises faster than asset PV → surplus shrinks. Counter-intuitive for candidates who think "lower rates = good for bonds."
+
+### 5.5 Risk Parity Allocation
+```
+w_i = (1/σ_i) / Σ(1/σ_j)  [equal risk contribution]
+```
+| Asset Class | Risk Contribution | Capital Weight |
+|-------------|-------------------|----------------|
+| Low-vol (bonds) | Equal | Higher |
+| High-vol (equities) | Equal | Lower |
+
+> **Exam Trap:** Risk parity allocates based on equal **risk contribution**, not equal capital. Bonds get higher capital weight because they're lower volatility.
+
+### 5.6 J-Curve in Private Equity
+```
+J-Curve: Returns negative in early years (fees, capital calls) → positive in later years (exits)
+```
+| Year | Cash Flow | Net IRR |
+|------|-----------|---------|
+| 1-3 | Negative (fees, investments) | Negative |
+| 4-7 | Mixed (some exits) | Approaching break-even |
+| 8+ | Positive (exits) | Positive |
+
+> **Exam Trap:** PE funds show negative returns in early years. This is normal, not a failure. The J-Curve reflects the illiquid, long-term nature of PE investments.
+
+---
+
+## Domain 6: Current Issues in Financial Markets (10%)
+
+### 6.1 SMA Internal Loss Multiplier (ILM)
+```
+ILM = log(1 + min(α × Loss_10y, 15)) / log(2)
+BIC_scaled = BIC × ILM
+```
+| Variable | Direction |
+|----------|-----------|
+| Loss_10y ↑ | ILM ↑ (capped at 15) |
+| α (scaling factor) ↑ | ILM ↑ |
+| National discretion | ILM = 1 (override) |
+
+> **Exam Trap:** National discretion allows supervisors to set ILM = 1, meaning historical losses have zero impact on Op Risk capital. Don't assume ILM always > 1 for banks with high losses.
+
+### 6.2 Climate Risk Transition Scenarios
+```
+Transition Risk Impact = Policy_Severity × Carbon_Intensity × Asset_Exposure
+Physical Risk Impact = Probability(Physical_Event) × Asset_Value × Vulnerability
+```
+| Risk Type | Temporal Priority | Key Drivers |
+|-----------|------------------|-------------|
+| Transition | Immediate (policy/tax) | Carbon taxes, phase-out deadlines, technology shifts |
+| Physical | Longer-term (decades) | Sea-level rise, extreme weather, agricultural loss |
+
+> **Exam Trap:** For a coal-plant lender, **transition risk** (policy/tax) hits valuations **before** physical risk (floods) destroys assets. The temporal dimension is key.
+
+### 6.3 Stablecoin Mechanics
+```
+Reserve_Ratio = Reserves / Outstanding_Stablecoins
+Redemption_Pressure = (Redemptions / Reserves) × Time_Window
+```
+| Variable | Direction |
+|----------|-----------|
+| Reserve_Ratio ↓ | Depegging risk ↑ |
+| Redemption_Pressure ↑ | Liquidity crisis risk ↑ |
+| Reserve asset volatility ↑ | Depegging risk ↑ |
+
+> **Exam Trap:** "DeFi eliminates counterparty risk through smart contracts" — False. Smart contract bugs, oracle manipulation, governance attacks, and liquidity crunches create different but real counterparty-like risks.
+
+### 6.4 NBFI Systemic Risk Metrics
+```
+Leverage = Assets / Equity
+Maturity_Transformation = (Short-term_Liabilities / Long-term_Assets)
+Interconnectedness = Cross-exposures / Total_Exposures
+```
+| Metric | NBFI Concern | Bank Comparison |
+|--------|--------------|-----------------|
+| Leverage | High (hedge funds, PE) | Regulated (Basel III) |
+| Maturity | High (MMFs, repo) | Regulated (LCR, NSFR) |
+| Interconnectedness | High (shadow banking) | Regulated (CCPs) |
+
+> **Exam Trap:** NBFI systemic risk arises from leverage, maturity transformation, and interconnectedness **outside** the regulatory perimeter. The key concern is that NBFI entities are not subject to the same capital/liquidity requirements as banks.
+
+### 6.5 AI Model Governance Metrics
+```
+Model_Explainer_Score = Feature_Importance_Clarity / Total_Feature_Count
+Fairness_Metric = (Protected_Group_Accuracy - Overall_Accuracy) / Overall_Accuracy
+```
+| Governance Aspect | Regulatory Expectation |
+|-------------------|------------------------|
+| Explainability | Must be interpretable for high-impact models |
+| Fairness | No disparate impact on protected groups |
+| Human Oversight | Human-in-the-loop for critical decisions |
+
+> **Exam Trap:** An ML model with 99% accuracy but no explainability should be **accepted with constraints** (human overlay, parallel run, lower limits) — not rejected outright (too conservative) or accepted fully (too risky). The "middle path" of governance.
+
 ---
 
 ## Directional Intuition Drill — Cover & Test

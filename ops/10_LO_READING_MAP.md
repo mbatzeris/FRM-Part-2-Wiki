@@ -96,14 +96,16 @@
 
 | LO # | Learning Objective | Primary Reading(s) | Secondary Reading(s) | Cross-Domain Notes |
 |------|-------------------|-------------------|---------------------|-------------------|
-| 6.1 | AI/ML in financial risk management — model governance, explainability, black-box dilemma | R101 (AI & Stability) | R56 (Model Risk) | Crosses to OpRisk (Domain 3) |
-| 6.2 | Climate risk — physical vs transition risk, scenario analysis, TCFD/ISSB frameworks | R102 (Climate Risk) | R103 (Climate Scenarios) | Crosses to Credit (Domain 2) |
-| 6.3 | Digital assets & DeFi — crypto risk, stablecoin mechanics, regulatory responses | R104 (Digital Assets) | R105 (DeFi) | — |
-| 6.4 | Geopolitical risk — sanctions compliance, supply chain disruption, scenario frameworks | R106 (Geopolitical Risk) | R26 (Country Risk) | Crosses to Credit (Domain 2) |
-| 6.5 | Cyber resilience — systemic cyber risk, third-party risk, regulatory developments | R107 (Cyber Threats) | R49 (Cyber Resilience) | Crosses to OpRisk (Domain 3) |
-| 6.6 | Non-bank financial intermediation (NBFI) — systemic risk, leverage, interconnectedness | R108 (NBFI) | R78 (Repo Markets) | Crosses to Liquidity (Domain 4) |
-| 6.7 | Interest rate environment — banking stress (SVB lessons), ALM implications | R109 (Rate Environment) | R82 (ALM Duration) | Crosses to Liquidity (Domain 4) |
-| 6.8 | Integrated risk management — enterprise risk aggregation, risk appetite frameworks | R48 (Integrated Risk) | R58 (Stress Testing) | Crosses to OpRisk (Domain 3) |
+| 6.1 | AI/ML in financial risk management — model governance, explainability, black-box dilemma | R100 (AI ML) + R101 (AI Stability) | R56 (Model Risk) | Crosses to OpRisk (Domain 3) |
+| 6.2 | Private credit drivers — alternative lending, risk factors, market dynamics | R102 (Private Credit Drivers) | R92 (Private Credit) | Crosses to Credit (Domain 2) |
+| 6.3 | Geopolitical stability — sanctions, supply chain risk, scenario frameworks | R103 (Geopolitical Stability) | R26 (Country Risk) | Crosses to Credit (Domain 2) |
+| 6.4 | Fiscal & monetary policy — rate environment, central bank actions, banking stress | R104 (Fiscal Monetary Policy) | R82 (ALM Duration) | Crosses to Liquidity (Domain 4) |
+| 6.5 | Crypto regulation — DeFi, stablecoin mechanics, regulatory responses | R105 (Crypto Regulation) + R106 (Tokenization Inefficiencies) | — | — |
+| 6.6 | Cyber resilience — systemic cyber risk, third-party risk, regulatory developments | R107 (Cyber Resilience) | R49 (Cyber Resilience in Book 3) | Crosses to OpRisk (Domain 3) |
+| 6.7 | NBFI — systemic risk, leverage, interconnectedness outside regulatory perimeter | Not covered in Book 5 (use external material) | R78 (Repo Markets in Book 4) | Crosses to Liquidity (Domain 4) |
+| 6.8 | Integrated risk management — enterprise risk aggregation, risk appetite frameworks | R48 (Integrated Risk in Book 3) | R58 (Stress Testing in Book 3) | Crosses to OpRisk (Domain 3) |
+
+> **Note:** Domain 6 Current Issues are covered in Book 5 readings R100-R107. R108 (NBFI) and R109 (Rate Environment) referenced in older LO maps do not exist in the current wiki structure. Use external GARP materials for these topics.
 
 ---
 

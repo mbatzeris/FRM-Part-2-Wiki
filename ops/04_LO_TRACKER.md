@@ -17,12 +17,12 @@
 | # | Domain | Weight | LOs Covered | Stars (★) | Domain Score |
 |---|--------|--------|-------------|-----------|-------------|
 | 1 | Market Risk | 20% | 14 / 14 | 0 / 14 | 0% |
-| 2 | Credit Risk | 20% | 6 / 11 | 6 / 11 | 11% |
+| 2 | Credit Risk | 20% | 6 / 11 | 0 / 11 | 0% |
 | 3 | Operational Risk & Resilience | 20% | 0 / 10 | 0 / 10 | 0% |
 | 4 | Liquidity & Treasury Risk | 15% | 0 / 8 | 0 / 8 | 0% |
 | 5 | Risk Mgmt & Investment Mgmt | 15% | 0 / 9 | 0 / 9 | 0% |
 | 6 | Current Issues | 10% | 0 / 8 | 0 / 8 | 0% |
-| | **TOTAL** | **100%** | **20 / 60** | **6 / 60** | **11%** |
+| | **TOTAL** | **100%** | **20 / 60** | **0 / 60** | **0%** |
 
 > **Readiness Formula:** `Σ (domain_star_count / domain_total_LOs × domain_weight × 100)`  
 > **Pass Threshold Target:** ≥ 70% weighted readiness before sitting the exam.

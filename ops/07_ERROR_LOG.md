@@ -9,7 +9,7 @@
 
 | Distractor Archetype | Count | % of Errors | Trend |
 |---------------------|-------|-------------|-------|
-| TRUE-IRRELEVANT | 0 | — | — |
+| TRUE-IRRELEVANT | 1 | 100% | — |
 | REG-ECO FLIP | 0 | — | — |
 | INVERSE INTUITION | 0 | — | — |
 | ABSOLUTE | 0 | — | — |
@@ -17,7 +17,7 @@
 
 | Domain | Errors | Questions Attempted | Error Rate |
 |--------|--------|-------------------|------------|
-| Market Risk | 0 | 0 | — |
+| Market Risk | 1 | 1 | 100% |
 | Credit Risk | 0 | 0 | — |
 | Operational Risk | 0 | 0 | — |
 | Liquidity & Treasury | 0 | 0 | — |
@@ -46,5 +46,17 @@
 ---
 
 <!-- BEGIN ENTRIES BELOW -->
+
+#### Entry #1
+- **Date:** 2026-04-13
+- **Source:** Drill Bank Q1
+- **Domain:** Market Risk
+- **Topic:** Basel backtesting multiplier
+- **My Answer:** A) Appropriate — the model is demonstrably conservative with only 3 exceptions
+- **Correct Answer:** B) Inappropriate — the multiplier is a regulatory floor, not a bank-discretionary input
+- **Distractor Archetype:** TRUE-IRRELEVANT
+- **What I Missed:** I focused on the factual observation that 3 exceptions is within Green Zone tolerance, but missed that the Basel multiplier floor of 3.0 is not negotiable downward regardless of model conservatism
+- **Antigravity Autopsy Result:** Option A is factually true (model is conservative) but answers the wrong question (economic efficiency vs regulatory constraint)
+- **Prevention Rule:** Next time I see a question about changing the Basel multiplier, I will check if the direction is downward — if so, it's always inappropriate (regulatory floor)
 
 

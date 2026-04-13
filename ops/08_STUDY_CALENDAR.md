@@ -8,10 +8,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Exam Date** | `________` (fill in) |
-| **Study Start Date** | `________` |
-| **Total Days Available** | `________` |
-| **Daily Study Hours** | `________` |
+| **Exam Date** | `November 17, 2026` |
+| **Study Start Date** | `April 13, 2026` |
+| **Total Days Available** | `217 days` |
+| **Daily Study Hours** | `________` (fill in) |
 
 ---
 
@@ -33,10 +33,10 @@ Study domains in order of weight × difficulty. Suggested sequence:
 |------|--------|--------|-------------|--------|
 | 1 | Credit Risk | 20% | Read chapters → NotebookLM primer → Boole Extraction | `[✓]` |
 | 2 | Market Risk | 20% | Read chapters → NotebookLM primer → Boole Extraction | `[✓]` |
-| 3 | Operational Risk | 20% | Read chapters → NotebookLM primer → Boole Extraction | `[ ]` |
-| 4 | Liquidity & Treasury | 15% | Read chapters → NotebookLM primer → Boole Extraction | `[ ]` |
-| 5 | Investment Mgmt | 15% | Read chapters → NotebookLM primer → Boole Extraction | `[ ]` |
-| 6 | Current Issues | 10% | Read assigned papers → summarize implications | `[ ]` |
+| 3 | Operational Risk | 20% | Read chapters → NotebookLM primer → Boole Extraction | `[✓]` |
+| 4 | Liquidity & Treasury | 15% | Read chapters → NotebookLM primer → Boole Extraction | `[✓]` |
+| 5 | Investment Mgmt | 15% | Read chapters → NotebookLM primer → Boole Extraction | `[✓]` |
+| 6 | Current Issues | 10% | Read assigned papers → summarize implications | `[✓]` |
 
 > After each week, update `04_LO_TRACKER.md` — all LOs in that domain should be at least `[~]`.
 
