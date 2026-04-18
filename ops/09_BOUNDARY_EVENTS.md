@@ -4,8 +4,6 @@
 >
 > **Purpose:** Train for 2026-trend questions where risks cross domain boundaries.
 > **How to use:** Read the vignette, then answer: (1) What is the **root cause** domain? (2) What is the **impact** domain? (3) Where is capital held? (4) What is the Board's first action?
->
-> **See also:** [Structural Linkage Map](../wiki/_boundary_events.md) — The comprehensive 10-cascade boundary events mapping for cross-domain reference.
 
 ---
 

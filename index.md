@@ -1,29 +1,36 @@
 # FRM Part 2 — LLM Wiki Master Map
 
-Welcome to the root directory. This architecture turns passive study materials into an active, compiled knowledge base using a 4-layer design.
+Welcome to the root directory. This architecture turns passive study materials into an active, compiled knowledge base using a 4-folder layout (`raw/`, `system/`, `wiki/`, `ops/`) with a 5-section Boole Scaffold per reading.
 
 ## 📁 Architecture
 
 ### `raw/` — Source Data (Immutable)
 Raw readings provided by GARP/Schweser. **Do not edit files in this folder.**
-- `FRM 2026 Part II Book 2.pdf`
-- `CR-10 Credit VaR PDFs`
-- `Exam Question Ambiguity Training Roadmap.txt`
+- `FRM 2026 Part II Book 1.pdf` + `.md` — Market Risk source
+- `FRM 2026 Part II Book 2.pdf` + `.md` — Credit Risk source
+- `FRM 2026 Part II Book 3.pdf` + `.md` — Operational Risk source
+- `FRM 2026 Part II Book 4.pdf` + `.md` — Liquidity Risk source
+- `FRM 2026 Part II Book 5.pdf` + `.md` — Investment Risk + Current Issues source
+- `2026-04-13-CR-10-Credit-Value-at-Risk-*.pdf` — Credit VaR chapter extracts
+- `Exam Question Ambiguity Training Roadmap.txt` — Distractor taxonomy reference
 
 ### `system/` — AI Engine (Prompts & Templates)
 Frameworks and instructions that Antigravity uses to process `raw/` files into `wiki/` output.
 - `00_SYSTEM_PROMPT.md` — Core persona and constraint hierarchy
-- `01_BOOLE_SCAFFOLD_TEMPLATE.md` — Scaffold output template (3 sections)
+- `01_BOOLE_SCAFFOLD_TEMPLATE.md` — Scaffold output template (5 sections)
 - `02_AMBIGUITY_DECODER.md` — Distractor archetypes taxonomy
 - `03_ANTIGRAVITY_WORKFLOW.md` — Operational pipeline and study loop
 
 ### `wiki/` — Compiled Knowledge Base (Boole Scaffolds by Book)
 Your actual study environment. Contains per-chapter scaffolds organized by GARP Book.
-- `Book 1 - Market Risk/` — 20% exam weight
-- `Book 2 - Credit Risk/` — 20% exam weight
-- `Book 3 - Operational Risk/` — 20% exam weight
-- `Book 4 - Liquidity Risk/` — 15% exam weight
-- `Book 5 - Investment Risk/` — 15% exam weight
+- `Book 1 - Market Risk/` (R1–R18) — 20% exam weight
+- `Book 2 - Credit Risk/` (R19–R41) — 20% exam weight
+- `Book 3 - Operational Risk/` (R42–R65) — 20% exam weight
+- `Book 4 - Liquidity Risk/` (R66–R82) — 15% exam weight
+- `Book 5 - Investment Risk/` (R83–R99) — 15% exam weight
+- `Book 5 - Investment Risk/` (R100–R107, *Current Issues in Financial Markets*) — 10% exam weight
+
+*Total: 100%. R100–R107 live inside the Book 5 folder but constitute GARP's separate "Current Issues" domain.*
 
 Each Book folder has an `_index.md` tracking progress across readings.
 
@@ -31,11 +38,14 @@ Each Book folder has an `_index.md` tracking progress across readings.
 Cross-cutting tools that span all domains.
 - `04_LO_TRACKER.md` — Executive dashboard for Learning Objectives
 - `05_FORMULA_ENGINE.md` — Directional math reference by domain
-- `06_DRILL_BANK.md` — 45 tagged combat simulation questions
+- `06_DRILL_BANK.md` — 62 tagged combat simulation questions
 - `07_ERROR_LOG.md` — Mistake tracking with distractor archetype analysis
 - `08_STUDY_CALENDAR.md` — 16-week study schedule with spaced repetition
 - `09_BOUNDARY_EVENTS.md` — Cross-domain drill templates
-- `../wiki/_boundary_events.md` — Structural cross-domain linkage map (Ref Class)
+- `10_LO_READING_MAP.md` — LO → Reading mapping table
+- `12_WEAK_LINK_RADAR.md` — Adaptive weak-area diagnostic
+- `13_CHEAT_SHEETS.md` — Condensed last-mile reference sheets
+- `wiki/_boundary_events.md` — Structural cross-domain linkage map (Ref Class)
 
 ---
 

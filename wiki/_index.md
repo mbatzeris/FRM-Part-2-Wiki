@@ -1,6 +1,6 @@
 # FRM Part 2 — Knowledge Wiki (2026 Cycle)
 
-Welcome to the comprehensive, 4-layer knowledge base for the FRM Part 2 Exam. This wiki contains high-fidelity synthesis of all 107 readings across the 5 core books.
+Welcome to the comprehensive knowledge base for the FRM Part 2 Exam. This wiki contains high-fidelity synthesis of all 107 readings across the 5 core books (plus GARP's Current Issues domain).
 
 ## 📚 Study Volumes
 
@@ -10,11 +10,12 @@ Welcome to the comprehensive, 4-layer knowledge base for the FRM Part 2 Exam. Th
 | **[Book 2](Book 2 - Credit Risk/_index.md)** | Credit Risk Measurement | 20% | R19—R41 | `COMPLETE` |
 | **[Book 3](Book 3 - Operational Risk/_index.md)** | Operational Risk & Resiliency | 20% | R42—R65 | `COMPLETE` |
 | **[Book 4](Book 4 - Liquidity Risk/_index.md)** | Liquidity & Treasury Risk | 15% | R66—R82 | `COMPLETE` |
-| **[Book 5](Book 5 - Investment Risk/_index.md)** | Risk & Investment Management | 15% | R83—R107 | `COMPLETE` |
+| **[Book 5](Book 5 - Investment Risk/_index.md)** | Risk & Investment Management | 15% | R83—R99 | `COMPLETE` |
+| **[Book 5](Book 5 - Investment Risk/_index.md)** | Current Issues in Financial Markets | 10% | R100—R107 | `COMPLETE` |
 
 ---
 
-## 🏗️ The 4-Layer Architecture (Boole Scaffold)
+## 🏗️ The 5-Section Boole Scaffold
 Each reading is synthesized using the **Boole Scaffold** framework to ensure maximum falsification training:
 1.  **Foundational Propositions:** The core quantitative and theoretical axioms.
 2.  **Constraint Stress-Tests:** "Variable Flip" logic to find where models break.
@@ -22,8 +23,8 @@ Each reading is synthesized using the **Boole Scaffold** framework to ensure max
 4.  **Directional Intuition:** Rapid relationship mapping ($\uparrow / \downarrow$).
 5.  **Ambiguity Traps:** Anti-decoder tips for common GARP question traps.
 
-## 🛠️ Usage for Antigravity Drill Engine
-This wiki is formatted for direct ingestion. To start a drill, point the engine to the `/wiki` directory and specify the reading ID (e.g., `R38`).
+## 🛠️ Usage with the Antigravity Tutor
+Each scaffold is formatted for direct ingestion into a chat-based drill session. To start a drill, reference a reading by its ID (e.g., `R38`) and invoke a Quick Command from `index.md` (Twin-Question Drill, Distractor Autopsy, Sensitivity Drill, or Constraint Layering Vignette).
 
 ---
 *Created with the Book 5 Standard for 100% Curriculum Atomicity.*

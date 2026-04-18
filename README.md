@@ -1,6 +1,6 @@
 # FRM Part 2 Wiki — Knowledge Base & Study System
 
-A comprehensive, 4-layer knowledge base for the FRM Part 2 Exam (2026 cycle). Contains 107 Boole Scaffolds covering all 5 core books with cross-domain boundary event mapping.
+A comprehensive knowledge base for the FRM Part 2 Exam (2026 cycle). Contains 107 Boole Scaffolds covering all 5 core books with cross-domain boundary event mapping. The filesystem is organized in 4 top-level folders (`raw/`, `system/`, `wiki/`, `ops/`); each scaffold uses a 5-section structure.
 
 ## Architecture
 
@@ -48,9 +48,15 @@ Each reading uses a 5-section structure designed for falsification training:
 | `index.md` | Root sitemap with quick commands |
 | `wiki/_index.md` | Wiki overview with book status |
 | `wiki/_boundary_events.md` | Cross-domain cascade map |
+| `ops/04_LO_TRACKER.md` | Executive dashboard for Learning Objectives |
 | `ops/05_FORMULA_ENGINE.md` | Directional math reference by domain |
-| `ops/06_DRILL_BANK.md` | 45 tagged practice questions |
+| `ops/06_DRILL_BANK.md` | 62 tagged practice questions (reference only) |
+| `ops/07_ERROR_LOG.md` | Mistake tracking with distractor archetype analysis |
+| `ops/08_STUDY_CALENDAR.md` | 16-week study schedule with spaced repetition |
+| `ops/09_BOUNDARY_EVENTS.md` | Cross-domain vignette templates |
 | `ops/10_LO_READING_MAP.md` | LO → Reading mapping table |
+| `ops/12_WEAK_LINK_RADAR.md` | Adaptive weak-area diagnostic |
+| `ops/13_CHEAT_SHEETS.md` | Condensed last-mile reference sheets |
 
 ## Constraint Hierarchy
 

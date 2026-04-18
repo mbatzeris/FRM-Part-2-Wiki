@@ -55,7 +55,7 @@
 
 ### Top 5 Formulas
 1. **SMA BIC:** `BIC: BI ≤ €1bn → 0.12 × BI; €1bn < BI ≤ €30bn → 0.12×€1bn + 0.15×(BI-€1bn); BI > €30bn → ... + 0.18×(BI-€30bn)`
-2. **ILM:** `ILM = log(1 + min(α × Loss_10y, 15)) / log(2)` — National discretion allows ILM = 1
+2. **ILM:** `ILM = ln[exp(1) − 1 + (LC / BIC)^0.8]` where `LC = 15 × avg annual op losses` — National discretion allows ILM = 1
 3. **Risk Decision Matrix:** High freq/High severity → Terminate; High freq/Low severity → Treat; Low freq/High severity → Transfer; Low freq/Low severity → Tolerate
 4. **Three Lines of Defense:** 1st Line (business) executes, 2nd Line (risk) monitors/advises, 3rd Line (audit) independent assurance
 5. **SR 11-7:** Model validation must be independent of model development
@@ -123,7 +123,7 @@
 ## Domain 6: Current Issues (10%)
 
 ### Top 5 Formulas
-1. **SMA ILM:** `ILM = log(1 + min(α × Loss_10y, 15)) / log(2)` — National discretion allows ILM = 1
+1. **SMA ILM:** `ILM = ln[exp(1) − 1 + (LC / BIC)^0.8]` where `LC = 15 × avg annual op losses` — National discretion allows ILM = 1
 2. **Climate Transition:** `Transition Risk Impact = Policy_Severity × Carbon_Intensity × Asset_Exposure`
 3. **Climate Physical:** `Physical Risk Impact = Probability(Physical_Event) × Asset_Value × Vulnerability`
 4. **Stablecoin Reserve:** `Reserve_Ratio = Reserves / Outstanding_Stablecoins`

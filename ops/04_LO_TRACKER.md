@@ -17,12 +17,12 @@
 | # | Domain | Weight | LOs Covered | Stars (★) | Domain Score |
 |---|--------|--------|-------------|-----------|-------------|
 | 1 | Market Risk | 20% | 14 / 14 | 0 / 14 | 0% |
-| 2 | Credit Risk | 20% | 6 / 11 | 0 / 11 | 0% |
+| 2 | Credit Risk | 20% | 5 / 11 | 0 / 11 | 0% |
 | 3 | Operational Risk & Resilience | 20% | 0 / 10 | 0 / 10 | 0% |
 | 4 | Liquidity & Treasury Risk | 15% | 0 / 8 | 0 / 8 | 0% |
 | 5 | Risk Mgmt & Investment Mgmt | 15% | 0 / 9 | 0 / 9 | 0% |
 | 6 | Current Issues | 10% | 0 / 8 | 0 / 8 | 0% |
-| | **TOTAL** | **100%** | **20 / 60** | **0 / 60** | **0%** |
+| | **TOTAL** | **100%** | **19 / 60** | **0 / 60** | **0%** |
 
 > **Readiness Formula:** `Σ (domain_star_count / domain_total_LOs × domain_weight × 100)`  
 > **Pass Threshold Target:** ≥ 70% weighted readiness before sitting the exam.
@@ -58,7 +58,7 @@
 | 2.2 | Default probability estimation — structural models (Merton), reduced-form (hazard rates), transition matrices | `[✓]` | R19, R23, R25, R26, R27 |
 | 2.3 | Credit exposure — EAD, PFE, EPE, loan equivalents | `[✓]` | R21 |
 | 2.4 | Loss Given Default (LGD) — recovery rates, seniority, collateral | `[✓]` | R19, R22 |
-| 2.5 | Counterparty credit risk (CCR) — netting, margining, wrong-way risk, right-way risk | `[✓]` | R21 (basics only - netting/margining in R34-R36 pending) |
+| 2.5 | Counterparty credit risk (CCR) — netting, margining, wrong-way risk, right-way risk | `[~]` | R21 (basics only); R33, R34 (Netting/Close-Out), R35 (Margin/Settlement), R36 (Central Clearing) still pending |
 | 2.6 | CVA & DVA — formulas, accounting vs risk management perspectives, CVA hedging | `[ ]` | R21 |
 | 2.7 | Credit derivatives — CDS pricing, basis risk, index products | `[ ]` | R21 |
 | 2.8 | Securitization — CDO tranching, correlation effects on equity/mezzanine/senior, waterfall structures | `[ ]` | R40, R41 |

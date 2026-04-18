@@ -9,20 +9,20 @@
 
 | LO # | Learning Objective | Primary Reading(s) | Secondary Reading(s) | Cross-Domain Notes |
 |------|-------------------|-------------------|---------------------|-------------------|
-| 1.1 | VaR estimation methods: Parametric, Historical Simulation, Monte Carlo | R1 (Market Risk Measures) | R18 (FRTB) | — |
+| 1.1 | VaR estimation methods: Parametric, Historical Simulation, Monte Carlo | R1 (Market Risk Measures) | R2 (Non-Parametric), R18 (FRTB) | — |
 | 1.2 | Expected Shortfall (ES) — definition, coherence, regulatory preference | R1 (Market Risk Measures) | R18 (FRTB) | — |
-| 1.3 | Backtesting VaR models — exception counting, Basel traffic-light zones | R4 (Backtesting VaR) | R18 (FRTB) | — |
-| 1.4 | Stress testing — scenario design, reverse stress testing, regulatory expectations | R5 (Stress Testing) | R58 (Stress Testing Banks) | Crosses to OpRisk (Domain 3) |
-| 1.5 | Risk measures for non-linear portfolios — Delta-Gamma, full revaluation | R2 (Non-Linear Risk) | R18 (FRTB) | — |
-| 1.6 | Correlation risk — breakdown in crisis, copulas, tail dependence | R8 (Correlation Basics) | R10 (Copulas), R29 (Portfolio Credit) | Crosses to Credit (Domain 2) |
-| 1.7 | Volatility modeling — EWMA, GARCH, term structure of volatility | R6 (Volatility) | R12–R16 (Term Structure Models) | — |
-| 1.8 | FRTB framework — IMA vs Standardized Approach, desk-level approval, P&L attribution | R18 (FRTB) | R64 (Basel III) | Crosses to OpRisk (Domain 3) |
-| 1.9 | Sensitivity-based measures (SbM) — Delta, Vega, Curvature risk charges | R18 (FRTB) | — | — |
-| 1.10 | Default Risk Charge (DRC) and Residual Risk Add-On (RRAO) | R18 (FRTB) | R28 (Credit VaR) | Crosses to Credit (Domain 2) |
-| 1.11 | Market risk for options — Greeks, exotic option risks | R7 (Options) | R2 (Non-Linear Risk) | — |
-| 1.12 | Model risk management — validation, governance, limitations | R56 (Model Risk) | — | Crosses to OpRisk (Domain 3) |
-| 1.13 | Marginal VaR, Component VaR, Incremental VaR — portfolio decomposition | R1 (Market Risk Measures) | — | — |
-| 1.14 | Parametric approaches — mapping positions, cash-flow mapping | R1 (Market Risk Measures) | — | — |
+| 1.3 | Backtesting VaR models — exception counting, Basel traffic-light zones | R4 (Backtesting VaR) | R6 (Validating VaR Models), R7 (PIT Backtesting), R18 (FRTB) | — |
+| 1.4 | Stress testing — scenario design, reverse stress testing, regulatory expectations | R1 (Market Risk Measures) | R58 (Stress Testing Banks) | Crosses to OpRisk (Domain 3) |
+| 1.5 | Risk measures for non-linear portfolios — Delta-Gamma, full revaluation | R12 (Arbitrage Pricing Models) | R13 (Expectations & Convexity), R18 (FRTB) | — |
+| 1.6 | Correlation risk — breakdown in crisis, copulas, tail dependence | R8 (Correlation Basics) | R9 (Empirical Properties of Correlation), R10 (Copulas), R29 (Portfolio Credit) | Crosses to Credit (Domain 2) |
+| 1.7 | Volatility modeling — EWMA, GARCH, term structure of volatility | R15 (Term Structure Volatility) | R14 (Term Structure Drift), R16 (Vasicek & Gauss+), R17 (Volatility Smiles) | — |
+| 1.8 | FRTB framework — IMA vs Standardized Approach, desk-level approval, P&L attribution | R18 (Fundamental Review Trading Book) | R64 (Basel III Reforms) | Crosses to OpRisk (Domain 3) |
+| 1.9 | Sensitivity-based measures (SbM) — Delta, Vega, Curvature risk charges | R18 (Fundamental Review Trading Book) | — | — |
+| 1.10 | Default Risk Charge (DRC) and Residual Risk Add-On (RRAO) | R18 (Fundamental Review Trading Book) | R28 (Credit VaR) | Crosses to Credit (Domain 2) |
+| 1.11 | Market risk for options — Greeks, exotic option risks | R17 (Volatility Smiles) | R12 (Arbitrage Pricing Models) | — |
+| 1.12 | Model risk management — validation, governance, limitations | R56 (Model Risk Management) | R6 (Validating VaR Models) | Crosses to OpRisk (Domain 3) |
+| 1.13 | Marginal VaR, Component VaR, Incremental VaR — portfolio decomposition | R1 (Market Risk Measures) | R11 (PCA Hedging) | — |
+| 1.14 | Parametric approaches — mapping positions, cash-flow mapping | R5 (VaR Mapping) | R11 (PCA Hedging) | — |
 
 ---
 
@@ -48,16 +48,16 @@
 
 | LO # | Learning Objective | Primary Reading(s) | Secondary Reading(s) | Cross-Domain Notes |
 |------|-------------------|-------------------|---------------------|-------------------|
-| 3.1 | Operational risk framework — definition (Basel), loss event categories, business line mapping | R43 (Op Risk Framework) | — | — |
-| 3.2 | Three Lines of Defense — roles, independence requirements, common violations | R20 (Governance) | R48 (Integrated Risk) | — |
-| 3.3 | Op Risk measurement — Basic Indicator, Standardized, AMA (legacy), new SMA | R44 (Op Risk Measurement) | R64 (Basel III) | — |
-| 3.4 | Loss data collection — internal loss data, external data, scenario analysis, BEICFs | R45 (Loss Data) | — | — |
-| 3.5 | Risk and Control Self-Assessments (RCSA) — design, scoring, limitations | R46 (RCSA) | — | — |
-| 3.6 | Key Risk Indicators (KRIs) vs Key Performance Indicators (KPIs) — design, thresholds, escalation | R47 (KRIs) | — | — |
-| 3.7 | Cyber risk — threat landscape, controls, NIST framework, regulatory expectations | R49 (Cyber Resilience) | R53 (Outsourcing), R107 (Cyber Threats) | Crosses to Current Issues (Domain 6) |
-| 3.8 | Operational resilience — impact tolerances, important business services, mapping dependencies | R50 (Operational Resilience) | R71 (Intraday Liquidity) | Crosses to Liquidity (Domain 4) |
-| 3.9 | Model risk management — SR 11-7 / SS1/23, validation, governance | R56 (Model Risk) | R4 (Backtesting) | Crosses to Market (Domain 1) |
-| 3.10 | Risk appetite & risk culture — board oversight, tone from the top, compensation alignment | R48 (Integrated Risk) | R59 (RAROC) | — |
+| 3.1 | Operational risk framework — definition (Basel), loss event categories, business line mapping | R42 (Intro to Operational Risk) | R43 (Risk Governance) | — |
+| 3.2 | Three Lines of Defense — roles, independence requirements, common violations | R20 (Governance) | R43 (Risk Governance), R48 (Integrated Risk Management) | — |
+| 3.3 | Op Risk measurement — Basic Indicator, Standardized, AMA (legacy), new SMA | R45 (Risk Measurement) | R64 (Basel III Reforms) | — |
+| 3.4 | Loss data collection — internal loss data, external data, scenario analysis, BEICFs | R44 (Risk Identification) | R45 (Risk Measurement) | — |
+| 3.5 | Risk and Control Self-Assessments (RCSA) — design, scoring, limitations | R44 (Risk Identification) | R46 (Risk Mitigation) | — |
+| 3.6 | Key Risk Indicators (KRIs) vs Key Performance Indicators (KPIs) — design, thresholds, escalation | R47 (Risk Reporting) | — | — |
+| 3.7 | Cyber risk — threat landscape, controls, NIST framework, regulatory expectations | R49 (Cyber Resilience) | R50 (Case Study: Cyberthreats), R53 (Outsourcing Risk), R107 (Cyber Threats & Digital Resilience) | Crosses to Current Issues (Domain 6) |
+| 3.8 | Operational resilience — impact tolerances, important business services, mapping dependencies | R49 (Cyber Resilience) | R53 (Outsourcing Risk), R54 (Case Study: Third-Party Risk), R71 (Intraday Liquidity) | Crosses to Liquidity (Domain 4) |
+| 3.9 | Model risk management — SR 11-7 / SS1/23, validation, governance | R56 (Model Risk Management) | R57 (Case Study: Model Risk), R4 (Backtesting VaR) | Crosses to Market (Domain 1) |
+| 3.10 | Risk appetite & risk culture — board oversight, tone from the top, compensation alignment | R48 (Integrated Risk Management) | R59 (RAROC) | — |
 
 ---
 
@@ -65,14 +65,14 @@
 
 | LO # | Learning Objective | Primary Reading(s) | Secondary Reading(s) | Cross-Domain Notes |
 |------|-------------------|-------------------|---------------------|-------------------|
-| 4.1 | Liquidity risk types — funding liquidity, market liquidity, settlement/payment risk | R66 (Liquidity Risk) | R71 (Intraday Liquidity) | — |
-| 4.2 | Liquidity Coverage Ratio (LCR) — HQLA classification (Level 1/2A/2B), total net cash outflows, 30-day horizon | R66 (Liquidity Risk) | — | — |
-| 4.3 | Net Stable Funding Ratio (NSFR) — Available Stable Funding (ASF), Required Stable Funding (RSF), ≥100% requirement | R67 (NSFR) | — | — |
-| 4.4 | Funds Transfer Pricing (FTP) — behavioral incentives, matched-maturity FTP, impact on business unit decisions | R79 (Liquidity Transfer Pricing) | — | — |
-| 4.5 | Intraday liquidity management — real-time monitoring, nostro account management | R71 (Intraday Liquidity) | R73 (Failure Mechanics) | — |
-| 4.6 | Contingency Funding Plans (CFPs) — triggers, stress scenarios, governance | R68 (CFP) | — | — |
-| 4.7 | Liquidity stress testing — scenario design, behavioral assumptions, management actions | R69 (Liquidity Stress Testing) | — | — |
-| 4.8 | Interest rate risk in the banking book (IRRBB) — EVE vs NII sensitivity, Basel standards | R82 (ALM Duration) | R83 (IRRBB) | — |
+| 4.1 | Liquidity risk types — funding liquidity, market liquidity, settlement/payment risk | R66 (Liquidity Risk) | R71 (Intraday Liquidity), R73 (Failure Mechanics) | — |
+| 4.2 | Liquidity Coverage Ratio (LCR) — HQLA classification (Level 1/2A/2B), total net cash outflows, 30-day horizon | R66 (Liquidity Risk) | R75 (Liquidity Reporting) | — |
+| 4.3 | Net Stable Funding Ratio (NSFR) — Available Stable Funding (ASF), Required Stable Funding (RSF), ≥100% requirement | R66 (Liquidity Risk) | R77 (Managing Liabilities) | — |
+| 4.4 | Funds Transfer Pricing (FTP) — behavioral incentives, matched-maturity FTP, impact on business unit decisions | R79 (Liquidity Transfer Pricing) | R67 (Liquidity Governance) | — |
+| 4.5 | Intraday liquidity management — real-time monitoring, nostro account management | R71 (Intraday Liquidity) | R72 (Monitoring Liquidity), R73 (Failure Mechanics) | — |
+| 4.6 | Contingency Funding Plans (CFPs) — triggers, stress scenarios, governance | R76 (Contingency Funding Plan) | R68 (Early Warning Indicators) | — |
+| 4.7 | Liquidity stress testing — scenario design, behavioral assumptions, management actions | R74 (Liquidity Stress Testing) | R70 (Liquidity Reserves Management) | — |
+| 4.8 | Interest rate risk in the banking book (IRRBB) — EVE vs NII sensitivity, Basel standards | R82 (ALM Duration) | — | — |
 
 ---
 
@@ -80,32 +80,34 @@
 
 | LO # | Learning Objective | Primary Reading(s) | Secondary Reading(s) | Cross-Domain Notes |
 |------|-------------------|-------------------|---------------------|-------------------|
-| 5.1 | Portfolio construction — mean-variance, risk budgeting, factor models | R84 (Portfolio Theory) | R85 (Factor Models) | — |
-| 5.2 | Alpha vs Beta — factor decomposition, risk-adjusted performance (Sharpe, IR, Sortino) | R86 (Performance Attribution) | R87 (Risk-Adjusted Performance) | — |
-| 5.3 | Hedge fund risk — strategy-specific risks, due diligence, style drift, illiquidity | R91 (HF Risk) | R92 (HF Due Diligence) | — |
-| 5.4 | Pension fund risk — asset-liability mismatch, surplus at risk, discount rate sensitivity | R93 (Pension Risk) | R94 (ALM for Pensions) | — |
-| 5.5 | Risk budgeting & allocation — marginal contribution to risk, risk parity | R85 (Factor Models) | R88 (Risk Budgeting) | — |
-| 5.6 | VaR & risk measures for investment portfolios — parametric vs simulation-based | R84 (Portfolio Theory) | — | Crosses to Market (Domain 1) |
-| 5.7 | Performance attribution — Brinson model (allocation, selection, interaction effects) | R86 (Performance Attribution) | — | — |
-| 5.8 | Illiquid asset valuation — smoothing bias, unsmoothing techniques, J-curves in PE | R95 (Illiquid Assets) | R96 (Private Equity) | — |
-| 5.9 | Tail risk management — portfolio insurance, options-based strategies, drawdown control | R98 (Tail Risk) | — | — |
+| 5.1 | Portfolio construction — mean-variance, risk budgeting, factor models | R86 (Portfolio Construction) | R83 (Factor Theory), R84 (Factors) | — |
+| 5.2 | Alpha vs Beta — factor decomposition, risk-adjusted performance (Sharpe, IR, Sortino) | R85 (Alpha & Low-Risk Anomaly) | R89 (Performance Evaluation) | — |
+| 5.3 | Hedge fund risk — strategy-specific risks, due diligence, style drift, illiquidity | R90 (HF Strategies) | R91 (HF Risk, Regulation, & Organizational Structure), R94 (Due Diligence) | — |
+| 5.4 | Pension fund / long-horizon investor risk — asset-liability mismatch, surplus at risk, discount rate sensitivity | R97 (Market-Driven Scenarios) | R98 (Liquidity Management), R99 (Illiquid Assets) | — |
+| 5.5 | Risk budgeting & allocation — marginal contribution to risk, risk parity | R88 (Risk Budgeting) | R87 (Portfolio Risk: Analytical Methods) | — |
+| 5.6 | VaR & risk measures for investment portfolios — parametric vs simulation-based | R87 (Portfolio Risk: Analytical Methods) | R88 (Risk Budgeting) | Crosses to Market (Domain 1) |
+| 5.7 | Performance attribution — Brinson model (allocation, selection, interaction effects) | R89 (Performance Evaluation) | — | — |
+| 5.8 | Illiquid asset valuation — smoothing bias, unsmoothing techniques, J-curves in PE | R99 (Illiquid Assets) | R93 (Private Markets Investing), R92 (Private Credit) | — |
+| 5.9 | Tail risk management / distress remedies — portfolio insurance, options-based strategies, drawdown control | R95 (Distress Symptoms & Remedies) | R96 (Madoff: Riot of Red Flags), R97 (Market-Driven Scenarios) | — |
 
 ---
 
 ## Domain 6: Current Issues in Financial Markets (10%)
 
+LO numbering matches `04_LO_TRACKER.md`. R100–R107 live inside the Book 5 folder but form GARP's separate Current Issues domain.
+
 | LO # | Learning Objective | Primary Reading(s) | Secondary Reading(s) | Cross-Domain Notes |
 |------|-------------------|-------------------|---------------------|-------------------|
-| 6.1 | AI/ML in financial risk management — model governance, explainability, black-box dilemma | R100 (AI ML) + R101 (AI Stability) | R56 (Model Risk) | Crosses to OpRisk (Domain 3) |
-| 6.2 | Private credit drivers — alternative lending, risk factors, market dynamics | R102 (Private Credit Drivers) | R92 (Private Credit) | Crosses to Credit (Domain 2) |
-| 6.3 | Geopolitical stability — sanctions, supply chain risk, scenario frameworks | R103 (Geopolitical Stability) | R26 (Country Risk) | Crosses to Credit (Domain 2) |
-| 6.4 | Fiscal & monetary policy — rate environment, central bank actions, banking stress | R104 (Fiscal Monetary Policy) | R82 (ALM Duration) | Crosses to Liquidity (Domain 4) |
-| 6.5 | Crypto regulation — DeFi, stablecoin mechanics, regulatory responses | R105 (Crypto Regulation) + R106 (Tokenization Inefficiencies) | — | — |
-| 6.6 | Cyber resilience — systemic cyber risk, third-party risk, regulatory developments | R107 (Cyber Resilience) | R49 (Cyber Resilience in Book 3) | Crosses to OpRisk (Domain 3) |
-| 6.7 | NBFI — systemic risk, leverage, interconnectedness outside regulatory perimeter | Not covered in Book 5 (use external material) | R78 (Repo Markets in Book 4) | Crosses to Liquidity (Domain 4) |
-| 6.8 | Integrated risk management — enterprise risk aggregation, risk appetite frameworks | R48 (Integrated Risk in Book 3) | R58 (Stress Testing in Book 3) | Crosses to OpRisk (Domain 3) |
+| 6.1 | AI/ML in financial risk management — model governance, explainability, black-box dilemma | R100 (AI ML) + R101 (AI Stability) | R56 (Model Risk Management) | Crosses to OpRisk (Domain 3) |
+| 6.2 | Climate risk — physical vs transition, scenario analysis, TCFD/ISSB frameworks | R104 (Fiscal Monetary Policy, partial) | External GARP climate readings (not covered in R100–R107 directly) | Crosses to Credit (Domain 2) |
+| 6.3 | Digital assets & DeFi — crypto risk, stablecoin mechanics, regulatory responses | R105 (Crypto Regulation) + R106 (Tokenization Inefficiencies) | — | — |
+| 6.4 | Geopolitical risk — sanctions compliance, supply chain disruption, scenario frameworks | R103 (Geopolitical Stability) | R26 (Country Risk) | Crosses to Credit (Domain 2) |
+| 6.5 | Cyber resilience — systemic cyber risk, third-party risk, regulatory developments | R107 (Cyber Resilience) | R49 (Cyber Resilience in Book 3) | Crosses to OpRisk (Domain 3) |
+| 6.6 | Non-bank financial intermediation (NBFI) — systemic risk, leverage, interconnectedness outside regulatory perimeter | R102 (Private Credit Drivers) | R78 (Repo Markets in Book 4), R92 (Private Credit in Book 5) | Crosses to Liquidity (Domain 4) |
+| 6.7 | Interest rate environment — banking stress (SVB lessons), ALM implications | R104 (Fiscal Monetary Policy) | R82 (ALM Duration in Book 4) | Crosses to Liquidity (Domain 4) |
+| 6.8 | Integrated risk management — enterprise risk aggregation, risk appetite frameworks | R48 (Integrated Risk Management in Book 3) | R58 (Stress Testing Banks in Book 3) | Crosses to OpRisk (Domain 3) |
 
-> **Note:** Domain 6 Current Issues are covered in Book 5 readings R100-R107. R108 (NBFI) and R109 (Rate Environment) referenced in older LO maps do not exist in the current wiki structure. Use external GARP materials for these topics.
+> **Note:** Climate-risk coverage (LO 6.2) in the FRM 2026 Book 5 is thin — R104 touches policy/monetary context only. Supplement with external GARP climate-risk readings if this LO is tested heavily.
 
 ---
 

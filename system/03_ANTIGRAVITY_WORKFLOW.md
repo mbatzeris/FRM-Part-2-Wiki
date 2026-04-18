@@ -36,22 +36,31 @@ Upload the same PDF (or tell me where it is in your workspace) and ask me to run
 ### Step 4: The Distractor Autopsy (If you get a question wrong)
 When doing practice questions from GARP or Schweser, do not just check the answer key. 
 * **Your Prompt:** *(Paste the question and your wrong answer)* *"I got this wrong. Perform a Distractor Autopsy."*
-* **What I will do:** I will run the question through the **Ambiguity Decoder**. I will tell you exactly which psychometric trap you fell into (e.g., The "True but Irrelevant" trap, or the "Reverse Intuition" trap) and how to identify the linguistic cue you missed in the primary text.
+* **What I will do:** I will run the question through the **Ambiguity Decoder**. I will tell you exactly which of the four archetypes you fell into — `[TRUE-IRRELEVANT]`, `[REG-ECO FLIP]`, `[INVERSE INTUITION]`, or `[ABSOLUTE]` — and how to identify the linguistic cue you missed in the primary text.
 
 ---
 
 ## Antigravity Quick-Commands to Use 
 
-To speed up your workflow, use these standardized prompts whenever we open a new study session:
+To speed up your workflow, use these standardized prompts whenever we open a new study session. The canonical command set is mirrored in `index.md`.
 
-> **Map reading:**
+> **Compile a scaffold (full Boole output):**
+> `Compile the Boole Scaffold for [Topic].`
+
+> **Map a reading (Noise map only, faster):**
 > `Initialize standard framework. Read [PDF NAME] and output the Dependency and Noise Map.`
+
+> **Twin-Question combat drill:**
+> `Generate a Twin-Question Drill for [Topic] based on the Ambiguity Roadmap.`
 
 > **Test quantitative intuition without calculator (High Yield):**
 > `Run a Qualitative Greeks/Sensitivity drill on [Topic]. Give me 3 scenarios where inputs change, and ask me for the directional impact.`
 
-> **Pre-Exam Drill:**
+> **Pre-Exam drill (hardest):**
 > `Give me a heavy 'Constraint Layering' vignette on [Topic]. Introduce at least two conflicting constraints (e.g. liquidity vs capital) and force me to pick the Best Fit.`
+
+> **Distractor Autopsy (post-mistake):**
+> `Distractor Autopsy: [paste the question + my wrong answer].`
 
 ---
 

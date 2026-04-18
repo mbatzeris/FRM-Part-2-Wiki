@@ -187,13 +187,16 @@ PFE = multiplier × AddOn_aggregate
 ```
 AddOn = Σ (AddOn_factor × Effective_Notional × Supervisory_Factor)
 ```
-| Asset Class | Supervisory Factor (SF) | Add-On Factor |
-|-------------|------------------------|---------------|
-| Interest Rate | 0.5% | Maturity × Notional |
-| FX | 4% | Maturity × Notional |
-| Equity | 6% | Maturity × Notional |
-| Commodity | 8-18% | Maturity × Notional |
-| Credit | 5% | Maturity × Notional |
+| Asset Class | Supervisory Factor (SF) | Notes |
+|-------------|------------------------|-------|
+| Interest Rate | 0.50% | Same across all tenors |
+| FX | 4.0% | Single factor |
+| Credit (single-name) | 0.38% (AAA–AA) → 6.00% (CCC and below) | Increases with credit grade deterioration |
+| Credit (index) | 0.38% (IG) / 1.06% (speculative) | Two-bucket structure |
+| Equity (single-name) | **32%** | — |
+| Equity (index) | 20% | — |
+| Commodity — electricity | 40% | Highest SF across all asset classes |
+| Commodity — energy / metals / agricultural | 18% | All other commodities |
 
 **Multiplier Calculation**
 ```
@@ -337,16 +340,17 @@ J-Curve: Returns negative in early years (fees, capital calls) → positive in l
 
 ### 6.1 SMA Internal Loss Multiplier (ILM)
 ```
-ILM = log(1 + min(α × Loss_10y, 15)) / log(2)
-BIC_scaled = BIC × ILM
+ILM = ln[exp(1) − 1 + (LC / BIC)^0.8]
+LC  = 15 × average annual operational losses over the prior 10 years
+Op Risk Capital = BIC × ILM
 ```
 | Variable | Direction |
 |----------|-----------|
-| Loss_10y ↑ | ILM ↑ (capped at 15) |
-| α (scaling factor) ↑ | ILM ↑ |
-| National discretion | ILM = 1 (override) |
+| LC / BIC ratio ↑ | ILM ↑ (above 1) |
+| LC / BIC = 0 | ILM = 1 (no historical-loss penalty) |
+| National discretion | ILM = 1 (override regardless of LC) |
 
-> **Exam Trap:** National discretion allows supervisors to set ILM = 1, meaning historical losses have zero impact on Op Risk capital. Don't assume ILM always > 1 for banks with high losses.
+> **Exam Trap:** National discretion allows supervisors to set ILM = 1, meaning historical losses have zero impact on Op Risk capital. Don't assume ILM always > 1 for banks with high losses. Also: when LC/BIC = 1, ILM = ln(e) = 1 exactly — the formula is anchored so that "average bank" has ILM ≈ 1.
 
 ### 6.2 Climate Risk Transition Scenarios
 ```

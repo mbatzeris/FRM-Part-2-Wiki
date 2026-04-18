@@ -254,7 +254,7 @@ Under SMA, the Business Indicator Component (BIC) is calculated using a tiered s
 A bank has high-frequency, low-severity transaction processing errors (average loss $500 per incident, 200 incidents/month). The correct strategy is **Treat** (improve controls), not Transfer (insurance). Insurance is for low-frequency/high-severity events. **Trap:** Candidates think "we should insure against all losses" — but frequent small losses make insurance premiums uneconomical. The cost of insurance exceeds the expected loss for high-frequency events.
 
 ### Q28 [OpRisk] [REG-ECO FLIP] [REG]
-The Internal Loss Multiplier (ILM) under SMA scales the BIC based on the bank's loss experience: ILM = log(1 + min(α × Loss_10y, 15)) / log(2). National discretion allows supervisors to set ILM = 1 for all banks. If a jurisdiction uses this discretion, historical losses have **zero impact** on the Op Risk capital charge. **Trap:** Assuming ILM always > 1 for banks with high losses — national discretion overrides the formula.
+The Internal Loss Multiplier (ILM) under SMA scales the BIC based on the bank's loss experience: ILM = ln[exp(1) − 1 + (LC/BIC)^0.8], where LC = 15 × avg annual op losses over 10 years. National discretion allows supervisors to set ILM = 1 for all banks. If a jurisdiction uses this discretion, historical losses have **zero impact** on the Op Risk capital charge. **Trap:** Assuming ILM always > 1 for banks with high losses — national discretion overrides the formula.
 
 ### Q29 [OpRisk] [ABSOLUTE] [ECO]
 "Scenario analysis always produces more reliable loss estimates than historical loss data." **Incorrect.** Scenario analysis is forward-looking and captures tail events not in historical data, but it is subjective and depends on expert judgment. Historical data is objective but backward-looking. Neither is "always" more reliable — the exam rewards nuance over absolutes.
@@ -264,96 +264,96 @@ A bank's risk appetite statement sets a maximum acceptable operational loss of �
 
 ---
 
-## Domain 4: Liquidity Risk (Questions 26–35)
+## Domain 4: Liquidity Risk (Questions 31–40)
 
-### Q26 [Liquidity] [TRUE-IRRELEVANT] [REG]
+### Q31 [Liquidity] [TRUE-IRRELEVANT] [REG]
 A corporate bond rated A+ with "proven liquidity during the 2008 crisis" is classified as HQLA Level **2B** (not 2A). Level 2A requires **AA- or higher**. The narrative about crisis performance is noise — the rating rule is the signal.
 
-### Q27 [Liquidity] [INVERSE INTUITION] [ECO]
+### Q32 [Liquidity] [INVERSE INTUITION] [ECO]
 FTP credit for deposits set below market rate → branch managers stop gathering deposits (unprofitable for their P&L) → bank's funding liquidity deteriorates. **Trap:** candidates analyze the direct accounting impact instead of the behavioral incentive (second-order effect).
 
-### Q28 [Liquidity] [REG] [REG > ECO]
+### Q33 [Liquidity] [REG] [REG > ECO]
 NSFR: Wholesale funding from financial institutions with residual maturity < 6 months receives **0% ASF factor** — assumed to completely vanish in stress. Even if the counterparty relationship is "strong and long-standing" (noise), the regulatory factor is 0%.
 
-### Q29 [Liquidity] [REG-ECO FLIP]
+### Q34 [Liquidity] [REG-ECO FLIP]
 LCR net cash outflows use **prescribed run-off rates**, not bank-estimated rates. Stable retail deposits = 5% outflow (regulatory), even if the bank's internal model estimates 2%. **Trap:** using the bank's "more accurate" estimate instead of the regulatory floor.
 
-### Q30 [Liquidity] [ABSOLUTE]
+### Q35 [Liquidity] [ABSOLUTE]
 "A bank with LCR > 100% will never face a liquidity crisis." **Incorrect.** LCR is a 30-day stress metric. Intraday liquidity crunches, reputational runs exceeding modeled outflows, or collateral value drops can create liquidity stress even with LCR compliance.
 
-### Q31 [Liquidity] [REG-ECO FLIP] [REG]
+### Q36 [Liquidity] [REG-ECO FLIP] [REG]
 Under NSFR, a bank has stable retail deposits of €100M. The ASF factor is 95% → ASF = €95M. If the bank uses these deposits to fund a 30-year mortgage portfolio (RSF factor 65%), the NSFR contribution is: ASF (95% of deposits) vs RSF (65% of assets). The **NSFR ratio** for this funding source is 95% / 65% = 1.46 > 100% → stable funding surplus. **Trap:** Candidates confuse the RSF factor (asset-side) with the ASF factor (liability-side) — deposits are liabilities, so they contribute to Available Stable Funding, not Required Stable Funding.
 
-### Q32 [Liquidity] [TRUE-IRRELEVANT] [REG]
+### Q37 [Liquidity] [TRUE-IRRELEVANT] [REG]
 A bank's collateral pool includes Level 2A assets (corporate bonds rated AA-) with a 15% haircut. The bonds have a market value of €50M. The HQLA value is €50M × (1 - 0.15) = €42.5M. If the bonds are downgraded to A+ but remain "proven liquid," they reclassify to Level 2B with a 25% haircut → HQLA value = €37.5M. **Trap:** The "proven liquidity" narrative is `[TRUE-IRRELEVANT]` — the rating rule (AA- vs A+) is the binding constraint for Level 2A classification.
 
-### Q33 [Liquidity] [INVERSE INTUITION] [ECO]
+### Q38 [Liquidity] [INVERSE INTUITION] [ECO]
 A bank's FTP system gives branches a 5% credit on deposits (below the bank's wholesale funding cost of 6%). Branch managers respond by reducing deposit gathering efforts and focusing on loan origination. **This is rational from the branch P&L perspective** but harmful to the bank's overall funding liquidity. **Trap:** Candidates think "branches should always gather deposits" — but if FTP creates a disincentive, branches will rationally avoid deposits. The second-order effect (funding shortage) is the exam focus.
 
-### Q34 [Liquidity] [REG-ECO FLIP] [REG]
+### Q39 [Liquidity] [REG-ECO FLIP] [REG]
 Under LCR, a bank calculates net cash outflows for its deposit base. The regulatory run-off rate for stable retail deposits is 5%. The bank's internal model estimates 2% based on customer stickiness. **For regulatory LCR calculation, the bank must use 5%** — the regulatory floor applies regardless of internal modeling. **Trap:** Using the bank's "more accurate" internal estimate instead of the regulatory prescription.
 
-### Q35 [Liquidity] [ABSOLUTE] [OPS]
+### Q40 [Liquidity] [ABSOLUTE] [OPS]
 "Contingency Funding Plans (CFPs) eliminate all liquidity risk if properly designed." **Incorrect.** CFPs are about **response** to liquidity stress, not prevention. Even with a perfect CFP, a bank can still face liquidity stress from sudden market shocks, operational failures, or counterparty defaults. The word "eliminate" is the `[ABSOLUTE]` trap.
 
 ---
 
-## Domain 5: Investment Management (Questions 31–40)
+## Domain 5: Investment Management (Questions 41–50)
 
-### Q31 [InvMgmt] [TRUE-IRRELEVANT] [ECO]
+### Q41 [InvMgmt] [TRUE-IRRELEVANT] [ECO]
 A hedge fund reports high returns with high correlation to the Momentum factor. The returns represent **factor beta** (momentum premium), **not alpha** (skill). If a factor model explains it, it's compensation for bearing systematic risk. **Trap:** equating "high returns" with "skill."
 
-### Q32 [InvMgmt] [INVERSE INTUITION]
+### Q42 [InvMgmt] [INVERSE INTUITION]
 PE fund reports low volatility and low correlation with public markets. This implies **smoothing bias** (stale pricing), not genuine diversification. True risk is higher, true correlation is higher, and Sharpe ratio is overstated. The exam rewards skepticism.
 
-### Q33 [InvMgmt] [REG-ECO FLIP]
+### Q43 [InvMgmt] [REG-ECO FLIP]
 Pension fund surplus-at-risk: if the discount rate falls (rates↓), liability PV rises faster than asset PV for most pension funds → surplus shrinks → risk increases. **Trap:** "lower rates are good for bonds" — true for assets but the liability side moves more (longer duration).
 
-### Q34 [InvMgmt] [ABSOLUTE]
+### Q44 [InvMgmt] [ABSOLUTE]
 "Diversification always reduces portfolio risk." **Incorrect in crisis.** Correlation convergence to 1 in stress eliminates diversification benefits precisely when they're needed most.
 
-### Q35 [InvMgmt] [ECO]
+### Q45 [InvMgmt] [ECO]
 Risk parity allocates based on **equal risk contribution**, not equal capital. Low-vol assets (bonds) get higher capital weight; high-vol assets (equities) get lower weight. **Trap:** confusing equal-weight with risk-parity.
 
-### Q36 [InvMgmt] [REG-ECO FLIP] [REG]
+### Q46 [InvMgmt] [REG-ECO FLIP] [REG]
 A pension fund reports a surplus (assets > liabilities). The discount rate used to calculate liability PV falls by 100bps. **The surplus decreases** because liability PV is more duration-sensitive than asset PV for most pension funds. **Trap:** "Lower rates are good for bonds" — true for assets but the liability side moves more (longer duration). The net effect is surplus shrinkage.
 
-### Q37 [InvMgmt] [TRUE-IRRELEVANT] [ECO]
+### Q47 [InvMgmt] [TRUE-IRRELEVANT] [ECO]
 A portfolio manager states: "Diversification always reduces portfolio risk." **Incorrect in crisis.** Correlation convergence to 1 in stress eliminates diversification benefits precisely when they're needed most. The word "always" is the `[ABSOLUTE]` trap. Historical average correlation may be 0.3, but stress-period correlation can spike to 0.8+.
 
-### Q38 [InvMgmt] [INVERSE INTUITION] [ECO]
+### Q48 [InvMgmt] [INVERSE INTUITION] [ECO]
 A hedge fund uses a strategy that is long volatility (buys options). When volatility increases sharply, the fund's P&L improves dramatically. However, the fund's **risk increases** because volatility is mean-reverting — the gains can reverse quickly if volatility collapses. **Trap:** Thinking "higher volatility = higher profit always" — for long vol positions, the profit is realized only if volatility stays elevated or increases further.
 
-### Q39 [InvMgmt] [REG-ECO FLIP] [OPS]
+### Q49 [InvMgmt] [REG-ECO FLIP] [OPS]
 A pension fund's investment policy mandates a minimum 60% allocation to "growth assets" (equities, alternatives). The fund's CRO argues for reducing equity exposure due to market volatility concerns. **From a fiduciary perspective**, the CRO's recommendation is inappropriate if it violates the policy — the policy was set by the board to meet long-term return objectives. **Trap:** "Risk management should always reduce risk" — but policy constraints may require maintaining risk exposure to meet return targets.
 
-### Q40 [InvMgmt] [ABSOLUTE] [ECO]
+### Q50 [InvMgmt] [ABSOLUTE] [ECO]
 "Private equity returns always outperform public equity over the long term." **Incorrect.** PE may have higher average returns historically, but this includes survivorship bias (failed funds don't report), illiquidity premium, and selection bias. Not all PE funds outperform, and the "always" qualifier makes the statement false.
 
 ---
 
-## Domain 6: Current Issues (Questions 41–45)
+## Domain 6: Current Issues (Questions 51–55)
 
-### Q41 [Current] [REG-ECO FLIP] [OPS > THE]
+### Q51 [Current] [REG-ECO FLIP] [OPS > THE]
 An ML model predicts default with 99% accuracy but is a black box. The Model Validation committee should most likely **accept with constraints** (human overlay, parallel run, lower limits) — not reject outright (too conservative) or accept fully (too risky). The "middle path" of governance.
 
-### Q42 [Current] [INVERSE INTUITION]
+### Q52 [Current] [INVERSE INTUITION]
 Climate risk: "Which risk is most immediate for a coal-plant lender?" → **Transition risk** (policy/tax) hits valuations before **Physical risk** (floods) destroys assets. Temporal dimension is the key.
 
-### Q43 [Current] [TRUE-IRRELEVANT]
+### Q53 [Current] [TRUE-IRRELEVANT]
 SVB lessons: the bank's securities portfolio had unrealized losses due to rising rates. "The bonds were high quality (Treasuries)." **True but irrelevant** — credit quality doesn't protect against interest rate risk. The loss was duration mismatch, not credit loss.
 
-### Q44 [Current] [ABSOLUTE]
+### Q54 [Current] [ABSOLUTE]
 "DeFi eliminates counterparty risk through smart contracts." **Incorrect.** Smart contract bugs, oracle manipulation, governance attacks, and liquidity crunches create different but real counterparty-like risks.
 
-### Q45 [Current] [REG]
+### Q55 [Current] [REG]
 NBFI (Non-Bank Financial Intermediation): systemic risk arises from leverage, maturity transformation, and interconnectedness **outside** the regulatory perimeter. The key concern is that NBFI entities are not subject to the same capital/liquidity requirements as banks, creating regulatory arbitrage.
 
 ---
 
-## 5 Cross-Domain "Boundary Event" Questions (46–50)
+## 5 Cross-Domain "Boundary Event" Questions (56–60)
 
-### Q46 [Credit + OpRisk + Liquidity] — Boundary Event
+### Q56 [Credit + OpRisk + Liquidity] — Boundary Event
 **Vignette:** A bank's CVA model (internally developed) produces a significant pricing error due to a coding bug. The counterparty defaults the following week. The bank's liquidity position is stressed due to unexpected margin calls.
 
 **The loss is classified as:**
@@ -364,23 +364,23 @@ NBFI (Non-Bank Financial Intermediation): systemic risk arises from leverage, ma
 
 **Answer:** C — The *cause* is OpRisk (model failure). The *manifestation* is credit loss and liquidity stress. Capital is held for Op Risk; liquidity buffers address the funding impact. Distinguishing cause from consequence is the 2026 exam trend.
 
-### Q47 [Market + Liquidity] — Boundary Event
+### Q57 [Market + Liquidity] — Boundary Event
 A bank's collateral (corporate bonds) is downgraded from A to BBB during a stress period. This simultaneously triggers: (1) HQLA reclassification from Level 2B to potentially ineligible, (2) higher haircuts in repo markets, (3) margin calls on derivatives. The **most immediate** risk is **liquidity** — the margin calls create a funding gap before market risk crystallizes.
 
-### Q48 [Credit + Current Issues] — Boundary Event
+### Q58 [Credit + Current Issues] — Boundary Event
 An AI-based credit scoring model systematically underestimates PD for borrowers in regions with limited historical default data. This is both a **model risk** issue (Op Risk) and a **credit risk** issue (understated EL/UL). The governance response must address both: model validation (Op Risk framework) AND credit reserve adequacy (Credit Risk framework).
 
-### Q49 [OpRisk + Current Issues] — Boundary Event
+### Q59 [OpRisk + Current Issues] — Boundary Event
 A cloud provider outage disables the bank's real-time risk monitoring for 6 hours. During this window, a trader exceeds position limits undetected. This is **third-party operational risk** (cloud dependency) enabling **market risk limit breach**. The exam tests whether candidates assign the cause (OpRisk) correctly vs the symptom (market risk breach).
 
-### Q50 [All Domains] — Integrated Scenario
+### Q60 [All Domains] — Integrated Scenario
 A geopolitical sanctions event causes: (1) a counterparty to become a restricted entity → credit exposure must be immediately crystallized, (2) the bank's correspondent banking network is disrupted → settlement/liquidity risk, (3) news coverage triggers reputational risk → deposit outflows, (4) the compliance team must screen all existing exposures → operational burden. **The Board's first priority should be:** ensuring legal compliance with sanctions (avoiding criminal liability) before optimizing capital/liquidity impacts.
 
 ---
 
 ## Domain 2 Addendum: Reading 28 — Twin Pair
 
-### Q51 [Credit Risk] [REG-ECO FLIP] [REG > ECO]
+### Q61 [Credit Risk] [REG-ECO FLIP] [REG > ECO]
 **Vignette:** A Basel III reporter uses the Internal Ratings-Based (IRB) approach for its corporate credit portfolio. The bank's internal model estimates that during a severe systemic crisis, the asset correlation ($\rho$) for its High-Yield (HY) portfolio will spike to 0.35 due to industry-specific contagion. The Basel IRB prescription for this PD range yields $\rho = 0.12$. 
 
 **For the purposes of calculating regulatory capital, the bank must use:**
@@ -392,7 +392,7 @@ A geopolitical sanctions event causes: (1) a counterparty to become a restricted
 **Answer:** **B**
 **Why:** [REG-ECO FLIP]. Under Basel IRB, the bank estimates PD, LGD, and EAD, but the **asset correlation ($\rho$) is a formula-prescribed input** based on PD. The bank's internal "economic" view ($\rho = 0.35$) is irrelevant for the regulatory capital charge. Option A is the common "realism" trap. 
 
-### Q52 [Credit Risk] [ABSOLUTE] [ECO]
+### Q62 [Credit Risk] [ABSOLUTE] [ECO]
 **Vignette:** A CRO states: "Calculating Credit VaR using a migration-based model (like CreditMetrics) will always yield a higher capital charge than a default-only model (like CreditRisk+) for a diversified investment-grade portfolio."
 
 **This statement is:**

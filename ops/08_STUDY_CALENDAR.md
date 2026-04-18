@@ -48,9 +48,9 @@ Study domains in order of weight × difficulty. Suggested sequence:
 |------|----------|--------|--------|
 | 7 | Credit Risk: Twin-Questions + Drill Bank Q11-Q20 | ≥ 70% accuracy | `[ ]` |
 | 8 | Market Risk: Twin-Questions + Drill Bank Q1-Q10 | ≥ 70% accuracy | `[ ]` |
-| 9 | OpRisk + Liquidity: Drill Bank Q21-Q30 | ≥ 70% accuracy | `[ ]` |
-| 10 | InvMgmt + Current Issues: Drill Bank Q31-Q40 | ≥ 70% accuracy | `[ ]` |
-| 11 | Boundary Events: Drill Bank Q41-Q45 + Sensitivity Drills | Build cross-domain intuition | `[ ]` |
+| 9 | OpRisk: Drill Bank Q21-Q30 + Liquidity: Q31-Q40 | ≥ 70% accuracy | `[ ]` |
+| 10 | InvMgmt: Drill Bank Q41-Q50 + Current Issues: Q51-Q55 | ≥ 70% accuracy | `[ ]` |
+| 11 | Boundary Events: Drill Bank Q56-Q60 + Credit VaR Addendum Q61-Q62 + Sensitivity Drills | Build cross-domain intuition | `[ ]` |
 | 12 | Weakest 2 domains (from Error Log): intensive review | Close gaps | `[ ]` |
 
 > After each week, update `04_LO_TRACKER.md` — drilled topics should move to `[✓]`.
