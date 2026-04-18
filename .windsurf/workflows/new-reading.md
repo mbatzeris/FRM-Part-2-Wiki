@@ -93,11 +93,30 @@ Before committing, verify all 16 items:
 15. Footer contains `**Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)`.
 16. No LaTeX rendering errors — all formulas in Unicode or plain text.
 
-## Step 9 — Commit
+## Step 9 — Append LOs to `_LO_TRACKER.md`
+
+For each LO covered in the new reading, append a row to the appropriate Book section of `@c:\Users\user\Documents\FRM 2\wiki\_LO_TRACKER.md`.
+
+Row template:
+```
+| {LO id} | R{N} | {topic, linked to prop Px} | {YYYY-MM-DD} | {YYYY-MM-DD} | 3 | 0/0 | — | 0.45 | {today + 3 days} | 🟡 |
+```
+
+Defaults for new LOs:
+- **First Studied / Last Reviewed** = today's date
+- **Confidence** = 3 (neutral baseline — user recalibrates in first drill)
+- **Qs** = 0/0 until first drill
+- **Readiness** = 0.45 (placeholder until drill)
+- **Next Review** = today + 3 days (Leitner "new LO" rule)
+- **Status** = 🟡 Amber
+
+After appending: update the aggregate snapshot at the top of `_LO_TRACKER.md` (LOs tracked count).
+
+## Step 10 — Commit
 
 ```powershell
-git add "wiki/Book N - {Name}/R{N}_{short_title}.md"
-git commit -m "R{N}: initial Schema B conversion from Schweser Book N"
+git add "wiki/Book N - {Name}/R{N}_{short_title}.md" "wiki/_LO_TRACKER.md"
+git commit -m "R{N}: initial Schema B conversion from Schweser Book N; LOs added to tracker"
 ```
 
 ---
