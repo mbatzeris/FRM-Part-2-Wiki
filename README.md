@@ -30,6 +30,7 @@ FRM 2/
     ├── _WEEKLY_LOG.md                          ← Sunday check-in template
     ├── _READINESS_DASHBOARD.md                 ← rolled-up exam-readiness %
     ├── _ERROR_ARCHETYPES.md                    ← your personal distractor decoder
+    ├── _ANKI_GUIDE.md                          ← Anki setup + import instructions
     └── Book 2 - Credit Risk/
         ├── R30_Credit_Risk.md                  ← gold-standard reading
         ├── Book2.txt                           ← pdftotext extract

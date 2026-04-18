@@ -64,7 +64,7 @@
 - ✅ Schema B template + `/new-reading` workflow
 - ✅ LO Tracker system built
 - ⏳ **R30 Module Quiz** (~30 min, before Sunday 20 Apr)
-- ⏳ **Install Anki** for deep cards (optional) OR commit fully to the wiki-SRS approach
+- ✅ **Anki installed** on PC; 30 R30 cards imported; see `_ANKI_GUIDE.md` for daily workflow
 - ⏳ **GARP Part 1 formula sheet** (15 min review — quant weak-spot triage)
 
 #### Next week plan (Week 2, 21–27 Apr)
