@@ -22,7 +22,6 @@ If the book's `.txt` extract does not yet exist:
 ```powershell
 & "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\poppler-25.07.0\Library\bin\pdftotext.exe" -layout "wiki\Book N - {Name}\FRM 2026 Part II Book N.pdf" "wiki\Book N - {Name}\BookN.txt"
 ```
-// turbo
 
 ## Step 2 — Isolate the reading
 
@@ -90,7 +89,7 @@ Before committing, verify all 16 items:
 12. §3 has Signal / Noise / **Tensions** (Tensions is mandatory).
 13. §4 uses Unicode arrows, no LaTeX.
 14. §5 has 8+ bullets.
-15. Footer contains `**Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)`.
+15. Footer contains `**Cross-Domain Linkage:** [Boundary Events](../_boundary_events.md)`.
 16. No LaTeX rendering errors — all formulas in Unicode or plain text.
 
 ## Step 9 — Append LOs to `_LO_TRACKER.md`
@@ -165,6 +164,6 @@ OUTPUT:
 | 4 | DeepSeek V3.2 | ~$0.01 | 10× cheaper; first-draft only — needs human formula verification. |
 | 5 | Claude Haiku 4.5 | ~$0.03 | Schema-compliant but shallower intuitions. |
 
-**Production recommendation:** Claude Sonnet 4.5. Total cost for the remaining ~82 readings ≈ $12.
+**Production recommendation:** Claude Sonnet 4.5. Total cost for the remaining ~106 readings ≈ $15.
 
 **Verification step regardless of model:** Run the §9 checklist (Step 8 above) manually on every output. The checklist catches the ~5% of cases where any model drifts.

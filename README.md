@@ -12,7 +12,7 @@ An active-recall + spaced-repetition study system for FRM Part 2 (Nov 2026 exam)
 ## Status
 
 - ✅ **Completed:** R30 Credit Risk (gold-standard Schema B, 7 LOs tracked)
-- ⏳ **Pending:** 77 readings remaining (R1–R29, R31–R107)
+- ⏳ **Pending:** ~106 readings remaining (R1–R29, R31–R107)
 - 📊 **Current readiness:** 0.5% (baseline, Week 1)
 
 ## Architecture
@@ -169,7 +169,7 @@ Book weights: Market 20% · Credit 20% · OpRisk 20% · Liquidity 15% · Invest+
 12. §3 has Signal / Noise / **Tensions** (Tensions mandatory)
 13. §4 uses Unicode arrows, zero LaTeX
 14. §5 ≥8 bullets
-15. Footer `**Cross-Domain Linkage:** [[Boundary Events]]`
+15. Footer `**Cross-Domain Linkage:** [Boundary Events](../_boundary_events.md)`
 16. No LaTeX rendering errors
 
 ## Canonical Tag Set

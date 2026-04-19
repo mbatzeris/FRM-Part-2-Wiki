@@ -9,15 +9,15 @@
 ## Current Overall Readiness
 
 ```
-Overall Exam Readiness:  0.09 / 1.00
-                         [█░░░░░░░░░░░░░░░░░░░]   9%
+Overall Exam Readiness:  0.005 / 1.00
+                         [░░░░░░░░░░░░░░░░░░░░]   0.5%
 Target (Week 28):        0.75 / 1.00
                          [███████████████░░░░░]  75%
-Gap to close:            66 pp  ·  Weeks remaining: 31
-Required weekly gain:    +2.1 pp / week
+Gap to close:            74.5 pp  ·  Weeks remaining: 31
+Required weekly gain:    +2.4 pp / week
 ```
 
-> Week 1 baseline: only R30 tracked (7 LOs at ~0.45 readiness × 1% book-exposure weight ≈ 0.03 overall). Rises rapidly as Book 2 fills in.
+> Week 1 baseline: only R30 tracked (7 LOs at ~0.45 readiness × 5% book coverage × 20% book weight ≈ 0.005 overall). Rises rapidly as Book 2 fills in.
 
 ---
 

@@ -1,4 +1,4 @@
-## The Boole Scaffold — Template (Schema C)
+## The Boole Scaffold — Template (Schema B)
 
 ### 1. Foundational Propositions (Tagged)
 List 3–5 core principles from the reading:

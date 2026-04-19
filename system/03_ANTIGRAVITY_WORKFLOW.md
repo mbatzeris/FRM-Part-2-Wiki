@@ -42,7 +42,7 @@ When doing practice questions from GARP or Schweser, do not just check the answe
 
 ## Antigravity Quick-Commands to Use 
 
-To speed up your workflow, use these standardized prompts whenever we open a new study session. The canonical command set is mirrored in `index.md`.
+To speed up your workflow, use these standardized prompts whenever we open a new study session.
 
 > **Compile a scaffold (full Boole output):**
 > `Compile the Boole Scaffold for [Topic].`

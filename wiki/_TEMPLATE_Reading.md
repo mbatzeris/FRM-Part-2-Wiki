@@ -68,4 +68,4 @@
 > **Target:** 8-14 bullets. Include at least one mnemonic, one sign-trap, and one "{A} ≠ {B}" clarification.
 
 ---
-**Cross-Domain Linkage:** [[Boundary Events]](../_boundary_events.md)
+**Cross-Domain Linkage:** [Boundary Events](../_boundary_events.md)

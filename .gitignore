@@ -1,5 +1,9 @@
 # Source PDFs (large files, should not be in version control)
 raw/*.pdf
+wiki/**/*.pdf
+
+# Extracted book text (derived from PDFs, can be regenerated)
+wiki/**/*.txt
 
 # Extracted/temporary files in raw/
 raw/extracted_*.txt

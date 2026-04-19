@@ -21,7 +21,7 @@ This directory contains the **AI Engine** of the FRM Wiki. It houses the 4 core 
 - **Section 1:** Tabular Foundational Propositions (tagged by `[REG]`, `[ECO]`, `[OPS]`, `[THE]`).
 - **Section 2:** Constraint Stress-Tests (Falsification) that flip variables to see how outcomes change.
 - **Section 3:** Dependency & Noise Maps (separating actual exam signals from distractor noise).
-- **Section 4:** Directional Intuition for key formulas (focusing on $X \uparrow \rightarrow Y \downarrow$ rather than raw math).
+- **Section 4:** Directional Intuition for key formulas (focusing on X ↑ → Y ↓ rather than raw math).
 - **Section 5:** Ambiguity Traps (Anti-Decoder) — distinctions GARP loves to blur (e.g., "Insolvency ≠ Default"), scope flips, and historical-intuition failures.
 
 ## 3. `02_AMBIGUITY_DECODER.md`
@@ -39,7 +39,7 @@ This directory contains the **AI Engine** of the FRM Wiki. It houses the 4 core 
 - **Step 1 (NotebookLM Primer, 15 min):** Load the chapter PDF into NotebookLM for audio overview and baseline definitions before combat.
 - **Step 2 (Boole Extraction via Antigravity, 10 min):** Run the Boole Scaffold on the PDF; tag every concept and map Signal/Noise. Save output to `wiki/`.
 - **Step 3 (Twin-Question Combat, 20 min):** Attempt dense vignettes under REG then ECO framing; apply the Strict Output Template.
-- **Step 4 (Distractor Autopsy, as needed):** Paste any wrongly-answered GARP/Schweser question; route it through the Ambiguity Decoder to name the trap and log it in `ops/07_ERROR_LOG.md`.
+- **Step 4 (Distractor Autopsy, as needed):** Paste any wrongly-answered GARP/Schweser question; route it through the Ambiguity Decoder to name the trap and log it in `wiki/_ERROR_ARCHETYPES.md`.
 
 ---
 
