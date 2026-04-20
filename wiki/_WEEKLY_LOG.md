@@ -20,8 +20,8 @@
 - R__ ({title}) — Schema B 16/16 ✅ / ❌
 - R__ ({title}) — Schema B 16/16 ✅ / ❌
 
-### LOs drilled this week (pulled from _LO_TRACKER.md)
-- {LO id}: {C/A questions, accuracy, new readiness}
+### LOs Drilled & Priority Changes
+- {LO id}: {C/A, new readiness} → Priority changed from {old} to {new}
 - ...
 
 ### New error archetypes identified
@@ -35,11 +35,11 @@
 ### Blockers / Notes
 - {anything that slowed me down or that I need to change}
 
-### Next week plan
+### Next Week Plan
 - **Readings:** R__, R__
-- **LO drill focus (top 3 by urgency):** {LO id} · {LO id} · {LO id}
+- **Drill Focus:** Address all `🔴 High` priority LOs from the tracker.
 - **Mock?** yes/no — which one
-- **Quant refresher?** (weeks 1-8 only) yes/no — topic
+- **Quant Refresher?** (weeks 1-8 only) yes/no — topic
 ```
 
 ---
@@ -56,8 +56,8 @@
 #### Readings completed
 - R30 (Credit Risk) — Schema B 16/16 ✅ (gold standard)
 
-#### LOs to drill this week
-- 30.a, 30.b, 30.c, 30.d, 30.e, 30.f, 30.g (all 7 R30 LOs) — baseline calibration via Schweser Module Quiz
+#### LOs Drilled & Priority Changes
+- **R30 Drill Session (10 Qs):** Overall score 25%. All R30 LOs except 30.c are now `🔴 High` priority. See `_LO_TRACKER.md` for details.
 
 #### Actions committed this week
 - ✅ Project cleanup (106 stale .md deleted)
@@ -69,7 +69,7 @@
 
 #### Next week plan (Week 2, 21–27 Apr)
 - **Readings:** R31 (Credit Derivatives), R32 (Structured Credit Risk)
-- **LO drill focus (top 3):** 30.f (Gaussian copula — confidence 2) · 30.g (Credit VaR — confidence 2) · 30.e (structural vs reduced-form — needs reinforcement)
+- **Drill Focus:** Address the 6 `🔴 High` priority LOs from R30.
 - **Mock?** No — first mock is scheduled Week 24
 - **Quant refresher?** Yes — 30 min on conditional probability + multivariate normal (prep for copula-heavy R32)
 

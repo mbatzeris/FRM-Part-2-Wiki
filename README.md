@@ -55,14 +55,14 @@ Full pipeline details in `.windsurf/workflows/new-reading.md`.
 This system rests on three evidence-backed learning mechanisms plus one diagnostic:
 
 1. **Active recall** (Roediger & Karpicke, 2006) — every reading is compressed into Schema B propositions you must reconstruct, not re-read.
-2. **Spaced repetition** (Leitner; Ebbinghaus) — the `_LO_TRACKER.md` schedules each LO for re-drill at 3 → 7 → 14 → 30 → 60 day intervals based on last performance.
+2. **Spaced repetition** (Leitner; Ebbinghaus) —A priority-based system in `_LO_TRACKER.md` assigns each LO a `High`, `Medium`, or `Low` priority based on quiz performance. This creates a flexible, adaptive queue for spaced repetition without a rigid calendar.
 3. **Error-driven learning** — wrong answers are logged in `_ERROR_ARCHETYPES.md` and folded back into `§5 Ambiguity Traps` of the relevant Schema B file.
 4. **Readiness indicator** — a single number, updated weekly, that quantifies exam preparedness and forecasts vs target.
 
 ### The Weekly Loop (every Sunday, ~10 min)
 
 ```
-1. Open _LO_TRACKER.md → sort by Next Review date
+1. Open _LO_TRACKER.md → sort by Priority
 2. Identify the 3 most urgent LOs (top of list, or 🔴 status)
 3. Plan 2-3 readings + those 3 LO drills for the coming week
 4. Fill in a new entry in _WEEKLY_LOG.md
