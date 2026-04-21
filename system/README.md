@@ -50,3 +50,22 @@ When you start a new study session, the AI effectively "loads" these 4 files int
 2. The **System Prompt (`00`)** tells it *how to act* and speak.
 3. If you ask it to summarize a reading, it fetches the **Scaffold Template (`01`)**.
 4. If you ask it to analyze a practice question, it fires up the **Ambiguity Decoder (`02`)**.
+
+---
+
+## Operational Workflows (in `.windsurf/workflows/`)
+
+These are the active slash-command workflows that implement the above system in practice:
+
+| Workflow | Command | Purpose |
+|:--|:--|:--|
+| **new-reading.md** | `/new-reading` | Convert a Schweser chapter into a Schema B `.md` file; includes Step 8b to update `wiki/_boundary_events.md` |
+| **drill.md** | `/drill` | Run a drill session using the 3-phase graduated difficulty framework (Phase 1 Foundation → Phase 2 Consolidation → Phase 3 Exam Simulation) |
+
+## Supporting Wiki Files
+
+| File | Purpose |
+|:--|:--|
+| `wiki/_boundary_events.md` | Cross-domain linkage index: maps concepts shared across readings and logs multi-risk boundary event chains (updated by Step 8b of `/new-reading`) |
+| `wiki/_ERROR_ARCHETYPES.md` | Personal distractor decoder: logs every error by archetype (A1–A12) with instance-level entries and lessons |
+| `wiki/_LO_TRACKER.md` | Master readiness tracker: drives phase selection in `/drill` and priority in weekly planning |

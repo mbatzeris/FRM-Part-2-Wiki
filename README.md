@@ -11,9 +11,10 @@ An active-recall + spaced-repetition study system for FRM Part 2 (Nov 2026 exam)
 
 ## Status
 
-- ✅ **Completed:** R30 Credit Risk (gold-standard Schema B, 7 LOs tracked)
-- ⏳ **Pending:** ~106 readings remaining (R1–R29, R31–R107)
+- ✅ **Completed:** R30 Credit Risk (gold-standard Schema B, 7 LOs tracked), R31 Credit Derivatives (8 LOs tracked)
+- ⏳ **Pending:** ~105 readings remaining (R1–R29, R32–R107)
 - 📊 **Current readiness:** 0.5% (baseline, Week 1)
+- 🔴 **Active High-priority LOs:** 30.d (50%), 30.g (38%)
 
 ## Architecture
 
@@ -21,7 +22,9 @@ An active-recall + spaced-repetition study system for FRM Part 2 (Nov 2026 exam)
 FRM 2/
 ├── .gitignore
 ├── README.md                                  ← this file
-├── .windsurf/workflows/new-reading.md         ← conversion pipeline + LLM prompt
+├── .windsurf/workflows/
+│   ├── new-reading.md                          ← conversion pipeline + LLM prompt
+│   └── drill.md                                ← graduated drill session protocol (3 phases)
 ├── raw/                                        ← immutable source PDFs (5 books)
 ├── system/                                     ← legacy prompts (reference only)
 └── wiki/
@@ -30,9 +33,11 @@ FRM 2/
     ├── _WEEKLY_LOG.md                          ← Sunday check-in template
     ├── _READINESS_DASHBOARD.md                 ← rolled-up exam-readiness %
     ├── _ERROR_ARCHETYPES.md                    ← your personal distractor decoder
+    ├── _boundary_events.md                     ← cross-domain linkage index + boundary scenarios
     ├── _ANKI_GUIDE.md                          ← Anki setup + import instructions
     └── Book 2 - Credit Risk/
         ├── R30_Credit_Risk.md                  ← gold-standard reading
+        ├── R31_Credit_Derivatives.md           ← Schema B reading
         ├── Book2.txt                           ← pdftotext extract
         └── FRM 2026 Part II Book 2.pdf
 ```
@@ -43,8 +48,9 @@ FRM 2/
 2. Provide **reading number** and **book number**.
 3. Workflow auto-extracts the chapter, calls the LLM, produces a Schema B `.md`.
 4. Manual 16-item §9 checklist pass.
-5. Append the reading's LOs to `wiki/_LO_TRACKER.md` (new row per LO).
-6. Commit.
+5. **Step 8b:** Scan §3 Tensions + §5 Ambiguity Traps → update `wiki/_boundary_events.md` with cross-domain links and boundary scenarios.
+6. Append the reading's LOs to `wiki/_LO_TRACKER.md` (new row per LO).
+7. Commit (includes `_boundary_events.md`).
 
 Full pipeline details in `.windsurf/workflows/new-reading.md`.
 
@@ -72,15 +78,24 @@ This system rests on three evidence-backed learning mechanisms plus one diagnost
 
 ### Per-LO Drill Session (~45 min per LO cluster of 3)
 
+Type `/drill R{N} [LO list]` in Cascade. The workflow auto-selects the phase based on current Readiness.
+
+| Phase | Trigger | Format |
+|:--|:--|:--|
+| **Phase 1 — Foundation** | New LO or Readiness < 0.50 | Clean calculations, directional, reverse-engineer, contrast pairs. Max 1 session — advance as soon as mechanics are verified. |
+| **Phase 2 — Consolidation** | Readiness 0.50–0.70 | Warm-up + vignette noise + Distractor Autopsy + first Twin Question. Archetype labels on wrong answers. |
+| **Phase 3 — Exam Simulation** | Readiness > 0.70 | Full Antigravity: noisy vignettes, Twin Question pairs, constraint-layered Best Fit, boundary event cross-reading, synthesis. |
+
 ```
-1. LEARN     → Open Schema B proposition, read + AnalystPrep video clip
-2. APPLY     → 3 questions from AnalystPrep filtered to that LO
-3. DIAGNOSE  → For each wrong Q, log archetype in _ERROR_ARCHETYPES.md
-4. COMPRESS  → Add any new trap to that reading's §5
-5. RECORD    → Update _LO_TRACKER.md row: Last Reviewed, Confidence (0-5),
-              Q C/A, Accuracy, new Readiness, new Next Review date
+1. PHASE     → Cascade checks _LO_TRACKER.md Readiness → selects Phase 1/2/3
+2. DRILL     → 5 questions per session in the phase-appropriate format
+3. AUTOPSY   → For each wrong Q: distractor archetype label + root-cause explanation
+4. RECORD    → Cascade updates _LO_TRACKER.md + _ERROR_ARCHETYPES.md
+5. COMMIT    → git push after every session
 6. REINFORCE → NotebookLM audio of the Schema B for tomorrow's commute
 ```
+
+Full protocol in `.windsurf/workflows/drill.md`.
 
 ### Readiness Formula
 
