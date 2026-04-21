@@ -129,7 +129,7 @@ Defaults for new LOs:
 - **Confidence** = 3 (neutral baseline — user recalibrates in first drill)
 - **Qs** = 0/0 until first drill
 - **Readiness** = 0.28 (formula-derived baseline: 0.60×0 + 0.30×(3/5) + 0.10×1 = 0.28 — Acc=0, Conf=3, recency=1)
-- **Priority** = 🔴 High (new LO; Readiness 0.28 < 0.50 threshold; needs first drill within 3 days)
+- **Priority** = 🔴 High (per Priority Engine rule "new LO with 0 questions"; needs first drill within 3 days). Note: Phase will also be 1 because 0.28 < 0.50, but that's a separate determination (Priority = when to drill; Phase = how to drill).
 
 After appending: update the aggregate snapshot at the top of `_LO_TRACKER.md` (LOs tracked count).
 

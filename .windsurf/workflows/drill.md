@@ -37,7 +37,7 @@ Append a new row to `wiki/_EVENT_LOG.md` **before asking the first question**:
 ```
 Then open with: *"Session {N} · R{X} · Phase {1/2/3} · Target LOs: {list}"*
 
-**Session numbering rule:** `{N}` = count of all prior `DRILL` event rows + 1 (numeric, e.g., `Session 11`, `Session 12`). The letter convention (Session A–J) is retired; historical sessions keep their letters in the error log but new sessions use numeric IDs. `{next #}` is the event log row number (e.g., `015`).
+**Session numbering rule:** `{N}` = count of all prior `DRILL` event rows + 1 (numeric, e.g., `Session 10`, `Session 11`, …). The letter convention (Session A–J) is retired; historical sessions keep their letters in the error log but new sessions use numeric IDs. `{next #}` is the event log row number (e.g., `016`).
 
 ---
 
