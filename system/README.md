@@ -15,14 +15,15 @@ This directory contains the **AI Engine** of the FRM Wiki. It houses the 4 core 
 - Defines the conversational tone (blunt, surgical, Socratic).
 
 ## 2. `01_BOOLE_SCAFFOLD_TEMPLATE.md`
-**Role:** The Knowledge Extraction Compiler
-**Purpose:** This is the universal blueprint for how all `raw/` PDFs are transformed into `wiki/` study notes. It forces the AI to output knowledge in a highly specific, standardized format.
-**Key Mechanisms:**
-- **Section 1:** Tabular Foundational Propositions (tagged by `[REG]`, `[ECO]`, `[OPS]`, `[THE]`).
-- **Section 2:** Constraint Stress-Tests (Falsification) that flip variables to see how outcomes change.
-- **Section 3:** Dependency & Noise Maps (separating actual exam signals from distractor noise).
-- **Section 4:** Directional Intuition for key formulas (focusing on X ↑ → Y ↓ rather than raw math).
-- **Section 5:** Ambiguity Traps (Anti-Decoder) — distinctions GARP loves to blur (e.g., "Insolvency ≠ Default"), scope flips, and historical-intuition failures.
+**Role:** Pointer to the active Schema B template
+**Status:** This file is now a **pointer**. The active, canonical Schema B template lives at `wiki/_TEMPLATE_Reading.md` and is the single source of truth for `/new-reading` conversions. The legacy 5-section version was retired to eliminate split-brain drift between two templates.
+**Key mechanisms (defined in the wiki template):**
+- **§1 Foundational Propositions** — one proposition per LO (minimum), tagged by `[REG]`, `[ECO]`, `[OPS]`, `[THE]`, with Trigger Phrases.
+- **§2 Constraint Stress-Test** — falsification table showing what flips the answer.
+- **§3 Dependency & Noise Map** — Signal / Noise / Tensions triage.
+- **§4 Directional Intuition** — qualitative ↑/↓ chains.
+- **§5 Ambiguity Traps** — distinctions GARP blurs; scope flips; historical-intuition failures.
+- **§9 Compliance Checklist** — 16-item gate enforced by `/new-reading` Step 8.
 
 ## 3. `02_AMBIGUITY_DECODER.md`
 **Role:** The Threat Intelligence & Question Analysis Engine

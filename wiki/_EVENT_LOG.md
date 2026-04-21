@@ -29,4 +29,4 @@ Append-only. One row per major system event. **Never edit existing rows — only
 
 *Next session appends row #016. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
 
-> **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #014 onward are fully tracked. Session numbering converts to numeric from #016 (Session 11 next).
+> **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #014 onward are fully tracked. Session numbering converts to numeric from #016: **next DRILL is Session 10** (9 prior DRILL rows in this log: #002–#010, per the drill.md counting rule).

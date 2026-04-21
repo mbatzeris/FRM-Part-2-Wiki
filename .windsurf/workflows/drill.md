@@ -57,7 +57,7 @@ Then open with: *"Session {N} · R{X} · Phase {1/2/3} · Target LOs: {list}"*
 
 ## Phase 1 — Foundation
 
-**Conditions:** First drill on a new LO or Readiness < 0.50.
+**Conditions:** Readiness < 0.50 (new LOs at 0.28 baseline qualify automatically; see Phase Determination table above).
 
 **Question mix (5 questions):**
 - Q1–Q2: Core formula or calculation — clean stem, no noise, exact numerical answer
