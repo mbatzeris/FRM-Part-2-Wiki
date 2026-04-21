@@ -121,15 +121,15 @@ For each LO covered in the new reading, append a row to the appropriate Book sec
 
 Row template:
 ```
-| {LO id} | R{N} | {topic, linked to prop Px} | {YYYY-MM-DD} | {YYYY-MM-DD} | 3 | 0/0 | — | 0.45 | 🔴 High |
+| {LO id} | R{N} | {topic, linked to prop Px} | {YYYY-MM-DD} | {YYYY-MM-DD} | 3 | 0/0 | — | 0.28 | 🔴 High |
 ```
 
 Defaults for new LOs:
 - **First Studied / Last Reviewed** = today's date
 - **Confidence** = 3 (neutral baseline — user recalibrates in first drill)
 - **Qs** = 0/0 until first drill
-- **Readiness** = 0.45 (placeholder until drill)
-- **Priority** = 🔴 High (new LO; Readiness 0.45 < 0.50 threshold; needs first drill within 3 days)
+- **Readiness** = 0.28 (formula-derived baseline: 0.60×0 + 0.30×(3/5) + 0.10×1 = 0.28 — Acc=0, Conf=3, recency=1)
+- **Priority** = 🔴 High (new LO; Readiness 0.28 < 0.50 threshold; needs first drill within 3 days)
 
 After appending: update the aggregate snapshot at the top of `_LO_TRACKER.md` (LOs tracked count).
 

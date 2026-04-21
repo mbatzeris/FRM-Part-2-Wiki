@@ -44,10 +44,10 @@ Clamp result: Readiness = min(1.00, max(0.00, calculated value))
 | 🟡 Medium priority | 4 |
 | 🟢 Low priority | 1 |
 | ⭐ Graduated | 0 |
-| **Avg LO Readiness** | **~0.54** (R30 avg 0.65; R31 baseline 0.45) |
+| **Avg LO Readiness** | **~0.45** (R30 avg 0.65; R31 formula-baseline 0.28) |
 | Target (week 28) | **≥ 0.75** |
 
-*Updated after every drill session (Step 4 of `/drill` close-out). Avg LO Readiness ≠ Exam Readiness — see `_READINESS_DASHBOARD.md` for the weighted exam score (currently 1.2%).*
+*Updated after every drill session (Step 5 of `/drill` close-out). Avg LO Readiness ≠ Exam Readiness — see `_READINESS_DASHBOARD.md` for the weighted exam score (currently ~1.0%).*
 
 ---
 
@@ -66,14 +66,14 @@ Clamp result: Readiness = min(1.00, max(0.00, calculated value))
 | 30.e | R30 | Default correlation: reduced-form vs structural models (P6) | 2026-04-18 | 2026-04-20 | 2 | 2/3 | 67% | 0.62 | 🟡 Medium |
 | 30.f | R30 | Gaussian copula for time-to-default; one-factor model (P7) | 2026-04-18 | 2026-04-20 | 2 | 2/3 | 67% | 0.62 | 🟡 Medium |
 | 30.g | R30 | Credit VaR via Gaussian copula; CreditMetrics (P8) | 2026-04-18 | 2026-04-21 | 3 | 8/21 | 38% | 0.51 | 🔴 High |
-| 31.a | R31 | CDS structure, TRS, CDO; CDS-bond basis; CTD bond (P1, P2) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
-| 31.b | R31 | CDS valuation: hazard rate, PS/PD, spread calculation (P3) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
-| 31.c | R31 | Risk-neutral vs real-world PD; RR impact on implied PD (P4) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
-| 31.d | R31 | Credit indices (CDX/iTraxx), fixed coupons, up-front payments (P5) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
-| 31.e | R31 | CDS forwards and CDS options (P6) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
-| 31.f | R31 | Synthetic CDO valuation: spread payments & Gaussian copula (P7) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
-| 31.g | R31 | Compound (tranche) vs base correlation; smile vs skew (P8) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
-| 31.h | R31 | Alternative approaches to default correlation estimation (P9) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🔴 High |
+| 31.a | R31 | CDS structure, TRS, CDO; CDS-bond basis; CTD bond (P1, P2) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
+| 31.b | R31 | CDS valuation: hazard rate, PS/PD, spread calculation (P3) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
+| 31.c | R31 | Risk-neutral vs real-world PD; RR impact on implied PD (P4) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
+| 31.d | R31 | Credit indices (CDX/iTraxx), fixed coupons, up-front payments (P5) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
+| 31.e | R31 | CDS forwards and CDS options (P6) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
+| 31.f | R31 | Synthetic CDO valuation: spread payments & Gaussian copula (P7) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
+| 31.g | R31 | Compound (tranche) vs base correlation; smile vs skew (P8) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
+| 31.h | R31 | Alternative approaches to default correlation estimation (P9) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.28 | 🔴 High |
 
 ### Book 1 — Market Risk (20% exam weight)
 

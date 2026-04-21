@@ -13,7 +13,7 @@ An active-recall + spaced-repetition study system for FRM Part 2 (Nov 2026 exam)
 
 - ✅ **Completed:** R30 Credit Risk (gold-standard Schema B, 7 LOs tracked), R31 Credit Derivatives (8 LOs tracked)
 - ⏳ **Pending:** ~105 readings remaining (R1–R29, R32–R107)
-- 📊 **Current readiness:** 1.2% (R30 + R31 baseline, Week 1)
+- 📊 **Current readiness:** 1.0% (R30 drilled + R31 baseline, Week 1)
 - 🔴 **Active High-priority LOs:** 10 total — 30.d (50%), 30.g (38%), plus all 8 R31 LOs (first drill pending)
 
 ## Architecture

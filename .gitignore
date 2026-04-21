@@ -25,9 +25,13 @@ ENV/
 # IDE
 .vscode/
 .idea/
+.obsidian/
 *.swp
 *.swo
 *~
+
+# Windows shortcuts (machine-specific)
+*.lnk
 
 # OS
 .DS_Store

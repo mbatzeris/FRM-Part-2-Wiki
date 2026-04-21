@@ -9,15 +9,15 @@
 ## Current Overall Readiness
 
 ```
-Overall Exam Readiness:  0.012 / 1.00
-                         [░░░░░░░░░░░░░░░░░░░░]   1.2%
+Overall Exam Readiness:  0.010 / 1.00
+                         [░░░░░░░░░░░░░░░░░░░░]   1.0%
 Target (Week 28):        0.75 / 1.00
                          [███████████████░░░░░]  75%
-Gap to close:            73.8 pp  ·  Weeks remaining: 31
+Gap to close:            74.0 pp  ·  Weeks remaining: 31
 Required weekly gain:    +2.4 pp / week
 ```
 
-> Week 1 baseline: R30 (7 LOs, avg 0.65) + R31 (8 LOs, avg 0.45) = 15 LOs tracked × 10.7% coverage × 20% book weight ≈ 0.012 overall. Rises rapidly as Book 2 fills in.
+> Week 1 baseline: R30 (7 LOs, avg 0.65) + R31 (8 LOs, formula-baseline 0.28) = 15 LOs tracked → Avg LO Readiness 0.45 × 10.7% coverage × 20% book weight ≈ 0.010 overall. Rises rapidly as Book 2 fills in and R31 is drilled.
 
 ---
 
@@ -47,11 +47,11 @@ where Book_exam_weights = {
 | Book | Weight | LOs tracked | Avg LO Readiness | Book Coverage | **Book Readiness** |
 |:--|:--:|:--:|:--:|:--:|:--:|
 | Book 1 — Market Risk | 20% | 0 | — | 0% | **0.00** |
-| Book 2 — Credit Risk | 20% | 15 (of ~140) | 0.54 | 10.7% | **0.058** |
+| Book 2 — Credit Risk | 20% | 15 (of ~140) | 0.45 | 10.7% | **0.048** |
 | Book 3 — Operational Risk | 20% | 0 | — | 0% | **0.00** |
 | Book 4 — Liquidity Risk | 15% | 0 | — | 0% | **0.00** |
 | Book 5 — Investment Risk + Current Issues | 25% | 0 | — | 0% | **0.00** |
-| **TOTAL WEIGHTED** | **100%** | | | | **0.012** (1.2%) |
+| **TOTAL WEIGHTED** | **100%** | | | | **0.010** (1.0%) |
 
 ---
 

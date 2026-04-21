@@ -4,7 +4,7 @@
 
 *Source Material: FRM 2026 Part II Book 2 · Hull, Chapter 25*
 *Learning Objectives Covered: 30.a, 30.b, 30.c, 30.d, 30.e, 30.f, 30.g*
-*Related Readings: [R27 — Estimating Default Probabilities](R27_Estimating_Default_Probabilities.md), [R29 — Portfolio Credit Risk](R29_Portfolio_Credit_Risk.md), [R31 — Credit Derivatives](R31_Credit_Derivatives.md), [R38 — Credit Value Adjustment (CVA)](R38_CVA.md)*
+*Related Readings: R27 — Estimating Default Probabilities (pending — link to be added when converted via `/new-reading`), R29 — Portfolio Credit Risk (pending), [R31 — Credit Derivatives](R31_Credit_Derivatives.md), R38 — Credit Value Adjustment (CVA) (pending)*
 
 ## 1. Foundational Propositions (Tagged)
 
