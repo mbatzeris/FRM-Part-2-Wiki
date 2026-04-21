@@ -11,9 +11,11 @@ Use this workflow every time you run a drill session. The format escalates autom
 ## Pre-Session Setup
 
 ### Step 1 — Check `_EVENT_LOG.md` for incomplete sessions
-Open `wiki/_EVENT_LOG.md` and read the last row.
-- If Status = `⚠️ In Progress`: tell the user — *"Incomplete session found: [Subject] from [Date]. Resume or start fresh?"* Wait for response before proceeding.
-- If Status = `✅ Complete` or log is empty: proceed normally.
+Open `wiki/_EVENT_LOG.md` and **scan ALL rows** (not just the last) for any row with Status = `⚠️ In Progress`.
+- If one or more incomplete rows found: tell the user — *"Incomplete session(s) found: [list Subject + Date for each]. Resume, close out as abandoned, or start fresh?"* Wait for response before proceeding.
+- If no incomplete rows: proceed normally.
+
+> **Why scan all rows:** An abandoned DRILL can be pushed off the last-row position by a later READING or SYSTEM event. Only a full scan guarantees detection.
 
 ### Step 2 — Read the LO tracker
 Open `wiki/_LO_TRACKER.md`. Identify:
@@ -33,9 +35,9 @@ Append a new row to `wiki/_EVENT_LOG.md` **before asking the first question**:
 ```
 | {next #} | {YYYY-MM-DD} | DRILL | Session {N} · R{X} · Phase {P} | LOs: {list} — in progress | ⚠️ In Progress |
 ```
-Then open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
+Then open with: *"Session {N} · R{X} · Phase {1/2/3} · Target LOs: {list}"*
 
-Session number = last `DRILL` event # in the log + 1 (count only DRILL rows).
+**Session numbering rule:** `{N}` = count of all prior `DRILL` event rows + 1 (numeric, e.g., `Session 11`, `Session 12`). The letter convention (Session A–J) is retired; historical sessions keep their letters in the error log but new sessions use numeric IDs. `{next #}` is the event log row number (e.g., `015`).
 
 ---
 
@@ -111,6 +113,7 @@ For each drilled LO, update **in this exact order**:
 
 **5a — Update Confidence first** (before recalculating Readiness):
 - Re-rate Conf (0–5) based on how the session felt. Do this BEFORE computing Readiness — the formula uses Conf as an input; using a stale pre-session value produces a wrong result.
+- Clamp: if user says a value outside [0, 5], cap to range (e.g., 6 → 5; -1 → 0) and flag it verbally.
 
 **5b — Then update the remaining fields:**
 - Q C/A (add session results)
@@ -127,12 +130,14 @@ For each drilled LO, update **in this exact order**:
   - 🔴 High — last session accuracy < 60%, OR new LO with 0 questions
   - 🟡 Medium — 60–79%, OR first session ≥ 80%
   - 🟢 Low — second consecutive session ≥ 80%
+  - ⭐ Graduated — **third consecutive session ≥ 80%**, promote from Low. Review only quarterly (no further drill scheduling).
 - Last Rev (today's date)
 
 After updating individual LO rows, also update the **Aggregate Snapshot** at the top of `_LO_TRACKER.md`:
 - Increment LOs tracked (if new LOs added)
-- Recount 🔴 High / 🟡 Medium / 🟢 Low by Priority column
+- Recount 🔴 High / 🟡 Medium / 🟢 Low / ⭐ Graduated by Priority column
 - Recompute Avg LO Readiness = sum of all Readiness values / total LOs
+- **Validation (self-check):** confirm `High + Medium + Low + Graduated == LOs tracked`. If not equal, one of the Priority cells is miscategorised — scan the table for typos/missing emoji before committing.
 
 ### Step 6 — Update `_ERROR_ARCHETYPES.md`
 For each error made:

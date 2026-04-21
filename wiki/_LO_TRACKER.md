@@ -30,8 +30,9 @@ Clamp result: Readiness = min(1.00, max(0.00, calculated value))
 | < 60% | 🔴 **High** | Immediate attention needed. Drill again within 1-3 days. |
 | 60% – 79% | 🟡 **Medium** | Good grasp, but needs reinforcement. Drill again within 1 week. |
 | ≥ 80% (1st time) | 🟡 **Medium** | Strong performance. Spaced repetition kicks in. Drill in ~2 weeks. |
-| ≥ 80% (2nd time) | 🟢 **Low** | Very strong. Promote to long-term review cycle. Drill in ~1 month. |
-| Graduated (⭐) | 🟢 **Low** | Mastered. Review quarterly to prevent decay. |
+| ≥ 80% (2nd consecutive) | 🟢 **Low** | Very strong. Promote to long-term review cycle. Drill in ~1 month. |
+| ≥ 80% (3rd consecutive) | ⭐ **Graduated** | Mastered. Review quarterly only; no further drill scheduling. |
+| Any drop < 60% | 🔴 **High** (reset) | Any regression resets to High regardless of prior status (including Graduated). |
 
 ---
 
