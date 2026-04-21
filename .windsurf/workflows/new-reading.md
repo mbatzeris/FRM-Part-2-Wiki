@@ -92,6 +92,29 @@ Before committing, verify all 16 items:
 15. Footer contains `**Cross-Domain Linkage:** [Boundary Events](../_boundary_events.md)`.
 16. No LaTeX rendering errors — all formulas in Unicode or plain text.
 
+## Step 8b — Update `_boundary_events.md`
+
+After the §9 checklist passes, scan the completed Schema B file for cross-domain linkages:
+
+1. Read **§3 Tensions** — every tension bullet names two canonical tags and a real-world tradeoff. If it references a concept from another reading, it's a boundary link.
+2. Read **§5 Ambiguity Traps** — any "A ≠ B" clarifier that involves a concept from a different reading is a boundary link.
+3. For each boundary link found, open `wiki/_boundary_events.md` and:
+   - **If the concept row already exists:** add R{N} to the Readings column.
+   - **If it's new:** append a row to the Cross-Domain Links table:
+     ```
+     | {Concept} | R{N}[, R{prev}] | [{Tag1}] vs [{Tag2}]: {one-sentence tension} |
+     ```
+4. Check **§Boundary Scenarios** — if the reading introduces a cross-domain event chain (e.g., credit event → collateral collapse → liquidity drain), add a row to that section.
+
+**Mandatory linkage checks per reading:**
+- Does the reading reuse a formula or model from a prior reading? → Link them.
+- Does the reading take a different REG or ECO position on a shared concept? → Link them with the tension.
+- Does the reading contain a scenario where two risk types interact (Market + Credit, Credit + Liquidity, Ops + Liquidity)? → Add to Boundary Scenarios.
+
+After updating, add `wiki/_boundary_events.md` to the git staging in Step 10.
+
+---
+
 ## Step 9 — Append LOs to `_LO_TRACKER.md`
 
 For each LO covered in the new reading, append a row to the appropriate Book section of `@c:\Users\user\Documents\FRM 2\wiki\_LO_TRACKER.md`.
@@ -114,8 +137,8 @@ After appending: update the aggregate snapshot at the top of `_LO_TRACKER.md` (L
 ## Step 10 — Commit
 
 ```powershell
-git add "wiki/Book N - {Name}/R{N}_{short_title}.md" "wiki/_LO_TRACKER.md"
-git commit -m "R{N}: initial Schema B conversion from Schweser Book N; LOs added to tracker"
+git add "wiki/Book N - {Name}/R{N}_{short_title}.md" "wiki/_LO_TRACKER.md" "wiki/_boundary_events.md"
+git commit -m "R{N}: initial Schema B conversion from Schweser Book N; LOs added to tracker; boundary events updated"
 ```
 
 ---
