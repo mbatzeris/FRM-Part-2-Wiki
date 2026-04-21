@@ -38,6 +38,8 @@ Always open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
 
 **Discipline rule:** Maximum ONE Phase 1 session per LO cluster. If the user gets the core mechanic correct twice in Phase 1, advance to Phase 2 within the same session — do not wait for the next session.
 
+> **Priority vs Phase:** Priority (🔴/🟡/🟢 in `_LO_TRACKER.md`) determines **when** to drill next — set by last-session accuracy. Phase (1/2/3) determines **how** to drill — set by current Readiness score. A 🔴 High priority LO with Readiness 0.55 correctly triggers Phase 2, not Phase 1.
+
 ---
 
 ## Phase 1 — Foundation
@@ -96,10 +98,24 @@ Always open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
 ### Step 4 — Update `_LO_TRACKER.md`
 For each drilled LO, update:
 - Q C/A (add session results)
-- Acc (recalculate)
-- Readiness (recalculate using formula: 0.60 × Acc + 0.30 × (Conf/5) + 0.10)
-- Priority (re-evaluate: 🔴 < 0.55, 🟡 0.55–0.74, 🟢 ≥ 0.75)
+- Acc (recalculate cumulative)
+- Readiness (recalculate using full formula):
+  ```
+  Readiness = 0.60 × Acc + 0.30 × (Conf/5) + 0.10 × recency_factor
+  where recency_factor = max(0, 1 − days_since_review / 30)
+  Note: immediately post-session recency_factor = 1.0, so formula simplifies to:
+  Readiness = 0.60 × Acc + 0.30 × (Conf/5) + 0.10
+  ```
+- Priority (re-evaluate using accuracy-based Leitner thresholds):
+  - 🔴 High — last session accuracy < 60%, OR new LO with 0 questions
+  - 🟡 Medium — 60–79%, OR first session ≥ 80%
+  - 🟢 Low — second consecutive session ≥ 80%
 - Last Rev (today's date)
+
+After updating individual LO rows, also update the **Aggregate Snapshot** at the top of `_LO_TRACKER.md`:
+- Increment LOs tracked (if new LOs added)
+- Recount 🔴 High / 🟡 Medium / 🟢 Low by Priority column
+- Recompute Avg LO Readiness = sum of all Readiness values / total LOs
 
 ### Step 5 — Update `_ERROR_ARCHETYPES.md`
 For each error made:

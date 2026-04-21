@@ -92,7 +92,7 @@ Before committing, verify all 16 items:
 15. Footer contains `**Cross-Domain Linkage:** [Boundary Events](../_boundary_events.md)`.
 16. No LaTeX rendering errors — all formulas in Unicode or plain text.
 
-## Step 8b — Update `_boundary_events.md`
+## Step 9 — Update `_boundary_events.md`
 
 After the §9 checklist passes, scan the completed Schema B file for cross-domain linkages:
 
@@ -111,11 +111,11 @@ After the §9 checklist passes, scan the completed Schema B file for cross-domai
 - Does the reading take a different REG or ECO position on a shared concept? → Link them with the tension.
 - Does the reading contain a scenario where two risk types interact (Market + Credit, Credit + Liquidity, Ops + Liquidity)? → Add to Boundary Scenarios.
 
-After updating, add `wiki/_boundary_events.md` to the git staging in Step 10.
+After updating, add `wiki/_boundary_events.md` to the git staging in Step 11.
 
 ---
 
-## Step 9 — Append LOs to `_LO_TRACKER.md`
+## Step 10 — Append LOs to `_LO_TRACKER.md`
 
 For each LO covered in the new reading, append a row to the appropriate Book section of `@c:\Users\user\Documents\FRM 2\wiki\_LO_TRACKER.md`.
 
@@ -133,7 +133,7 @@ Defaults for new LOs:
 
 After appending: update the aggregate snapshot at the top of `_LO_TRACKER.md` (LOs tracked count).
 
-## Step 10 — Commit
+## Step 11 — Commit
 
 ```powershell
 git add "wiki/Book N - {Name}/R{N}_{short_title}.md" "wiki/_LO_TRACKER.md" "wiki/_boundary_events.md"

@@ -20,12 +20,6 @@ LO_Readiness = 0.60 × (accuracy on last 5 questions)
 where recency_factor = max(0, 1 − days_since_review / 30)
 ```
 
-**Status legend:**
-- 🔴 **Red** — Readiness < 0.50 · drill this week
-- 🟡 **Amber** — 0.50 ≤ Readiness < 0.75 · active rotation
-- 🟢 **Green** — Readiness ≥ 0.75 · monthly review only
-- ⭐ **Graduated** — 2 consecutive ≥ 80% reviews at Green · quarterly touch
-
 ## Priority Engine (Leitner Logic)
 
 | Last Session Accuracy | New Priority | Description |
@@ -43,14 +37,14 @@ where recency_factor = max(0, 1 − days_since_review / 30)
 | Metric | Value |
 |:--|:--:|
 | LOs tracked | 15 |
-| 🔴 Red (Readiness < 0.50) | 8 |
-| 🟡 Amber (0.50 – 0.74) | 6 |
-| 🟢 Green (≥ 0.75) | 1 |
+| 🔴 High priority | 10 |
+| 🟡 Medium priority | 4 |
+| 🟢 Low priority | 1 |
 | ⭐ Graduated | 0 |
-| **Overall readiness** | **~0.54** (R30 avg 0.65; R31 baseline 0.45) |
+| **Avg LO Readiness** | **~0.54** (R30 avg 0.65; R31 baseline 0.45) |
 | Target (week 28) | **≥ 0.75** |
 
-*Auto-recompute after each weekly log entry.*
+*Updated after every drill session (Step 4 of `/drill` close-out). Avg LO Readiness ≠ Exam Readiness — see `_READINESS_DASHBOARD.md` for the weighted exam score (currently 1.2%).*
 
 ---
 

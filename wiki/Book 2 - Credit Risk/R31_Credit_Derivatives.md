@@ -4,7 +4,7 @@
 
 *Source Material: FRM 2026 Part II Book 2 · Schweser Study Session 5*
 *Learning Objectives Covered: 31.a, 31.b, 31.c, 31.d, 31.e, 31.f, 31.g, 31.h*
-*Related Readings: [R30 — Credit Risk Models](R30_Credit_Risk.md), [R32 — Spread Risk and Credit Migrations](R32_Spread_Risk.md)*
+*Related Readings: [R30 — Credit Risk Models](R30_Credit_Risk.md), R32 — Spread Risk and Credit Migrations (pending — link to be added when converted via `/new-reading`)*
 
 ---
 

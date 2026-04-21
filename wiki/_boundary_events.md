@@ -11,7 +11,7 @@
 | Risk-neutral vs real-world PD | R30, R31 | [THE] vs [REG]: Q-measure PD used in CDS/CVA pricing; P-measure PD used for regulatory capital and stress testing |
 | CVA / DVA accounting | R30, R38 | [REG] vs [ECO]: Basel disallows DVA benefit in regulatory capital; accounting standards (IFRS 13) permit it |
 | Netting & close-out | R30, R31 | [OPS] vs [REG]: legal enforceability of netting varies by jurisdiction; close-out netting under ISDA Master Agreement reduces gross exposure |
-| Default correlation models | R30, R29 | [THE]: reduced-form hazard rate models (tractable, low correlation) vs structural asset-value models (flexible, computationally slow) |
+| Default correlation models | R30, R29 *(Schema B pending)* | [THE]: reduced-form hazard rate models (tractable, low correlation) vs structural asset-value models (flexible, computationally slow) |
 | Gaussian copula for correlated defaults | R30, R31 | [THE]: R30 uses copula for Credit VaR portfolio; R31 applies the same one-factor Gaussian copula to synthetic CDO tranche pricing — same model, different output |
 | CDS spread and hazard rate | R31, R38 | [THE] vs [OPS]: R31 derives CDS spread from hazard rate under constant λ assumption; R38 extends to CVA incorporating CDS-implied PD as the market-standard input |
 | CDO tranche correlation | R31 | [THE]: compound correlation produces smile (inconsistent); base correlation produces skew (consistent, market standard) — both implied from market tranche prices |
