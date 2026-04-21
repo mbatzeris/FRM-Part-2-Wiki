@@ -63,12 +63,20 @@ where recency_factor = max(0, 1 − days_since_review / 30)
 | LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Priority |
 |:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | 30.a | R30 | ISDA event of default & unsecured creditor situations (P3) | 2026-04-18 | 2026-04-20 | 3 | 2/3 | 67% | 0.68 | � Medium |
-| 30.b | R30 | CVA & DVA; wrong-way / right-way risk (P4) | 2026-04-18 | 2026-04-20 | 2 | 3/6 | 50% | 0.52 | 🔴 High |
+| 30.b | R30 | CVA & DVA; wrong-way / right-way risk (P4) | 2026-04-18 | 2026-04-21 | 2 | 5/8 | 63% | 0.60 | � Medium |
 | 30.c | R30 | PD from credit spreads; risk-neutral vs real-world PD (P1, P2) | 2026-04-18 | 2026-04-20 | 4 | 2/2 | 100% | 0.94 | � Low |
-| 30.d | R30 | Credit risk mitigants: netting, collateral, downgrade triggers (P5) | 2026-04-18 | 2026-04-20 | 3 | 4/8 | 50% | 0.58 | 🔴 High |
+| 30.d | R30 | Credit risk mitigants: netting, collateral, downgrade triggers (P5) | 2026-04-18 | 2026-04-21 | 3 | 6/12 | 50% | 0.58 | 🔴 High |
 | 30.e | R30 | Default correlation: reduced-form vs structural models (P6) | 2026-04-18 | 2026-04-20 | 2 | 2/3 | 67% | 0.62 | � Medium |
 | 30.f | R30 | Gaussian copula for time-to-default; one-factor model (P7) | 2026-04-18 | 2026-04-20 | 2 | 2/3 | 67% | 0.62 | � Medium |
-| 30.g | R30 | Credit VaR via Gaussian copula; CreditMetrics (P8) | 2026-04-18 | 2026-04-20 | 3 | 3/16 | 19% | 0.39 | 🔴 High |
+| 30.g | R30 | Credit VaR via Gaussian copula; CreditMetrics (P8) | 2026-04-18 | 2026-04-21 | 3 | 8/21 | 38% | 0.51 | 🔴 High |
+| 31.a | R31 | CDS structure, TRS, CDO; CDS-bond basis; CTD bond (P1, P2) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.b | R31 | CDS valuation: hazard rate, PS/PD, spread calculation (P3) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.c | R31 | Risk-neutral vs real-world PD; RR impact on implied PD (P4) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.d | R31 | Credit indices (CDX/iTraxx), fixed coupons, up-front payments (P5) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.e | R31 | CDS forwards and CDS options (P6) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.f | R31 | Synthetic CDO valuation: spread payments & Gaussian copula (P7) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.g | R31 | Compound (tranche) vs base correlation; smile vs skew (P8) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.h | R31 | Alternative approaches to default correlation estimation (P9) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
 
 ### Book 1 — Market Risk (20% exam weight)
 
