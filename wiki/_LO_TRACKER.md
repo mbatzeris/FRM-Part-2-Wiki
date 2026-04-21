@@ -42,12 +42,12 @@ where recency_factor = max(0, 1 − days_since_review / 30)
 
 | Metric | Value |
 |:--|:--:|
-| LOs tracked | 7 |
-| 🔴 Red | 0 |
-| 🟡 Amber | 7 |
-| 🟢 Green | 0 |
+| LOs tracked | 15 |
+| 🔴 Red (Readiness < 0.50) | 8 |
+| 🟡 Amber (0.50 – 0.74) | 6 |
+| 🟢 Green (≥ 0.75) | 1 |
 | ⭐ Graduated | 0 |
-| **Overall readiness** | **~0.45** (baseline, pre-calibration) |
+| **Overall readiness** | **~0.54** (R30 avg 0.65; R31 baseline 0.45) |
 | Target (week 28) | **≥ 0.75** |
 
 *Auto-recompute after each weekly log entry.*
@@ -69,49 +69,49 @@ where recency_factor = max(0, 1 − days_since_review / 30)
 | 30.e | R30 | Default correlation: reduced-form vs structural models (P6) | 2026-04-18 | 2026-04-20 | 2 | 2/3 | 67% | 0.62 | � Medium |
 | 30.f | R30 | Gaussian copula for time-to-default; one-factor model (P7) | 2026-04-18 | 2026-04-20 | 2 | 2/3 | 67% | 0.62 | � Medium |
 | 30.g | R30 | Credit VaR via Gaussian copula; CreditMetrics (P8) | 2026-04-18 | 2026-04-21 | 3 | 8/21 | 38% | 0.51 | 🔴 High |
-| 31.a | R31 | CDS structure, TRS, CDO; CDS-bond basis; CTD bond (P1, P2) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
-| 31.b | R31 | CDS valuation: hazard rate, PS/PD, spread calculation (P3) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
-| 31.c | R31 | Risk-neutral vs real-world PD; RR impact on implied PD (P4) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
-| 31.d | R31 | Credit indices (CDX/iTraxx), fixed coupons, up-front payments (P5) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
-| 31.e | R31 | CDS forwards and CDS options (P6) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
-| 31.f | R31 | Synthetic CDO valuation: spread payments & Gaussian copula (P7) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
-| 31.g | R31 | Compound (tranche) vs base correlation; smile vs skew (P8) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
-| 31.h | R31 | Alternative approaches to default correlation estimation (P9) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | 🟡 Medium |
+| 31.a | R31 | CDS structure, TRS, CDO; CDS-bond basis; CTD bond (P1, P2) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
+| 31.b | R31 | CDS valuation: hazard rate, PS/PD, spread calculation (P3) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
+| 31.c | R31 | Risk-neutral vs real-world PD; RR impact on implied PD (P4) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
+| 31.d | R31 | Credit indices (CDX/iTraxx), fixed coupons, up-front payments (P5) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
+| 31.e | R31 | CDS forwards and CDS options (P6) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
+| 31.f | R31 | Synthetic CDO valuation: spread payments & Gaussian copula (P7) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
+| 31.g | R31 | Compound (tranche) vs base correlation; smile vs skew (P8) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
+| 31.h | R31 | Alternative approaches to default correlation estimation (P9) | 2026-04-21 | 2026-04-21 | 3 | 0/0 | — | 0.45 | � High |
 
 ### Book 1 — Market Risk (20% exam weight)
 
-| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Next Rev | Status |
-|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| _To be populated as Book 1 readings are re-converted via /new-reading_ | | | | | | | | | | |
+| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Priority |
+|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| _To be populated as Book 1 readings are re-converted via /new-reading_ | | | | | | | | | |
 
 ### Book 3 — Operational Risk (20% exam weight)
 
-| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Next Rev | Status |
-|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| _Pending_ | | | | | | | | | | |
+| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Priority |
+|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| _Pending_ | | | | | | | | | |
 
 ### Book 4 — Liquidity Risk (15% exam weight)
 
-| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Next Rev | Status |
-|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| _Pending_ | | | | | | | | | | |
+| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Priority |
+|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| _Pending_ | | | | | | | | | |
 
 ### Book 5 — Investment Risk + Current Issues (25% exam weight)
 
-| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Next Rev | Status |
-|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| _Pending_ | | | | | | | | | | |
+| LO | Reading | Topic | First | Last Rev | Conf | Q C/A | Acc | Readiness | Priority |
+|:--|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| _Pending_ | | | | | | | | | |
 
 ---
 
 
 ## Process Per Drill Session (the "guaranteed-success" loop)
 
-1. **Pick top 3 LOs** by urgency from `Next Rev` column.
+1. **Pick top 3 LOs** by urgency: sort by Priority (🔴 High first), then by Readiness (lowest first within same Priority).
 2. **Read the proposition** in the linked Schema B file (5 min each).
 3. **Answer 3 questions** (AnalystPrep filtered to that LO, or Schweser Module Quiz).
 4. **For each wrong answer:** log the archetype in `_ERROR_ARCHETYPES.md`.
-5. **Update this file's row** for the LO: `Last Reviewed = today`, `Confidence`, `Q C/A`, `Accuracy`, new `Readiness`, new `Next Rev` per Leitner.
+5. **Update this file's row** for the LO: `Last Reviewed = today`, `Confidence`, `Q C/A`, `Accuracy`, new `Readiness`, new `Priority` per Leitner.
 6. **Add to _ANKI-style self-quiz** in §5 of the Schema B file if a new trap is discovered.
 7. **Close session** — 5 min passive: NotebookLM audio on today's LOs for tomorrow's commute.
 

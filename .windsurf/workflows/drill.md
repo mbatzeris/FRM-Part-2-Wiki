@@ -33,8 +33,8 @@ Always open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
 | Phase | Trigger | Core Goal |
 |:---|:---|:---|
 | **Phase 1 — Foundation** | First drill on LO **OR** Readiness < 0.50 | Verify mechanical competence |
-| **Phase 2 — Consolidation** | Readiness 0.50–0.70 | Introduce exam-format friction |
-| **Phase 3 — Exam Simulation** | Readiness > 0.70 | Full Antigravity exam replication |
+| **Phase 2 — Consolidation** | 0.50 ≤ Readiness < 0.70 | Introduce exam-format friction |
+| **Phase 3 — Exam Simulation** | Readiness ≥ 0.70 | Full Antigravity exam replication |
 
 **Discipline rule:** Maximum ONE Phase 1 session per LO cluster. If the user gets the core mechanic correct twice in Phase 1, advance to Phase 2 within the same session — do not wait for the next session.
 
@@ -59,7 +59,7 @@ Always open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
 
 ## Phase 2 — Consolidation
 
-**Conditions:** Readiness 0.50–0.70.
+**Conditions:** 0.50 ≤ Readiness < 0.70.
 
 **Question mix (5 questions):**
 - Q1: Warm-up calculation (confidence anchor — clean, Phase 1 style)
@@ -75,7 +75,7 @@ Always open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
 
 ## Phase 3 — Exam Simulation
 
-**Conditions:** Readiness > 0.70.
+**Conditions:** Readiness ≥ 0.70.
 
 **Question mix (5 questions):**
 - Q1: Noisy vignette — 3–5 sentence narrative with ≥2 irrelevant data points; single focused question. Label which data was noise in the feedback.

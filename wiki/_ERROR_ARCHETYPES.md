@@ -14,7 +14,7 @@
 | Code | Archetype | Description | Count | Last Seen | Highest Risk Books |
 |:--:|:--|:--|:--:|:--:|:--|
 | **A1** | **Sign Flip** | Got the magnitude right but direction wrong (e.g., CVA decreases instead of increases when correlation rises) | 9 | 2026-04-20 | 2 (Credit), 4 (Liquidity) |
-| **A2** | **Swapped Definitions** | Confused paired concepts (CVA↔DVA, WWR↔RWR, netting↔close-out, Q↔P probability, PD↔WCDR) | 7 | 2026-04-20 | 2 |
+| **A2** | **Swapped Definitions** | Confused paired concepts (CVA↔DVA, WWR↔RWR, netting↔close-out, Q↔P probability, PD↔WCDR) | 8 | 2026-04-21 | 2 |
 | **A3** | **Formula Component Drop** | Forgot a multiplier (e.g., dropped (1-RR) in Credit VaR, ignored recovery rate in hazard) | 3 | 2026-04-20 | All |
 | **A4** | **Wrong Regulator / Framework** | Attributed a rule to the wrong body (e.g., OCC vs BCBS, ISDA vs SFTR) | 0 | — | 3 (OpRisk), 4 |
 | **A5** | **Q vs P confusion** | Used real-world PD for pricing, or risk-neutral for stress losses | 0 | — | 2 |
@@ -22,8 +22,8 @@
 | **A7** | **Basel Threshold Miss** | Wrong trigger number (e.g., 2.5% buffer vs 2% countercyclical; 4.5% vs 6% CET1) | 0 | — | 3 |
 | **A8** | **Model Choice Mismatch** | Picked wrong model for task (reduced-form for high correlation, historical sim for fat tails) | 0 | — | 1, 2, 5 |
 | **A9** | **Time-Horizon Error** | Confused 10-day vs 1-year VaR, or conditional vs unconditional default over N years | 0 | — | 1, 2 |
-| **A10** | **Distractor Plausibility Trap** | Picked a "textbook-sounding" wrong answer over the correct one because it recited canonical language | 0 | — | All |
-| **A11** | **Vignette Constraint Miss** | Ignored a specific constraint in the question stem (e.g., "assume zero recovery", exposure floor at zero) | 1 | 2026-04-20 | All |
+| **A10** | **Distractor Plausibility Trap** | Picked a "textbook-sounding" wrong answer over the correct one because it recited canonical language | 1 | 2026-04-19 | All |
+| **A11** | **Vignette Constraint Miss** | Ignored a specific constraint in the question stem (e.g., "assume zero recovery", exposure floor at zero, CSA threshold) | 2 | 2026-04-21 | All |
 | **A12** | **Stale Regulation Trap** | Picked the pre-Basel-III answer when Basel III/IV applies, or vice versa | 0 | — | 3 |
 
 ---
@@ -63,6 +63,22 @@ Format: date · question source · LO · your-answer → correct-answer · **arc
 - **Correct:** Right-Way Risk
 - **Archetype:** A2 · Swapped Definitions
 - **Lesson:** Right-way risk is "good" (high exposure aligns with low PD) and reduces CVA.
+
+### 2026-04-21 · Drill Session J, Q5
+- **LO:** 30.d
+- **Question summary:** CSA threshold=$10M, MTA=$1M, net MtM=$13M. Collateral posted and residual uncollateralised exposure?
+- **You answered:** Collateral $3M ✓, uncollateralised $2M ✗.
+- **Correct:** Collateral $3M; uncollateralised = threshold = $10M.
+- **Archetype:** A11 · Vignette Constraint Miss
+- **Lesson:** Residual uncollateralised exposure always equals the threshold (the band of exposure never covered by collateral). Formula: uncollateralised = min(exposure, threshold).
+
+### 2026-04-21 · Drill Session I, Q2
+- **LO:** 30.d
+- **Question summary:** Bank claims in bankruptcy under netting: gross positive MtM ($55M) or net ($37M)?
+- **You answered:** $55M (sum of positive trades only).
+- **Correct:** $37M — under netting, bank files one net claim, not the sum of winning trades.
+- **Archetype:** A2 · Swapped Definitions (gross vs net claim)
+- **Lesson:** Netting means ONE claim = net MtM. The administrator cannot cherry-pick trades. No netting = $55M claim; with netting = $37M claim.
 
 ### 2026-04-20 · Drill Session H, Q2
 - **LO:** 30.g
