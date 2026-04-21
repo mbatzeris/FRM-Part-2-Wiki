@@ -1,6 +1,6 @@
 # Weekly Log
 
-**Purpose:** A 10-minute Sunday check-in that drives next week's priorities. Open every Sunday evening (after son bedtime). Fill in the week that just ended, then write next week's plan. Git-commit at the end.
+**Purpose:** A 10-minute Sunday check-in that drives next week's priorities. Open every Sunday evening (after son bedtime). Fill in the week that just ended, then write next week's plan. Git-commit at the end with `[REVIEW] Week N log`.
 
 **Exam:** Saturday 21 November 2026 · **Target readiness:** ≥ 0.75 by Week 28 (week of 2 Nov)
 

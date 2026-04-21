@@ -106,7 +106,7 @@ Session number = last `DRILL` event # in the log + 1 (count only DRILL rows).
 
 ## Post-Session Close-Out
 
-### Step 4 — Update `_LO_TRACKER.md`
+### Step 5 — Update `_LO_TRACKER.md`
 For each drilled LO, update:
 - Q C/A (add session results)
 - Acc (recalculate cumulative)
@@ -128,12 +128,12 @@ After updating individual LO rows, also update the **Aggregate Snapshot** at the
 - Recount 🔴 High / 🟡 Medium / 🟢 Low by Priority column
 - Recompute Avg LO Readiness = sum of all Readiness values / total LOs
 
-### Step 5 — Update `_ERROR_ARCHETYPES.md`
+### Step 6 — Update `_ERROR_ARCHETYPES.md`
 For each error made:
 - Increment the archetype count in the summary table
 - Add an instance log entry: date · LO · question summary · user answer → correct answer · archetype · lesson
 
-### Step 6 — Update event log, commit and push
+### Step 7 — Update event log, commit and push
 Update the open session row in `wiki/_EVENT_LOG.md`:
 - Change Status from `⚠️ In Progress` → `✅ Complete`
 - Update Detail to include final error count: `LOs: {list} · {n} errors ({archetypes})`

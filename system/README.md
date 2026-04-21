@@ -59,13 +59,14 @@ These are the active slash-command workflows that implement the above system in 
 
 | Workflow | Command | Purpose |
 |:--|:--|:--|
-| **new-reading.md** | `/new-reading` | Convert a Schweser chapter into a Schema B `.md` file; includes Step 8b to update `wiki/_boundary_events.md` |
+| **new-reading.md** | `/new-reading` | Convert a Schweser chapter into a Schema B `.md` file; includes Step 9 to update `wiki/_boundary_events.md` |
 | **drill.md** | `/drill` | Run a drill session using the 3-phase graduated difficulty framework (Phase 1 Foundation → Phase 2 Consolidation → Phase 3 Exam Simulation) |
 
 ## Supporting Wiki Files
 
 | File | Purpose |
 |:--|:--|
-| `wiki/_boundary_events.md` | Cross-domain linkage index: maps concepts shared across readings and logs multi-risk boundary event chains (updated by Step 8b of `/new-reading`) |
+| `wiki/_boundary_events.md` | Cross-domain linkage index: maps concepts shared across readings and logs multi-risk boundary event chains (updated by Step 9 of `/new-reading`) |
 | `wiki/_ERROR_ARCHETYPES.md` | Personal distractor decoder: logs every error by archetype (A1–A12) with instance-level entries and lessons |
+| `wiki/_EVENT_LOG.md` | Append-only event log: records all READING, DRILL, SYSTEM, and REVIEW events with resume-detection for incomplete sessions |
 | `wiki/_LO_TRACKER.md` | Master readiness tracker: drives phase selection in `/drill` and priority in weekly planning |

@@ -13,7 +13,7 @@
 ## Readiness Formula
 
 ```
-LO_Readiness = 0.60 × (accuracy on last 5 questions)
+LO_Readiness = 0.60 × (cumulative accuracy)
              + 0.30 × (self-confidence / 5)
              + 0.10 × (recency factor)
 
@@ -103,7 +103,7 @@ where recency_factor = max(0, 1 − days_since_review / 30)
 
 1. **Pick top 3 LOs** by urgency: sort by Priority (🔴 High first), then by Readiness (lowest first within same Priority).
 2. **Read the proposition** in the linked Schema B file (5 min each).
-3. **Answer 3 questions** (AnalystPrep filtered to that LO, or Schweser Module Quiz).
+3. **Answer 5 questions** via `/drill` (phase-appropriate format; see drill.md).
 4. **For each wrong answer:** log the archetype in `_ERROR_ARCHETYPES.md`.
 5. **Update this file's row** for the LO: `Last Reviewed = today`, `Confidence`, `Q C/A`, `Accuracy`, new `Readiness`, new `Priority` per Leitner.
 6. **Add to _ANKI-style self-quiz** in §5 of the Schema B file if a new trap is discovered.

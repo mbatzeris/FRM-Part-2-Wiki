@@ -227,7 +227,8 @@ Format: date · question source · LO · your-answer → correct-answer · **arc
 
 | Week | Top Archetype | Count | Action Taken |
 |:--:|:--|:--:|:--|
-| 1 | — | — | Baseline week; no drill yet |
+| 1 (14–20 Apr) | A1 · Sign Flip | 9 | Lesson added to R30 §5; formula mnemonic drilled in Sessions G, H |
+| 2 (21–27 Apr) | — | — | First R31 drill session pending |
 
 ---
 

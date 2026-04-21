@@ -27,3 +27,5 @@ Append-only. One row per major system event. **Never edit existing rows — only
 ---
 
 *Next session appends row #015. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
+
+> **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #015 onward are fully tracked.
