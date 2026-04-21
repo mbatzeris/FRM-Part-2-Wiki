@@ -36,11 +36,11 @@ This directory contains the **AI Engine** of the FRM Wiki. It houses the 4 core 
 ## 4. `03_ANTIGRAVITY_WORKFLOW.md`
 **Role:** The Operational Pipeline
 **Purpose:** This document maps out the study loop. It dictates how the system moves a candidate from passive reading to active combat.
-**Key Mechanisms — the 4-Step Elite Tutor Loop:**
-- **Step 1 (NotebookLM Primer, 15 min):** Load the chapter PDF into NotebookLM for audio overview and baseline definitions before combat.
-- **Step 2 (Boole Extraction via Antigravity, 10 min):** Run the Boole Scaffold on the PDF; tag every concept and map Signal/Noise. Save output to `wiki/`.
-- **Step 3 (Twin-Question Combat, 20 min):** Attempt dense vignettes under REG then ECO framing; apply the Strict Output Template.
-- **Step 4 (Distractor Autopsy, as needed):** Paste any wrongly-answered GARP/Schweser question; route it through the Ambiguity Decoder to name the trap and log it in `wiki/_ERROR_ARCHETYPES.md`.
+**Key Mechanisms — the 4-Step Elite Tutor Loop** (now implemented as slash commands; see `.windsurf/workflows/`):
+- **Step 1 (NotebookLM Primer, 15 min):** Load the chapter PDF into NotebookLM for audio overview and baseline definitions before combat. (Manual step.)
+- **Step 2 (Boole Extraction via `/new-reading`, 10 min):** Run the `/new-reading` workflow on the chapter. Handles proposition extraction, §9 checklist, `_boundary_events.md` update, `_LO_TRACKER.md` append (Readiness = 0.28 baseline), and event-log row in one pipeline.
+- **Step 3 (Graduated Drill via `/drill`, 20 min):** Run the `/drill` workflow. Automatically selects Phase 1/2/3 by target LO Readiness; Twin-Question combat lives in Phase 2–3.
+- **Step 4 (Distractor Autopsy, as needed):** For ad-hoc GARP/Schweser practice questions outside a drill, route the question through the Ambiguity Decoder (`02_AMBIGUITY_DECODER.md`) to name the trap and log it in `wiki/_ERROR_ARCHETYPES.md` manually.
 
 ---
 

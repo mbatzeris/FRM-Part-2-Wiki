@@ -6,6 +6,8 @@
 *Learning Objectives Covered: {N}.a, {N}.b, {N}.c, ...*
 *Related Readings: [R{prev} — {prev title}](R{prev}_Xxx.md), [R{next} — {next title}](R{next}_Xxx.md)*
 
+> **Related Readings format rule:** Use a markdown link `[R{N} — {title}](R{N}_Xxx.md)` only for readings that have been converted (a Schema B `.md` file exists). For unconverted sibling readings, use plain text with a pending marker: `R{N} — {title} (pending)`. Never leave a hyperlink pointing to a non-existent file — those become dead links. Example: `[R31 — Credit Derivatives](R31_Credit_Derivatives.md), R32 — Spread Risk (pending), R38 — CVA (pending)`.
+
 ## 1. Foundational Propositions (Tagged)
 
 | # | Proposition | Tag | Exam Dominance | Trigger Phrase |

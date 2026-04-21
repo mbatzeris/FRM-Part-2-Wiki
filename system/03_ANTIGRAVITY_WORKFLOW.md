@@ -1,5 +1,11 @@
 # FRM Part 2: The Antigravity + NotebookLM Study Workflow
 
+> **⚠️ Status — conceptual design doc.** The active, executable implementation lives in:
+> - `.windsurf/workflows/new-reading.md` — `/new-reading` (converts a chapter PDF into a Schema B markdown file; includes Step 9 boundary-events update and Step 10 `_LO_TRACKER.md` append)
+> - `.windsurf/workflows/drill.md` — `/drill` (Phase 1/2/3 graduated difficulty, LO tracker updates, error archetype logging, event log integration)
+>
+> This file describes the *why* behind the workflow. The slash commands are *how* to execute it. If the two diverge, the slash-command files win — they are the enforced pipeline.
+
 To conquer the FRM Part 2, passive reading and rote memorization are insufficient. You need an active, constraint-stress-testing environment. 
 
 By combining **NotebookLM** with **Antigravity**, you create a hybrid learning engine: NotebookLM acts as your passive synthesizer and summarizer, while Antigravity acts as your active **Elite Tutor and CRO interrogator**.
@@ -23,20 +29,20 @@ Before you come to me, load your chapter PDF (e.g., Credit VaR) into NotebookLM.
 * Ask NotebookLM to extract the 5 main formulas or definitions.
 * **Goal:** You should walk away knowing *what* the concepts are.
 
-### Step 2: The "Boole Extraction" via Antigravity (10 mins)
-Upload the same PDF (or tell me where it is in your workspace) and ask me to run the **Boole Scaffold**. 
-* **Your Prompt:** *"Run the Boole extraction on the [Topic] PDF."*
-* **What I will do:** I will not summarize the chapter (NotebookLM already did that). Instead, I will tag every concept as `[REG]`, `[ECO]`, `[OPS]`, or `[THE]`, tell you what trigger phrases GARP uses, and map the Signal/Noise for that specific chapter. 
+### Step 2: The "Boole Extraction" via `/new-reading` (10 mins)
+Run the `/new-reading` slash-command workflow on the chapter. This is the enforced pipeline — it handles extraction, proposition generation, §9 compliance checklist, boundary-event linkage, LO tracker append, event log row, and git commit in one sequence.
+* **Your Prompt:** *"/new-reading R{N}"* (the workflow in `.windsurf/workflows/new-reading.md` takes it from there)
+* **What the workflow does:** Runs `pdftotext` extraction, builds propositions (one per LO minimum), tags each as `[REG]` / `[ECO]` / `[OPS]` / `[THE]`, maps Signal/Noise, verifies the 16-item §9 checklist, updates `_boundary_events.md`, appends rows to `_LO_TRACKER.md` with baseline Readiness = 0.28, and logs a `READING` row to `_EVENT_LOG.md`.
 
-### Step 3: The "Twin-Question" Combat Simulation (20 mins)
- This is where the real learning happens. You must train your brain to quickly identify which framework a vignette is operating under.
-* **Your Prompt:** *"Generate a Twin-Question Drill for this topic based on the Ambiguity Roadmap."*
-* **What I will do:** I will build a dense, noisy vignette and ask you two questions. Question 1 will require the Regulatory answer; Question 2 will require the Economic answer. You will attempt to answer them using the Strict Output Template.
+### Step 3: The Graduated Drill via `/drill` (20 mins)
+This is where the real learning happens. The `/drill` slash command automatically selects a Phase (1 Foundation, 2 Consolidation, or 3 Exam Simulation) based on the target LO's current Readiness score in `_LO_TRACKER.md`. Twin-Question combat is built into Phase 2 and Phase 3.
+* **Your Prompt:** *"/drill"* (the workflow in `.windsurf/workflows/drill.md` checks for incomplete sessions, picks target LOs by priority, and runs a 5-question session)
+* **What the workflow does:** Appends a `⚠️ In Progress` row to `_EVENT_LOG.md`, runs phase-appropriate questions, applies Distractor Autopsy labels (`[TRUE-IRRELEVANT]` / `[REG-ECO FLIP]` / `[INVERSE INTUITION]` / `[ABSOLUTE]`) on incorrect answers, updates `_LO_TRACKER.md` (Confidence first, then Readiness, then Priority per Leitner), logs errors to `_ERROR_ARCHETYPES.md`, closes out the event row, and commits.
 
-### Step 4: The Distractor Autopsy (If you get a question wrong)
-When doing practice questions from GARP or Schweser, do not just check the answer key. 
-* **Your Prompt:** *(Paste the question and your wrong answer)* *"I got this wrong. Perform a Distractor Autopsy."*
-* **What I will do:** I will run the question through the **Ambiguity Decoder**. I will tell you exactly which of the four archetypes you fell into — `[TRUE-IRRELEVANT]`, `[REG-ECO FLIP]`, `[INVERSE INTUITION]`, or `[ABSOLUTE]` — and how to identify the linguistic cue you missed in the primary text.
+### Step 4: The Distractor Autopsy (If you get a question wrong outside of `/drill`)
+For ad-hoc GARP or Schweser practice questions outside a drill session, do not just check the answer key. 
+* **Your Prompt:** *(Paste the question and your wrong answer)* *"Distractor Autopsy."*
+* **What I will do:** I will run the question through the **Ambiguity Decoder** in `02_AMBIGUITY_DECODER.md`. I will tell you exactly which of the four archetypes you fell into and how to identify the linguistic cue you missed — then manually log the archetype to `_ERROR_ARCHETYPES.md`.
 
 ---
 
