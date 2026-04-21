@@ -107,15 +107,21 @@ Session number = last `DRILL` event # in the log + 1 (count only DRILL rows).
 ## Post-Session Close-Out
 
 ### Step 5 — Update `_LO_TRACKER.md`
-For each drilled LO, update:
+For each drilled LO, update **in this exact order**:
+
+**5a — Update Confidence first** (before recalculating Readiness):
+- Re-rate Conf (0–5) based on how the session felt. Do this BEFORE computing Readiness — the formula uses Conf as an input; using a stale pre-session value produces a wrong result.
+
+**5b — Then update the remaining fields:**
 - Q C/A (add session results)
 - Acc (recalculate cumulative)
-- Readiness (recalculate using full formula):
+- Readiness (recalculate using full formula, with the freshly updated Conf):
   ```
   Readiness = 0.60 × Acc + 0.30 × (Conf/5) + 0.10 × recency_factor
   where recency_factor = max(0, 1 − days_since_review / 30)
   Note: immediately post-session recency_factor = 1.0, so formula simplifies to:
   Readiness = 0.60 × Acc + 0.30 × (Conf/5) + 0.10
+  Clamp: Readiness = min(1.00, max(0.00, calculated value))
   ```
 - Priority (re-evaluate using accuracy-based Leitner thresholds):
   - 🔴 High — last session accuracy < 60%, OR new LO with 0 questions
