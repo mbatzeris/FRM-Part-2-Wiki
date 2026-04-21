@@ -45,7 +45,7 @@ Then open with: *"Session {N} · R{X} · Phase {1/2/3} · Target LOs: {list}"*
 
 | Phase | Trigger | Core Goal |
 |:---|:---|:---|
-| **Phase 1 — Foundation** | First drill on LO **OR** Readiness < 0.50 | Verify mechanical competence |
+| **Phase 1 — Foundation** | Readiness < 0.50 | Verify mechanical competence (new LOs at 0.28 baseline qualify automatically) |
 | **Phase 2 — Consolidation** | 0.50 ≤ Readiness < 0.70 | Introduce exam-format friction |
 | **Phase 3 — Exam Simulation** | Readiness ≥ 0.70 | Full Antigravity exam replication |
 

@@ -23,9 +23,10 @@ Append-only. One row per major system event. **Never edit existing rows — only
 | 012 | 2026-04-21 | SYSTEM | Review fixes (B1–B8) | A10 count, LO tracker snapshot, Priority/column format, dashboard refresh, Phase 3 boundary | ✅ Complete |
 | 013 | 2026-04-21 | SYSTEM | Structural fixes (S1–S8) | Status legend removed · Priority unified · drill formula · step renumber · R38/R32 pending links | ✅ Complete |
 | 014 | 2026-04-21 | SYSTEM | Event log + commit format | _EVENT_LOG.md created · drill.md + new-reading.md updated · R38 boundary annotation | ✅ Complete |
+| 015 | 2026-04-21 | SYSTEM | Exhaustive review fixes (12 items) | C1–C5 + L1–L5 + L7, A3, A5 · 3 commits · R31 readiness 0.45→0.28, dashboard recomputed | ✅ Complete |
 
 ---
 
-*Next session appends row #015. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
+*Next session appends row #016. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
 
-> **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #015 onward are fully tracked.
+> **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #014 onward are fully tracked. Session numbering converts to numeric from #016 (Session 11 next).

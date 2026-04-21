@@ -23,6 +23,8 @@ Update order: re-rate Confidence FIRST, then calculate Readiness.
 Clamp result: Readiness = min(1.00, max(0.00, calculated value))
 ```
 
+**Weight rationale:** 60% accuracy (primary objective evidence of mastery) · 30% confidence (metacognitive signal — detects illusory competence / over-reliance on luck) · 10% recency (decay guard — keeps stale LOs from showing false readiness). Tune weights only if you have strong evidence that one channel is systematically biased.
+
 ## Priority Engine (Leitner Logic)
 
 | Last Session Accuracy | New Priority | Description |

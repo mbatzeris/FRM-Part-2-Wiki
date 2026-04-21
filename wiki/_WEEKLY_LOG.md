@@ -2,6 +2,13 @@
 
 **Purpose:** A 10-minute Sunday check-in that drives next week's priorities. Open every Sunday evening (after son bedtime). Fill in the week that just ended, then write next week's plan. Git-commit at the end with `[REVIEW] Week N log`.
 
+**Sunday checklist (do in this order):**
+1. **Refresh `_READINESS_DASHBOARD.md`** — recompute per-book Avg LO Readiness from `_LO_TRACKER.md`; update Current Overall Readiness row + trajectory bar.
+2. Fill in the week's actuals (hours, readings, drills).
+3. Read the refreshed dashboard numbers into the "Readiness snapshot" section of this log.
+4. Write next week's plan.
+5. `git commit -m "[REVIEW] Week N log"`.
+
 **Exam:** Saturday 21 November 2026 · **Target readiness:** ≥ 0.75 by Week 28 (week of 2 Nov)
 
 ---
