@@ -10,21 +10,32 @@ Use this workflow every time you run a drill session. The format escalates autom
 
 ## Pre-Session Setup
 
-### Step 1 — Read the LO tracker
+### Step 1 — Check `_EVENT_LOG.md` for incomplete sessions
+Open `wiki/_EVENT_LOG.md` and read the last row.
+- If Status = `⚠️ In Progress`: tell the user — *"Incomplete session found: [Subject] from [Date]. Resume or start fresh?"* Wait for response before proceeding.
+- If Status = `✅ Complete` or log is empty: proceed normally.
+
+### Step 2 — Read the LO tracker
 Open `wiki/_LO_TRACKER.md`. Identify:
 - Target reading(s) and LO(s) for this session (🔴 High priority first, then 🟡 Medium)
 - Current Readiness score for each target LO
 - Determine the Phase for each LO (see table below)
 
-### Step 2 — Load source material
+### Step 3 — Load source material
 Open the target Schema B file(s). The question bank draws from:
 - **§3 Noise** bullets → red-herring ingredients for vignettes
 - **§4 Directional Intuition** → Phase 1 directional questions
 - **§5 Ambiguity Traps** → Phase 2–3 distractor material
 - **§2 Constraint Stress-Test** → Phase 1 calculation anchors
 
-### Step 3 — State the phase at the start of the session
-Always open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
+### Step 4 — Open the event log row and state the session
+Append a new row to `wiki/_EVENT_LOG.md` **before asking the first question**:
+```
+| {next #} | {YYYY-MM-DD} | DRILL | Session {N} · R{X} · Phase {P} | LOs: {list} — in progress | ⚠️ In Progress |
+```
+Then open with: *"Session [X] · R{N} · Phase {1/2/3} · Target LOs: {list}"*
+
+Session number = last `DRILL` event # in the log + 1 (count only DRILL rows).
 
 ---
 
@@ -122,12 +133,18 @@ For each error made:
 - Increment the archetype count in the summary table
 - Add an instance log entry: date · LO · question summary · user answer → correct answer · archetype · lesson
 
-### Step 6 — Commit and push
+### Step 6 — Update event log, commit and push
+Update the open session row in `wiki/_EVENT_LOG.md`:
+- Change Status from `⚠️ In Progress` → `✅ Complete`
+- Update Detail to include final error count: `LOs: {list} · {n} errors ({archetypes})`
+
 ```powershell
-git add "wiki/_LO_TRACKER.md" "wiki/_ERROR_ARCHETYPES.md"
-git commit -m "Drill session [X]: R{N} LOs {list}; Phase {1/2/3}; {n} errors logged"
+git add "wiki/_LO_TRACKER.md" "wiki/_ERROR_ARCHETYPES.md" "wiki/_EVENT_LOG.md"
+git commit -m "[DRILL] Session {N}: R{X} LOs {list}; Phase {P}; {n} errors"
 git push
 ```
+
+> **Commit format:** `[TYPE] Description` where TYPE = `DRILL` / `READING` / `SYSTEM` / `REVIEW` / `FIX`
 
 ---
 

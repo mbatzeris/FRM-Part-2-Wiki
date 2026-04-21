@@ -133,12 +133,20 @@ Defaults for new LOs:
 
 After appending: update the aggregate snapshot at the top of `_LO_TRACKER.md` (LOs tracked count).
 
-## Step 11 — Commit
+## Step 11 — Append to event log and commit
+
+Append a row to `wiki/_EVENT_LOG.md`:
+```
+| {next #} | {YYYY-MM-DD} | READING | R{N} — {Short Title} | {n} LOs added ({LO id list}) · boundary events updated | ✅ Complete |
+```
 
 ```powershell
-git add "wiki/Book N - {Name}/R{N}_{short_title}.md" "wiki/_LO_TRACKER.md" "wiki/_boundary_events.md"
-git commit -m "R{N}: initial Schema B conversion from Schweser Book N; LOs added to tracker; boundary events updated"
+git add "wiki/Book N - {Name}/R{N}_{short_title}.md" "wiki/_LO_TRACKER.md" "wiki/_boundary_events.md" "wiki/_EVENT_LOG.md"
+git commit -m "[READING] R{N} converted; {n} LOs added; boundary events updated"
+git push
 ```
+
+> **Commit format:** `[TYPE] Description` where TYPE = `READING` / `DRILL` / `SYSTEM` / `REVIEW` / `FIX`
 
 ---
 
