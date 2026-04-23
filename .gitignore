@@ -44,3 +44,6 @@ tmp/
 
 # Logs
 *.log
+
+# Graphify generated artifacts (regeneratable from source via /graphify)
+graphify-out/
