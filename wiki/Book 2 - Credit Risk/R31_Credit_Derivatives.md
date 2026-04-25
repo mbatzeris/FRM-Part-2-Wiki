@@ -93,4 +93,6 @@
 
 ---
 
+**Source Fidelity:** §1 propositions spot-checked 2026-04-26 against `R31.raw.gemini.md` extracted from FRM 2026 Part II Book 2 PDF, pages 163–179. Verified: CDS-bond basis (P1), PS(t) = e^(−λt) (P3), expected payoff = (1−RR)·PD·NP (P3), MtM = PV(payments)−PV(payoff) (P3), Q(t|F) common-correlation form (P7), EL_t = E(NP_{t−1})−E(NP_t) (P7), CDO C = Σ EL_t · DF (P7). Figure 31.7 (TRS structure) was dropped by the old `pdftotext` extract but is now captured in raw markdown.
+
 **Cross-Domain Linkage:** [Boundary Events](../_boundary_events.md)

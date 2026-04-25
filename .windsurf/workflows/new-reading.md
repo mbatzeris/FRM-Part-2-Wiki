@@ -16,37 +16,47 @@ Use this workflow every time you start a new reading. The output is a single `.m
 
 ---
 
-## Step 1 — Extract the chapter text
+## Step 1 — (Legacy / optional) Pre-extract the whole book to text
 
-If the book's `.txt` extract does not yet exist:
+> **Status:** Optional since 2026-04-26. Step 2 (Gemini direct-PDF) does not require this. Keep this only if you want the verifier in Step 2.5 to operate against a `Book{B}.txt` reference, or for keyword-search across an entire book.
+
 ```powershell
-& "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\poppler-25.07.0\Library\bin\pdftotext.exe" -layout "wiki\Book N - {Name}\FRM 2026 Part II Book N.pdf" "wiki\Book N - {Name}\BookN.txt"
+& "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\poppler-25.07.0\Library\bin\pdftotext.exe" -layout "raw\FRM 2026 Part II Book N.pdf" "wiki\Book N - {Name}\BookN.txt"
 ```
 
-## Step 2 — Isolate the reading
+`pdftotext -layout` silently drops display formulas and embedded tables — never use its output as the source for proposition formulas. That's Step 2's job.
 
-Grep for `READING {N}` and `READING {N+1}` in the book text; the chapter is the slice between them. Record:
-- **Module headers** (`MODULE N.1:`, `MODULE N.2:`, ...)
-- **Learning objectives** (`LO N.a:`, `LO N.b:`, ...)
-- **Key Concepts** section (end of reading)
-- **Module Quiz** questions + answer key (end of reading)
+## Step 2 — Extract the reading via Gemini direct-PDF
 
-## Step 2.5 — Verify extraction quality (BLOCKING)
+**This replaces the old `pdftotext -layout` step**, which silently dropped display formulas, subscripts, and tables. Gemini reads the PDF as a vision-aware LLM, preserving formulas as LaTeX.
 
-Run the extraction verifier before calling the LLM:
+```powershell
+.venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book {B} --reading {N} --output raw
+```
+
+Output: `wiki/Book {B} - {Name}/R{N}.raw.gemini.md` (gitignored). Contains:
+- All section headings (MODULE N.X, LO N.x)
+- Display formulas as `$$...$$` LaTeX blocks
+- Inline formulas as `$...$`
+- Tables as Markdown tables
+- Figure captions + faithful descriptions
+- Module Quiz questions + answer key
+
+Record from the raw output:
+- **Module headers** and **learning objectives** order
+- **Formulas** — every `$$...$$` block is a candidate proposition source
+- **Tables and figures** — quote numerical data verbatim into the Schema B
+- **Module Quiz** — verbatim, including answer key
+
+## Step 2.5 — Verifier (safety net, non-blocking)
+
+The extraction verifier remains as a sanity check, but is no longer the primary gate. Gemini-extracted markdown rarely triggers B1/B2 because formulas come through in LaTeX blocks rather than after "...is defined as:" cues.
 
 ```powershell
 python scripts/verify_extraction.py --reading R{N} --book "Book {B} - {Name}" --start-marker "READING {N}" --end-marker "READING {N+1}"
 ```
 
-The script writes `wiki/Book {B} - {Name}/R{N}_extraction_audit.md` with all findings.
-
-**Exit codes:**
-- `0` — clean, proceed to Step 3.
-- `1` — warnings only, review the audit then proceed.
-- `2` — **BLOCKERS present. STOP.** Open the audit, identify which formulas/figures the `pdftotext` extract dropped, and either (a) manually transcribe the missing formulas from the source PDF and inject them into the chapter text before LLM ingestion, or (b) wait until the vision-pipeline migration (Stage 3) is complete and re-run with PDF-native LLM input.
-
-> **Why this exists:** `pdftotext -layout` silently drops display formulas and embedded tables. R30 and R31 both had multiple dropped formulas that the LLM filled in from prior knowledge — invisible to the §9 checklist. This step catches that class of failure before the LLM is called. See `wiki/Book 2 - Credit Risk/R30_extraction_audit.md` and `R31_extraction_audit.md` for examples.
+> **Note:** the verifier still operates against the legacy `Book{B}.txt` extract if present. If you have not regenerated that with `pdftotext`, this step is optional. Keep it as belt-and-suspenders for any reading where you want a second opinion.
 
 ## Step 3 — Build propositions
 

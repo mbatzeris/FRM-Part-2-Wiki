@@ -21,6 +21,16 @@ __pycache__/
 venv/
 env/
 ENV/
+.venv-gemini/
+
+# Secrets
+.env
+
+# Generated extraction artefacts (regeneratable)
+out/
+**/*.gemini.md
+**/*.marker.md
+**/*.marker.json
 
 # IDE
 .vscode/
