@@ -16,19 +16,9 @@ Use this workflow every time you start a new reading. The output is a single `.m
 
 ---
 
-## Step 1 — (Legacy / optional) Pre-extract the whole book to text
+## Step 1 — Extract the reading via Gemini direct-PDF
 
-> **Status:** Optional since 2026-04-26. Step 2 (Gemini direct-PDF) does not require this. Keep this only if you want the verifier in Step 2.5 to operate against a `Book{B}.txt` reference, or for keyword-search across an entire book.
-
-```powershell
-& "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\poppler-25.07.0\Library\bin\pdftotext.exe" -layout "raw\FRM 2026 Part II Book N.pdf" "wiki\Book N - {Name}\BookN.txt"
-```
-
-`pdftotext -layout` silently drops display formulas and embedded tables — never use its output as the source for proposition formulas. That's Step 2's job.
-
-## Step 2 — Extract the reading via Gemini direct-PDF
-
-**This replaces the old `pdftotext -layout` step**, which silently dropped display formulas, subscripts, and tables. Gemini reads the PDF as a vision-aware LLM, preserving formulas as LaTeX.
+Gemini reads the PDF as a vision-aware LLM, preserving formulas as LaTeX. This is the single source of truth for chapter content.
 
 ```powershell
 .venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book {B} --reading {N} --output raw
@@ -48,17 +38,7 @@ Record from the raw output:
 - **Tables and figures** — quote numerical data verbatim into the Schema B
 - **Module Quiz** — verbatim, including answer key
 
-## Step 2.5 — Verifier (safety net, non-blocking)
-
-The extraction verifier remains as a sanity check, but is no longer the primary gate. Gemini-extracted markdown rarely triggers B1/B2 because formulas come through in LaTeX blocks rather than after "...is defined as:" cues.
-
-```powershell
-python scripts/verify_extraction.py --reading R{N} --book "Book {B} - {Name}" --start-marker "READING {N}" --end-marker "READING {N+1}"
-```
-
-> **Note:** the verifier still operates against the legacy `Book{B}.txt` extract if present. If you have not regenerated that with `pdftotext`, this step is optional. Keep it as belt-and-suspenders for any reading where you want a second opinion.
-
-## Step 3 — Build propositions
+## Step 2 — Build propositions
 
 **Rule:** one proposition per LO (minimum). If an LO contains two dense sub-concepts, split into two.
 
@@ -70,7 +50,7 @@ For each proposition:
 - Exam Dominance: rate Very High / High / Medium / Low with a one-phrase reason.
 - Trigger Phrase: 2-5 quoted keywords or phrases the exam would use.
 
-## Step 4 — Constraint stress-test
+## Step 3 — Constraint stress-test
 
 Pull 3-8 rows from:
 - Numerical examples inside the reading (e.g., Schweser's worked examples).
@@ -79,17 +59,17 @@ Pull 3-8 rows from:
 
 Format each row: `P{n} ({topic}) | {flip} | {answer}`.
 
-## Step 5 — Dependency & Noise Map
+## Step 4 — Dependency & Noise Map
 
 - **Signal:** 3-5 bullets capturing the *distinctions* that matter (X vs Y pairs, directional rules, formula components).
 - **Noise:** 3-8 bullets of plausible-but-wrong statements with explicit corrections (these become exam distractors).
 - **Tensions:** 1-2 bullets with two canonical tags on either side. Draw from the reading's real-world tradeoffs (e.g., `[REG] vs [OPS]`).
 
-## Step 6 — Directional Intuition
+## Step 5 — Directional Intuition
 
 5-8 bulleted arrows showing what rises/falls when an input changes. Always use Unicode arrows (↑ ↓ →), never LaTeX.
 
-## Step 7 — Ambiguity Traps
+## Step 6 — Ambiguity Traps
 
 8-14 bullets covering:
 - Swapped definitions (A vs B) with a clarifying tell.
@@ -98,7 +78,7 @@ Format each row: `P{n} ({topic}) | {flip} | {answer}`.
 - Regulator/framework mappings.
 - "{A} ≠ {B}" clarifications.
 
-## Step 8 — §9 Checklist Verification
+## Step 7 — §9 Checklist Verification
 
 Before committing, verify all 16 items:
 
@@ -119,7 +99,7 @@ Before committing, verify all 16 items:
 15. Footer contains `**Cross-Domain Linkage:** [Boundary Events](../_boundary_events.md)`.
 16. No LaTeX rendering errors — all formulas in Unicode or plain text.
 
-## Step 9 — Update `_boundary_events.md`
+## Step 8 — Update `_boundary_events.md`
 
 After the §9 checklist passes, scan the completed Schema B file for cross-domain linkages:
 
@@ -138,11 +118,11 @@ After the §9 checklist passes, scan the completed Schema B file for cross-domai
 - Does the reading take a different REG or ECO position on a shared concept? → Link them with the tension.
 - Does the reading contain a scenario where two risk types interact (Market + Credit, Credit + Liquidity, Ops + Liquidity)? → Add to Boundary Scenarios.
 
-After updating, add `wiki/_boundary_events.md` to the git staging in Step 11.
+After updating, add `wiki/_boundary_events.md` to the git staging in Step 10.
 
 ---
 
-## Step 10 — Append LOs to `_LO_TRACKER.md`
+## Step 9 — Append LOs to `_LO_TRACKER.md`
 
 For each LO covered in the new reading, append a row to the appropriate Book section of `@c:\Users\user\Documents\FRM 2\wiki\_LO_TRACKER.md`.
 
@@ -160,7 +140,7 @@ Defaults for new LOs:
 
 After appending: update the aggregate snapshot at the top of `_LO_TRACKER.md` (LOs tracked count).
 
-## Step 11 — Append to event log and commit
+## Step 10 — Append to event log and commit
 
 Append a row to `wiki/_EVENT_LOG.md`:
 ```
