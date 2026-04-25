@@ -10,7 +10,7 @@ This directory contains the **AI Engine** of the FRM Wiki. It houses the 4 core 
 **Role:** The Core Persona & Operating System
 **Purpose:** This file defines the *behavior* of the AI. It establishes the "Antigravity" persona—an elite, aggressive FRM tutor focused on falsification and structural dominance rather than passive summarization. 
 **Key Mechanisms:**
-- Enforces two parallel taxonomies: the **Constraint Hierarchy** `[REG] > [APP] > [ECO] > [THE]` (which tag wins in a vignette) and the **Proposition Tags** `[REG] | [ECO] | [OPS] | [THE]` (how each axiom is classified).
+- Enforces two parallel taxonomies: the **Constraint Hierarchy** `[REG] > [VIG] > [ECO] > [THE]` (which tag wins in a vignette) and the **Proposition Tags** `[REG] | [ECO] | [OPS] | [THE]` (how each axiom is classified). Note: `[VIG]` exists **only** in the Constraint Hierarchy — never use it as a proposition tag in Schema B files.
 - Sets strict constraints prohibiting fluff, generic advice, and non-exam-tested material.
 - Defines the conversational tone (blunt, surgical, Socratic).
 

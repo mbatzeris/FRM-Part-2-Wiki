@@ -24,9 +24,10 @@ Append-only. One row per major system event. **Never edit existing rows — only
 | 013 | 2026-04-21 | SYSTEM | Structural fixes (S1–S8) | Status legend removed · Priority unified · drill formula · step renumber · R38/R32 pending links | ✅ Complete |
 | 014 | 2026-04-21 | SYSTEM | Event log + commit format | _EVENT_LOG.md created · drill.md + new-reading.md updated · R38 boundary annotation | ✅ Complete |
 | 015 | 2026-04-21 | SYSTEM | Exhaustive review fixes (12 items) | C1–C5 + L1–L5 + L7, A3, A5 · 3 commits · R31 readiness 0.45→0.28, dashboard recomputed | ✅ Complete |
+| 016 | 2026-04-25 | SYSTEM | Tag rename [APP]→[VIG] | Eliminate proposition-tag collision; 4 files touched (00_SYSTEM_PROMPT, drill.md, system/README, raw/chat) | ✅ Complete |
 
 ---
 
-*Next session appends row #016. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
+*Next session appends row #017. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
 
 > **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #014 onward are fully tracked. Session numbering converts to numeric from #016: **next DRILL is Session 10** (9 prior DRILL rows in this log: #002–#010, per the drill.md counting rule).
