@@ -31,6 +31,23 @@ Grep for `READING {N}` and `READING {N+1}` in the book text; the chapter is the 
 - **Key Concepts** section (end of reading)
 - **Module Quiz** questions + answer key (end of reading)
 
+## Step 2.5 — Verify extraction quality (BLOCKING)
+
+Run the extraction verifier before calling the LLM:
+
+```powershell
+python scripts/verify_extraction.py --reading R{N} --book "Book {B} - {Name}" --start-marker "READING {N}" --end-marker "READING {N+1}"
+```
+
+The script writes `wiki/Book {B} - {Name}/R{N}_extraction_audit.md` with all findings.
+
+**Exit codes:**
+- `0` — clean, proceed to Step 3.
+- `1` — warnings only, review the audit then proceed.
+- `2` — **BLOCKERS present. STOP.** Open the audit, identify which formulas/figures the `pdftotext` extract dropped, and either (a) manually transcribe the missing formulas from the source PDF and inject them into the chapter text before LLM ingestion, or (b) wait until the vision-pipeline migration (Stage 3) is complete and re-run with PDF-native LLM input.
+
+> **Why this exists:** `pdftotext -layout` silently drops display formulas and embedded tables. R30 and R31 both had multiple dropped formulas that the LLM filled in from prior knowledge — invisible to the §9 checklist. This step catches that class of failure before the LLM is called. See `wiki/Book 2 - Credit Risk/R30_extraction_audit.md` and `R31_extraction_audit.md` for examples.
+
 ## Step 3 — Build propositions
 
 **Rule:** one proposition per LO (minimum). If an LO contains two dense sub-concepts, split into two.
