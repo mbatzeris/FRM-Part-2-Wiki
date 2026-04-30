@@ -10,15 +10,15 @@ import pypdfium2 as pdfium
 
 
 def slice_pdf(src: Path, dst: Path, start: int, end: int) -> None:
-    src_doc = pdfium.PdfDocument(str(src))
-    n = len(src_doc)
-    if not (1 <= start <= end <= n):
-        raise ValueError(f"Page range {start}-{end} out of bounds (PDF has {n} pages)")
-    dst_doc = pdfium.PdfDocument.new()
-    # import_pages takes 0-indexed range string
-    dst_doc.import_pages(src_doc, list(range(start - 1, end)))
-    dst.parent.mkdir(parents=True, exist_ok=True)
-    dst_doc.save(str(dst))
+    with pdfium.PdfDocument(str(src)) as src_doc:
+        n = len(src_doc)
+        if not (1 <= start <= end <= n):
+            raise ValueError(f"Page range {start}-{end} out of bounds (PDF has {n} pages)")
+        with pdfium.PdfDocument.new() as dst_doc:
+            # import_pages accepts 0-indexed page indices
+            dst_doc.import_pages(src_doc, list(range(start - 1, end)))
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            dst_doc.save(str(dst))
     print(f"Wrote {dst} ({end - start + 1} pages, {dst.stat().st_size:,} bytes)")
 
 

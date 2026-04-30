@@ -30,9 +30,10 @@ Append-only. One row per major system event. **Never edit existing rows — only
 | 019 | 2026-04-26 | SYSTEM | Migrated extraction to Gemini direct-PDF | scripts/extract_via_gemini.py + slice_pdf.py · .venv-gemini (50 MB, replaces .venv-marker 2 GB) · /new-reading Step 2 rewritten · verifier downgraded to non-blocking safety net · Marker pipeline abandoned (CPU too slow) | ✅ Complete |
 | 020 | 2026-04-26 | FIX | R30 P7 corrected via Gemini-extracted PDF | F1 (one-factor copula factor decomposition) was wrong: Schema B showed only common-correlation form; PDF presents general form first (xᵢ = aᵢF + √(1−aᵢ²)Zᵢ). Both forms now in P7 + Trap. F2/F3/F4 confirmed correct. Source Fidelity footer added. | ✅ Complete |
 | 021 | 2026-04-26 | FIX | R31 spot-checked via Gemini-extracted PDF | All 7 key formulas (CDS-bond basis, PS=e^−λt, expected payoff, MtM, Q(t\|F), EL_t, CDO C) confirmed match. Figure 31.7 now captured in raw markdown. Source Fidelity footer added. | ✅ Complete |
+| 022 | 2026-04-30 | SYSTEM | extract_via_gemini hardening (11 findings) | Stricter chapter-start regex `^Reading\s+N\s*[:\n]` over first 300 chars (drops density filter; captures LO page; rejects forward-references) · `resp.candidates[0].content.parts` parsing avoids `resp.text` crash on blocked/truncated responses · `MAX_TOKENS` → `R{N}.partial.gemini.md` + exit 4 · other non-STOP → exit 5 · `ServerError` retry (3×, exp-backoff 4/16/64s) · `--pdf` override + `raw/FRM*Book{B}.pdf` glob (drops hardcoded year) · `--force` flag with auto-`.bak` backup · `end-padding` clamped to total_pages · `with` blocks on all PdfDocument · single PDF open via `(pages, total)` return · README.md + new-reading.md updated. | ✅ Complete |
 
 ---
 
-*Next session appends row #022. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
+*Next session appends row #023. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
 
 > **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #014 onward are fully tracked. Session numbering converts to numeric from #016: **next DRILL is Session 10** (9 prior DRILL rows in this log: #002–#010, per the drill.md counting rule).

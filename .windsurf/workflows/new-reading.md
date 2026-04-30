@@ -11,7 +11,7 @@ Use this workflow every time you start a new reading. The output is a single `.m
 ## Inputs Required
 
 1. **Reading number** (e.g., `R30`, `R42`).
-2. **Book number** (1-5) and the corresponding PDF at `wiki/Book N - {Name}/FRM 2026 Part II Book N.pdf`.
+2. **Book number** (1-5). The script auto-detects the source PDF as `raw/FRM*Book{N}.pdf` (single match required; pass `--pdf PATH` to override).
 3. **Target output path** — `wiki/Book N - {Name}/R{N}_{short_title}.md`.
 
 ---
@@ -21,8 +21,17 @@ Use this workflow every time you start a new reading. The output is a single `.m
 Gemini reads the PDF as a vision-aware LLM, preserving formulas as LaTeX. This is the single source of truth for chapter content.
 
 ```powershell
+# First run
 .venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book {B} --reading {N} --output raw
+
+# Re-run (auto-backs up previous output to .bak)
+.venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book {B} --reading {N} --output raw --force
+
+# Custom PDF path (e.g., a hand-sliced chapter)
+.venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book {B} --reading {N} --output raw --pdf raw\custom.pdf
 ```
+
+**Exit codes:** `0` success · `2` config/args/IO error · `3` Gemini network failure (after 3 retries) · `4` `MAX_TOKENS` truncation (partial saved to `R{N}.partial.gemini.md`, canonical not written) · `5` other non-STOP finish (safety/recitation block).
 
 Output: `wiki/Book {B} - {Name}/R{N}.raw.gemini.md` (gitignored). Contains:
 - All section headings (MODULE N.X, LO N.x)

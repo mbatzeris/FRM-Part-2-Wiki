@@ -26,6 +26,9 @@ FRM 2/
 │   ├── new-reading.md                          ← conversion pipeline + LLM prompt
 │   └── drill.md                                ← graduated drill session protocol (3 phases)
 ├── raw/                                        ← immutable source PDFs (5 books)
+├── scripts/                                    ← extraction pipeline
+│   ├── extract_via_gemini.py                   ← chapter → Gemini → Markdown
+│   └── slice_pdf.py                            ← page-range PDF slicer
 ├── system/                                     ← legacy prompts (reference only)
 └── wiki/
     ├── _TEMPLATE_Reading.md                    ← Schema B skeleton
@@ -161,13 +164,13 @@ Book weights: Market 20% · Credit 20% · OpRisk 20% · Liquidity 15% · Invest+
 
 ## Schema B Structure (per reading)
 
-| § | Section | Content |
-|:--:|:--|:--|
-| 1 | **Foundational Propositions** | One per LO; 5-column table (ID / Prop + Intuition / Tag / Exam Dominance / Trigger Phrase) |
-| 2 | **Constraint Stress-Test** | 3-column falsification drills with numerical answers |
-| 3 | **Dependency & Noise Map** | Signal / Noise / **Tensions** (two canonical tags) |
-| 4 | **Directional Intuition** | Unicode-arrow sensitivity chains (no LaTeX) |
-| 5 | **Ambiguity Traps** | ≥8 anti-decoder bullets |
+|  §  | Section                       | Content                                                                                    |
+| :-: | :---------------------------- | :----------------------------------------------------------------------------------------- |
+|  1  | **Foundational Propositions** | One per LO; 5-column table (ID / Prop + Intuition / Tag / Exam Dominance / Trigger Phrase) |
+|  2  | **Constraint Stress-Test**    | 3-column falsification drills with numerical answers                                       |
+|  3  | **Dependency & Noise Map**    | Signal / Noise / **Tensions** (two canonical tags)                                         |
+|  4  | **Directional Intuition**     | Unicode-arrow sensitivity chains (no LaTeX)                                                |
+|  5  | **Ambiguity Traps**           | ≥8 anti-decoder bullets                                                                    |
 
 ## 16-Item Compliance Checklist
 
@@ -206,10 +209,24 @@ Book weights: Market 20% · Credit 20% · OpRisk 20% · Liquidity 15% · Invest+
 
 ## PDF Text Extraction
 
-The pipeline uses **Poppler `pdftotext`** (already installed):
+The extraction pipeline uses **Gemini 2.5 Pro direct-PDF** via `scripts/extract_via_gemini.py`. Gemini reads the chapter PDF as a vision-aware LLM, preserving formulas as LaTeX and tables verbatim — no silent loss (replaces the old Poppler `pdftotext -layout` flow which dropped formulas and figures).
+
 ```powershell
-& "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\poppler-25.07.0\Library\bin\pdftotext.exe" -layout "raw\FRM 2026 Part II Book N.pdf" "wiki\Book N - Name\BookN.txt"
+# Auto-detect PDF as raw/FRM*Book{B}.pdf
+.venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book 2 --reading 30 --output raw
+
+# Or override the PDF path explicitly
+.venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book 2 --reading 30 --output raw --pdf raw\custom.pdf
+
+# Re-run / overwrite an existing output (auto-backs up previous to .bak)
+.venv-gemini\Scripts\python.exe scripts\extract_via_gemini.py --book 2 --reading 30 --output raw --force
 ```
+
+**Output:** `wiki/Book {B} - {Name}/R{N}.raw.gemini.md` (gitignored). Hand-merge into the canonical `R{N}_{Title}.md` after review.
+
+**Exit codes:** `0` success · `2` config/IO/args error · `3` Gemini network failure (after 3 retries) · `4` `MAX_TOKENS` truncation (partial saved to `R{N}.partial.gemini.md`) · `5` other non-STOP finish (safety/recitation block).
+
+**Pre-reqs:** `GEMINI_API_KEY` in `.env` (copy from `.env.example`) and `pip install -r requirements.txt` inside `.venv-gemini`.
 
 ## Git Safety
 
