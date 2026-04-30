@@ -28,8 +28,14 @@ FRM 2/
 ├── raw/                                        ← immutable source PDFs (5 books)
 ├── scripts/                                    ← extraction pipeline
 │   ├── extract_via_gemini.py                   ← chapter → Gemini → Markdown
-│   └── slice_pdf.py                            ← page-range PDF slicer
-├── system/                                     ← legacy prompts (reference only)
+│   ├── slice_pdf.py                            ← page-range PDF slicer
+│   └── verify_formulas.py                      ← checks §1 formulas appear in raw extract
+├── system/
+│   ├── system_prompt.md                        ← active LLM prompt (persona + constraints + archetypes)
+│   ├── 01_BOOLE_SCAFFOLD_TEMPLATE.md           ← pointer to wiki/_TEMPLATE_Reading.md
+│   ├── README.md                               ← system architecture overview
+│   └── legacy/
+│       └── 03_ANTIGRAVITY_WORKFLOW.md          ← archived conceptual design doc
 └── wiki/
     ├── _TEMPLATE_Reading.md                    ← Schema B skeleton
     ├── _LO_TRACKER.md                          ← master LO readiness (your SRS)

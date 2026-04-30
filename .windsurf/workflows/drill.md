@@ -102,7 +102,7 @@ Then open with: *"Session {N} · R{X} · Phase {1/2/3} · Target LOs: {list}"*
 **Feedback rules:**
 - Distractor archetype label required on ALL feedback, correct or incorrect
 - For wrong answers: full Distractor Autopsy + identify the constraint hierarchy applied
-- For correct answers: confirm which constraint (REG/VIG/ECO/THE) drove the correct selection
+- For correct answers: confirm which constraint (REG/STEM/ECO/THE) drove the correct selection
 
 ---
 
@@ -172,10 +172,10 @@ git push
 
 ## Constraint Hierarchy Reference (for Phase 3 feedback)
 
-> **Note:** `[VIG]` is a question-answering priority tag only — it is NOT a proposition classification tag. Proposition tags in Schema B files are `[REG] | [ECO] | [OPS] | [THE]`.
+> **Note:** `[STEM]` is a question-answering priority tag only — it is NOT a proposition classification tag. Proposition tags in Schema B files are `[REG] | [ECO] | [OPS] | [THE]`. (Renamed from `[VIG]` on 2026-04-30 to eliminate collision with the proposition tagset — see `_EVENT_LOG.md` row #023.)
 
 Apply in order when evaluating answer correctness:
 1. **[REG]** Regulatory mandates (Basel/FRTB/Supervisory) — always overrides theory
-2. **[VIG]** Vignette constraints (Risk Appetite / specific stem cues) — overrides general best practice
-3. **[ECO]** First-order economic logic — applies when no regulatory or vignette constraint is active
+2. **[STEM]** Vignette / question-stem constraints (Risk Appetite, specific cues in the question stem) — overrides general best practice
+3. **[ECO]** First-order economic logic — applies when no regulatory or stem constraint is active
 4. **[THE]** Theoretical purity — only if the question explicitly asks for it

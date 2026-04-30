@@ -1,3 +1,7 @@
+> **🗄️ ARCHIVED 2026-04-30.** Content frozen as of this date. The active pipeline lives in `../../.windsurf/workflows/new-reading.md` and `../../.windsurf/workflows/drill.md`. The active system prompt is `../system_prompt.md`. Some references below (e.g., to `pdftotext`) reflect the pre-Gemini extraction pipeline and are intentionally preserved for historical context — do not trust them as current documentation. For the live behavior of `/new-reading` and `/drill`, read the workflow files directly.
+
+---
+
 # FRM Part 2: The Antigravity + NotebookLM Study Workflow
 
 > **⚠️ Status — conceptual design doc.** The active, executable implementation lives in:

@@ -128,7 +128,7 @@ You must produce output in EXACTLY this structure. Do not deviate.
 3. Reproduce every inline formula as inline LaTeX: $...$
 4. Greek letters: Unicode in prose (λ, ρ, σ), LaTeX inside formula blocks.
 5. The proposition tags are exactly: [REG] | [ECO] | [OPS] | [THE].
-   The Constraint Hierarchy is [REG] > [VIG] > [ECO] > [THE]. [VIG] is a
+   The Constraint Hierarchy is [REG] > [STEM] > [ECO] > [THE]. [STEM] is a
    question-answering priority tag only — never use it as a proposition tag.
 6. Every formula you write in §1 must trace to a specific PDF page. After
    each formula, add a parenthetical source reference: (PDF p. N).
