@@ -25,6 +25,8 @@ Clamp result: Readiness = min(1.00, max(0.00, calculated value))
 
 **Weight rationale:** 60% accuracy (primary objective evidence of mastery) · 30% confidence (metacognitive signal — detects illusory competence / over-reliance on luck) · 10% recency (decay guard — keeps stale LOs from showing false readiness). Tune weights only if you have strong evidence that one channel is systematically biased.
 
+> **TODO (deferred 2026-04-30) — recency floors at 0 after 30 days.** With the current `max(0, …)` formulation, an LO that has not been reviewed in 60 days scores the same on the recency channel as one untouched for exactly 30 days. A 100%-accuracy LO that sat for 4 months would still show Readiness ≈ 0.90, which flatters stale mastery. Future fix: replace with exponential decay `recency = exp(-days_since_review / 30)` (decays to 0.04 at 90 days, 0.013 at 120 days), which keeps decaying past 30 days and forces re-drill of stale LOs. One-line change. Deferred until Book 1 + Book 5 LOs are populated and the drift becomes empirically observable; with only 15 LOs tracked today the difference is invisible. See `_EVENT_LOG.md` row #023.
+
 ## Priority Engine (Leitner Logic)
 
 | Last Session Accuracy | New Priority | Description |

@@ -31,9 +31,18 @@ Append-only. One row per major system event. **Never edit existing rows — only
 | 020 | 2026-04-26 | FIX | R30 P7 corrected via Gemini-extracted PDF | F1 (one-factor copula factor decomposition) was wrong: Schema B showed only common-correlation form; PDF presents general form first (xᵢ = aᵢF + √(1−aᵢ²)Zᵢ). Both forms now in P7 + Trap. F2/F3/F4 confirmed correct. Source Fidelity footer added. | ✅ Complete |
 | 021 | 2026-04-26 | FIX | R31 spot-checked via Gemini-extracted PDF | All 7 key formulas (CDS-bond basis, PS=e^−λt, expected payoff, MtM, Q(t\|F), EL_t, CDO C) confirmed match. Figure 31.7 now captured in raw markdown. Source Fidelity footer added. | ✅ Complete |
 | 022 | 2026-04-30 | SYSTEM | extract_via_gemini hardening (11 findings) | Stricter chapter-start regex `^Reading\s+N\s*[:\n]` over first 300 chars (drops density filter; captures LO page; rejects forward-references) · `resp.candidates[0].content.parts` parsing avoids `resp.text` crash on blocked/truncated responses · `MAX_TOKENS` → `R{N}.partial.gemini.md` + exit 4 · other non-STOP → exit 5 · `ServerError` retry (3×, exp-backoff 4/16/64s) · `--pdf` override + `raw/FRM*Book{B}.pdf` glob (drops hardcoded year) · `--force` flag with auto-`.bak` backup · `end-padding` clamped to total_pages · `with` blocks on all PdfDocument · single PDF open via `(pages, total)` return · README.md + new-reading.md updated. | ✅ Complete |
+| 023 | 2026-04-30 | SYSTEM | Post-review hardening (10 items) | system/ docs consolidated: 00 + 02 → new system_prompt.md (single live prompt) · 03 → system/legacy/ with ARCHIVED header · 01 unchanged (pointer) · `[VIG]` → `[STEM]` rename in constraint hierarchy (drill.md + extract_via_gemini.py prompt) · drill.md Phase 1 rule rewritten to match practice (advance only on twice-consecutive-correct; multi-Phase 1 stays are correct when errors persist; cites R30 30.g sessions A→H) · /new-reading Step 1.5 added (verify_formulas.py symbol-coverage linter) · /new-reading Step 8 boundary-events enforcement clause (≥1 row OR commit-msg justification) · scripts/verify_formulas.py created (~145 LOC, split-on-`**` bold extraction; smoke-tested on R30: 3/3 formulas covered) · _ANKI_GUIDE.md orphan claim removed · .gitignore pruned (legacy pdftotext + Marker entries) · _EVENT_LOG.md letter→numeric crosswalk added · _LO_TRACKER.md + drill.md recency TODO documented (deferred fix: exp(-days/30); see below) · README.md + system/README.md updated for new system/ layout. | ✅ Complete |
 
 ---
 
-*Next session appends row #023. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
+*Next session appends row #024. At close-out, update the row's Status from `⚠️ In Progress` to `✅ Complete`.*
 
 > **Note:** Sessions D and F (alphabetical sequence) had no errors logged in `_ERROR_ARCHETYPES.md` and pre-dated this log — they are not reconstructed here. All sessions from #014 onward are fully tracked. Session numbering converts to numeric from #016: **next DRILL is Session 10** (9 prior DRILL rows in this log: #002–#010, per the drill.md counting rule).
+>
+> **Historical session ID crosswalk** (added 2026-04-30 per row #023; for cross-referencing entries in `_ERROR_ARCHETYPES.md` that still use letter IDs):
+> - Session A = Sess1, Session B = Sess2, Session C = Sess3
+> - Session D = (no errors logged; pre-dated this log)
+> - Session E = Sess4
+> - Session F = (no errors logged; pre-dated this log)
+> - Session G = Sess5, "30.g Deep Dive" = Sess6, Session H = Sess7, Session I = Sess8, Session J = Sess9
+> - Next DRILL = Session 10 (numeric only going forward)

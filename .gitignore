@@ -5,11 +5,6 @@ wiki/**/*.pdf
 # Extracted book text (derived from PDFs, can be regenerated)
 wiki/**/*.txt
 
-# Extracted/temporary files in raw/
-raw/extracted_*.txt
-raw/toc*.txt
-raw/*timestamp*.pdf
-
 # Python cache
 __pycache__/
 *.py[cod]
@@ -29,8 +24,6 @@ ENV/
 # Generated extraction artefacts (regeneratable)
 out/
 **/*.gemini.md
-**/*.marker.md
-**/*.marker.json
 
 # IDE
 .vscode/

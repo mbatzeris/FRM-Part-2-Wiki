@@ -92,7 +92,7 @@ That's it. Anki's algorithm handles the scheduling. You just show up.
 
 ## 7. Adding Cards for Future Readings
 
-Every time you complete a new `/new-reading`, I'll generate a `R{N}_anki_cards.txt` file in the same format. To import:
+Anki cards are generated **manually on request** — not automatically as part of `/new-reading`. When you ask Cascade to generate cards for a completed reading, it produces a `R{N}_anki_cards.txt` file in the reading's folder (gitignored, scratch artifact). To import:
 
 1. **File → Import** → select the new `.txt` file.
 2. Same settings as Step 2.

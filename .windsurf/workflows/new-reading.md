@@ -47,6 +47,18 @@ Record from the raw output:
 - **Tables and figures** — quote numerical data verbatim into the Schema B
 - **Module Quiz** — verbatim, including answer key
 
+## Step 1.5 — Verify formula coverage (after §1 hand-merge)
+
+After you build §1 Foundational Propositions and bold the key formulas, run the symbol-coverage linter to catch any formula whose distinctive symbols (Greek letters, multi-letter abbreviations) do not appear anywhere in the raw Gemini extract. This catches the failure mode where a formula is reconstructed from training data instead of sourced from the PDF.
+
+```powershell
+python scripts\verify_formulas.py --reading {N} --book {B}
+```
+
+**Exit codes:** `0` all bold formulas covered · `1` one or more flagged (review and hand-correct §1 from raw extract before proceeding) · `2` IO/args error.
+
+**Limitation:** the linter only scans bold formulas (`**...**` blocks containing `=` or `≈`). Inline-prose formulas are not scanned — the convention is to bold the key formula in each proposition. A `WARN: no bold formulas` output means the reading has no formula-bearing propositions or formulas are not bolded; check manually.
+
 ## Step 2 — Build propositions
 
 **Rule:** one proposition per LO (minimum). If an LO contains two dense sub-concepts, split into two.
@@ -128,6 +140,8 @@ After the §9 checklist passes, scan the completed Schema B file for cross-domai
 - Does the reading contain a scenario where two risk types interact (Market + Credit, Credit + Liquidity, Ops + Liquidity)? → Add to Boundary Scenarios.
 
 After updating, add `wiki/_boundary_events.md` to the git staging in Step 10.
+
+**Mandatory: every reading MUST either add ≥1 row to `_boundary_events.md` OR explicitly note in the Step 10 commit message:** `no cross-domain links — standalone reading`. This forces the cross-reading scan to happen on every reading and prevents Phase 3 drills (which pull from `_boundary_events.md`) from silently degrading as the syllabus grows.
 
 ---
 

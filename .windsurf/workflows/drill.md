@@ -49,7 +49,7 @@ Then open with: *"Session {N} · R{X} · Phase {1/2/3} · Target LOs: {list}"*
 | **Phase 2 — Consolidation** | 0.50 ≤ Readiness < 0.70 | Introduce exam-format friction |
 | **Phase 3 — Exam Simulation** | Readiness ≥ 0.70 | Full Antigravity exam replication |
 
-**Discipline rule:** Maximum ONE Phase 1 session per LO cluster. If the user gets the core mechanic correct twice in Phase 1, advance to Phase 2 within the same session — do not wait for the next session.
+**Discipline rule (revised 2026-04-30):** Stay in Phase 1 as long as systematic mechanical errors recur (e.g., repeated sign-flips on the same formula, swapped definitions, or reversed inequalities — see `_ERROR_ARCHETYPES.md` A1–A5). Advance to Phase 2 only when the user gets the core mechanic correct **twice consecutively without prompt** within a session. Multiple Phase 1 sessions per LO are expected and correct when errors persist — see R30 30.g sessions A→H for the canonical example (six Phase 1 sessions across A1 sign-flip variants before mechanics stuck). Do not advance to Phase 2 to "save time" while mechanics are still broken; that just buries the same error under exam-format noise where it is harder to diagnose.
 
 > **Priority vs Phase:** Priority (🔴/🟡/🟢 in `_LO_TRACKER.md`) determines **when** to drill next — set by last-session accuracy. Phase (1/2/3) determines **how** to drill — set by current Readiness score. A 🔴 High priority LO with Readiness 0.55 correctly triggers Phase 2, not Phase 1.
 
@@ -125,6 +125,15 @@ For each drilled LO, update **in this exact order**:
   Note: immediately post-session recency_factor = 1.0, so formula simplifies to:
   Readiness = 0.60 × Acc + 0.30 × (Conf/5) + 0.10
   Clamp: Readiness = min(1.00, max(0.00, calculated value))
+
+  TODO (deferred 2026-04-30): recency floors at 0 after 30 days, so
+  60-day-stale and 30-day-stale LOs are indistinguishable on this channel.
+  Future fix: replace with exponential decay
+      recency = exp(-days_since_review / 30)
+  which decays to 0.04 at 90 days, forcing re-drill of stale "mastered"
+  LOs in the dashboard. One-line change. Defer until Book 1 + Book 5 are
+  tracked; with only 15 LOs today the drift is unobservable. See
+  _LO_TRACKER.md Readiness Formula section + _EVENT_LOG.md row #023.
   ```
 - Priority (re-evaluate using accuracy-based Leitner thresholds):
   - 🔴 High — last session accuracy < 60%, OR new LO with 0 questions
